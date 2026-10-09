@@ -1,0 +1,2588 @@
+<REAPER_PROJECT 0.1 "7.82/win64" 1791281013 0
+  <NOTES 0 2
+  >
+  RIPPLE 0 0
+  GROUPOVERRIDE 0 0 0 0
+  AUTOXFADE 129
+  ENVATTACH 3
+  POOLEDENVATTACH 0
+  TCPUIFLAGS 0
+  MIXERUIFLAGS 11 48 0
+  ENVFADESZ10 40
+  PEAKGAIN 1
+  FEEDBACK 0
+  PANLAW 1
+  PROJOFFS 0 0 0
+  MAXPROJLEN 0 0
+  GRID 3199 8 1 8 1 0 0 0
+  TIMEMODE 1 5 -1 30 0 0 -1 0
+  VIDEO_CONFIG 0 0 65792
+  PANMODE 3
+  PANLAWFLAGS 3
+  CURSOR 0
+  ZOOM 100 0 0
+  VZOOMEX 6 0
+  USE_REC_CFG 0
+  RECMODE 1
+  SMPTESYNC 0 30 100 40 1000 300 0 0 1 0 0
+  LOOP 0
+  LOOPGRAN 0 4
+  RECORD_PATH "Media" ""
+  <RECORD_CFG
+    ZXZhdxgAAQ==
+  >
+  <APPLYFX_CFG
+  >
+  RENDER_FILE ""
+  RENDER_PATTERN ""
+  RENDER_FMT 0 2 0
+  RENDER_1X 0
+  RENDER_RANGE 1 0 0 0 1000
+  RENDER_RESAMPLE 3 0 1
+  RENDER_ADDTOPROJ 0
+  RENDER_STEMS 0
+  RENDER_DITHER 0
+  RENDER_TRIM 0.000001 0.000001 0 0
+  TIMELOCKMODE 1
+  TEMPOENVLOCKMODE 1
+  ITEMMIX 1
+  DEFPITCHMODE 589824 0
+  TAKELANE 1
+  SAMPLERATE 48000 1 0
+  <RENDER_CFG
+    ZXZhdxgAAQ==
+  >
+  LOCK 1
+  <METRONOME 6 2
+    VOL 0.25 0.125
+    BEATLEN 4
+    FREQ 1760 880 1
+    SAMPLES "" "" "" ""
+    SPLIGNORE 0 0
+    SPLDEF 2 660 "" 0 ""
+    SPLDEF 3 440 "" 0 ""
+    PATTERN 0 169
+    PATTERNSTR ABBB
+    MULT 1
+  >
+  GLOBAL_AUTO -1
+  TEMPO 120 4 4 0
+  PLAYRATE 1 0 0.25 4
+  SELECTION 0 0
+  SELECTION2 0 0
+  MASTERAUTOMODE 0
+  MASTERTRACKHEIGHT 0 0
+  MASTERPEAKCOL 16576
+  MASTERMUTESOLO 0
+  MASTERTRACKVIEW 0 0.6667 0.5 0.5 0 0 0 0 0 0 0 0 0 0 1
+  MASTERHWOUT 2 0 1 0 0 0 0 -1
+  MASTER_NCH 2 2
+  MASTER_VOLUME 1 0 -1 -1 1
+  MASTER_PANMODE 3
+  MASTER_PANLAWFLAGS 3
+  MASTER_FX 1
+  MASTER_TRACKID {FF815CCE-E657-527A-86F2-1FF00FED7F37}
+  MASTER_SEL 0
+  <MASTERFXLIST
+    SHOW 0
+    LASTSEL 0
+    DOCKED 0
+    BYPASS 0 0 0
+    <JS Bururu-DAW/bururu_out.jsfx ""
+      1 0 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    >
+    MULTIFXLINK 0
+    FLOATPOS 0 0 0 0
+    FXID {0CEFE454-E997-5BCB-804A-6851149447DF}
+    WAK 0 0
+  >
+  <MASTERPLAYSPEEDENV
+    EGUID {1FFC02AB-0E8A-535B-A066-9A06E8079540}
+    ACT 0 -1
+    VIS 0 1 1
+    LANEHEIGHT 0 0
+    ARM 0
+    DEFSHAPE 0 -1 -1
+  >
+  <TEMPOENVEX
+    EGUID {F0C9B128-8EF3-5605-A2E7-953CDAE3720E}
+    ACT 1 -1
+    VIS 1 0 1
+    LANEHEIGHT 0 0
+    ARM 0
+    DEFSHAPE 1 -1 -1
+  >
+  RULERHEIGHT 86 86
+  RULERLANE 1 4 "" 0 -1 0
+  RULERLANE 2 8 "" 0 -1 0
+  <PROJBAY
+  >
+  <TRACK {03D0B4E5-7419-5171-98D2-8C7371AAD3EA}
+    NAME one-shots
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    PANLAWFLAGS 3
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 1 1
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0 0
+    FIXEDLANES 9 0 0 0 0
+    SEL 0
+    REC 0 0 1 0 0 0 0 0
+    VU 64
+    TRACKHEIGHT 0 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {03D0B4E5-7419-5171-98D2-8C7371AAD3EA}
+    PERF 0
+    MIDIOUT -1 -1
+    MAINSEND 1 0
+  >
+  <TRACK {41997B90-F223-5BCB-8BAB-9D6A12C73711}
+    NAME seat_in
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    PANLAWFLAGS 3
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0 0
+    FIXEDLANES 9 0 0 0 0
+    SEL 0
+    REC 0 0 1 0 0 0 0 0
+    VU 64
+    TRACKHEIGHT 0 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {41997B90-F223-5BCB-8BAB-9D6A12C73711}
+    PERF 0
+    MIDIOUT -1 -1
+    MAINSEND 1 0
+    <FXCHAIN
+      SHOW 0
+      LASTSEL 0
+      DOCKED 0
+      BYPASS 0 0 0
+      <JS Bururu-DAW/bururu_voice.jsfx ""
+        0 120 200 0 0 0 150 2 80 0 1 0 0 250 1 0.4 1 1 0 0 0 0 80 70 2 30 20 1 0 1 0 1 0 0 0 0 127 0 - - - - - - - - - - - - - - - - - - - - - - - - - -
+      >
+      MULTIFXLINK 0
+      FLOATPOS 0 0 0 0
+      FXID {D9F611A2-AED4-5687-9702-CAE89C2F8032}
+      WAK 0 0
+    >
+    <ITEM
+      POSITION 0
+      SNAPOFFS 0
+      LENGTH 3.5
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0 0 1 0 0 0 1 0 0 1 0 0
+      FADEOUT 1 0 0 1 0 0 0 1 0 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {7E204EDD-1638-57A2-A762-2E2C710482C1}
+      IID 1
+      NAME ""
+      VOLPAN 1 0 1 -1
+      SOFFS 0 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {B9FFE680-1E5E-57C4-AA2D-75E27BBF434B}
+      <SOURCE MIDI
+        HASDATA 1 960 QN
+        CCINTERP 32
+        POOLEDEVTS {7F7D6C6B-95B4-5BA7-B070-E0C0AED06AC3}
+        E 0 90 3c 7f
+        E 192 80 3c 00
+        E 6528 b0 7b 00
+        CCINTERP 32
+        CHASE_CC_TAKEOFFS 1
+        GUID {B3B3B2C0-FFF1-558A-A81B-00DEE0B6E8E1}
+        IGNTEMPO 0 120 4 4
+        SRCCOLOR 49
+        EVTFILTER 0 -1 -1 -1 -1 0 0 0 0 -1 -1 -1 -1 0 -1 0 -1 -1
+      >
+    >
+  >
+  <TRACK {B892B9F4-B0C4-5B5D-9D77-1F6B68A932FD}
+    NAME seat_out
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    PANLAWFLAGS 3
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0 0
+    FIXEDLANES 9 0 0 0 0
+    SEL 0
+    REC 0 0 1 0 0 0 0 0
+    VU 64
+    TRACKHEIGHT 0 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {B892B9F4-B0C4-5B5D-9D77-1F6B68A932FD}
+    PERF 0
+    MIDIOUT -1 -1
+    MAINSEND 1 0
+    <FXCHAIN
+      SHOW 0
+      LASTSEL 0
+      DOCKED 0
+      BYPASS 0 0 0
+      <JS Bururu-DAW/bururu_voice.jsfx ""
+        0 200 130 0 0 0 60 1 60 0 1 0 0 300 1 0.3 1 1 0 0 0 0 80 70 2 30 20 2 0 1 0 1 0 0 0 0 127 0 - - - - - - - - - - - - - - - - - - - - - - - - - -
+      >
+      MULTIFXLINK 0
+      FLOATPOS 0 0 0 0
+      FXID {8753B0D8-6343-5970-886A-226B5D02AD46}
+      WAK 0 0
+    >
+    <ITEM
+      POSITION 3.5
+      SNAPOFFS 0
+      LENGTH 3.5
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0 0 1 0 0 0 1 0 0 1 0 0
+      FADEOUT 1 0 0 1 0 0 0 1 0 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {F31A7FC5-0B0D-5ABD-B395-D1DA3A4483F1}
+      IID 2
+      NAME ""
+      VOLPAN 1 0 1 -1
+      SOFFS 0 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {893E135A-B33A-5819-99E7-B8940345DB9A}
+      <SOURCE MIDI
+        HASDATA 1 960 QN
+        CCINTERP 32
+        POOLEDEVTS {D6A0C71A-06E8-5074-BD10-C91A527C4819}
+        E 0 90 3c 7f
+        E 192 80 3c 00
+        E 6528 b0 7b 00
+        CCINTERP 32
+        CHASE_CC_TAKEOFFS 1
+        GUID {3EA12B65-4C33-51F6-AFF0-9F0F2227B123}
+        IGNTEMPO 0 120 4 4
+        SRCCOLOR 49
+        EVTFILTER 0 -1 -1 -1 -1 0 0 0 0 -1 -1 -1 -1 0 -1 0 -1 -1
+      >
+    >
+  >
+  <TRACK {A45DC5F1-86EE-521E-B96E-7CDFB8E121E3}
+    NAME qt_target
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    PANLAWFLAGS 3
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0 0
+    FIXEDLANES 9 0 0 0 0
+    SEL 0
+    REC 0 0 1 0 0 0 0 0
+    VU 64
+    TRACKHEIGHT 0 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {A45DC5F1-86EE-521E-B96E-7CDFB8E121E3}
+    PERF 0
+    MIDIOUT -1 -1
+    MAINSEND 1 0
+    <FXCHAIN
+      SHOW 0
+      LASTSEL 0
+      DOCKED 0
+      BYPASS 0 0 0
+      <JS Bururu-DAW/bururu_voice.jsfx ""
+        0 220 0 0 0 0 2 1 20 0 1 0 0 10 1 0.4 0 1 0 0 0 0 80 70 2 30 20 118 0 1 0 1 0 0 0 0 127 0 - - - - - - - - - - - - - - - - - - - - - - - - - -
+      >
+      MULTIFXLINK 0
+      FLOATPOS 0 0 0 0
+      FXID {3524B0F0-24DC-5904-8277-7C140D901A2A}
+      WAK 0 0
+      BYPASS 0 0 0
+      <JS Bururu-DAW/bururu_voice.jsfx ""
+        0 330 0 0 0 50 2 1 20 0 1 0 0 10 1 0.3 0 1 0 0 0 0 80 70 2 30 20 119 0 1 0 1 0 0 0 0 127 0 - - - - - - - - - - - - - - - - - - - - - - - - - -
+      >
+      MULTIFXLINK 0
+      FLOATPOS 0 0 0 0
+      FXID {2DB3560B-54CF-5308-B47E-A21ACAA8C7E1}
+      WAK 0 0
+    >
+    <ITEM
+      POSITION 7
+      SNAPOFFS 0
+      LENGTH 3.5
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0 0 1 0 0 0 1 0 0 1 0 0
+      FADEOUT 1 0 0 1 0 0 0 1 0 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {D82394F2-B69C-5336-82F3-E449C1AB820C}
+      IID 3
+      NAME ""
+      VOLPAN 1 0 1 -1
+      SOFFS 0 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {91A71C63-98B6-53FA-959E-75CDFCBC534E}
+      <SOURCE MIDI
+        HASDATA 1 960 QN
+        CCINTERP 32
+        POOLEDEVTS {99F3D37E-0F93-5EED-8EC3-8057CEE6AF7C}
+        E 0 90 3c 7f
+        E 192 80 3c 00
+        E 6528 b0 7b 00
+        CCINTERP 32
+        CHASE_CC_TAKEOFFS 1
+        GUID {C0F43A52-0416-58EB-8EF0-64ACB1CA3447}
+        IGNTEMPO 0 120 4 4
+        SRCCOLOR 49
+        EVTFILTER 0 -1 -1 -1 -1 0 0 0 0 -1 -1 -1 -1 0 -1 0 -1 -1
+      >
+    >
+  >
+  <TRACK {0EB94514-AEDD-5D49-BFAC-E61DCF136B80}
+    NAME qt_arrive
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    PANLAWFLAGS 3
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0 0
+    FIXEDLANES 9 0 0 0 0
+    SEL 0
+    REC 0 0 1 0 0 0 0 0
+    VU 64
+    TRACKHEIGHT 0 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {0EB94514-AEDD-5D49-BFAC-E61DCF136B80}
+    PERF 0
+    MIDIOUT -1 -1
+    MAINSEND 1 0
+    <FXCHAIN
+      SHOW 0
+      LASTSEL 0
+      DOCKED 0
+      BYPASS 0 0 0
+      <JS Bururu-DAW/bururu_voice.jsfx ""
+        0 170 0 0 0 0 500 2 100 0 1 0 0 900 2 0.35 1 1 0 0 0 0 80 70 2 30 20 3 0 1 0 1 0 0 0 0 127 0 - - - - - - - - - - - - - - - - - - - - - - - - - -
+      >
+      MULTIFXLINK 0
+      FLOATPOS 0 0 0 0
+      FXID {701375E1-E045-542F-9C3C-9D6F91BE0EE6}
+      WAK 0 0
+    >
+    <ITEM
+      POSITION 10.5
+      SNAPOFFS 0
+      LENGTH 3.5
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0 0 1 0 0 0 1 0 0 1 0 0
+      FADEOUT 1 0 0 1 0 0 0 1 0 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {3E92E6B5-FC77-5FDC-98A9-2608090ADFDC}
+      IID 4
+      NAME ""
+      VOLPAN 1 0 1 -1
+      SOFFS 0 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {553599C4-3069-5E84-B360-EA8A37DA7A4C}
+      <SOURCE MIDI
+        HASDATA 1 960 QN
+        CCINTERP 32
+        POOLEDEVTS {2052CC10-CDD7-5B5D-82DA-F59F57C1D00B}
+        E 0 90 3c 7f
+        E 192 80 3c 00
+        E 6528 b0 7b 00
+        CCINTERP 32
+        CHASE_CC_TAKEOFFS 1
+        GUID {B3606AB6-0C44-5F64-9EEA-BDB752CB717C}
+        IGNTEMPO 0 120 4 4
+        SRCCOLOR 49
+        EVTFILTER 0 -1 -1 -1 -1 0 0 0 0 -1 -1 -1 -1 0 -1 0 -1 -1
+      >
+    >
+  >
+  <TRACK {F0984A6E-7FF0-50EF-A510-B55CFCA9A449}
+    NAME qt_arrive_taps
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    PANLAWFLAGS 3
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0 0
+    FIXEDLANES 9 0 0 0 0
+    SEL 0
+    REC 0 0 1 0 0 0 0 0
+    VU 64
+    TRACKHEIGHT 0 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {F0984A6E-7FF0-50EF-A510-B55CFCA9A449}
+    PERF 0
+    MIDIOUT -1 -1
+    MAINSEND 1 0
+    <FXCHAIN
+      SHOW 0
+      LASTSEL 0
+      DOCKED 0
+      BYPASS 0 0 0
+      <JS Bururu-DAW/bururu_voice.jsfx ""
+        0 180 0 0 0 0 2 1 50 0 1 0 0 30 1 0.35 1 1 0 0 0 0 80 70 2 30 20 18 0 1 0 1 0 0 0 0 127 0 - - - - - - - - - - - - - - - - - - - - - - - - - -
+      >
+      MULTIFXLINK 0
+      FLOATPOS 0 0 0 0
+      FXID {4E6B5624-210B-5854-A422-511909226A80}
+      WAK 0 0
+      BYPASS 0 0 0
+      <JS Bururu-DAW/bururu_voice.jsfx ""
+        0 240 0 0 0 120 2 1 50 0 1 0 0 50 1 0.35 1 1 0 0 0 0 80 70 2 30 20 19 0 1 0 1 0 0 0 0 127 0 - - - - - - - - - - - - - - - - - - - - - - - - - -
+      >
+      MULTIFXLINK 0
+      FLOATPOS 0 0 0 0
+      FXID {0A864EA2-1C6C-5B75-AC60-6416B6D24D9B}
+      WAK 0 0
+    >
+    <ITEM
+      POSITION 14
+      SNAPOFFS 0
+      LENGTH 3.5
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0 0 1 0 0 0 1 0 0 1 0 0
+      FADEOUT 1 0 0 1 0 0 0 1 0 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {CD61B82B-91F7-5E65-9E0E-FAB314F07979}
+      IID 5
+      NAME ""
+      VOLPAN 1 0 1 -1
+      SOFFS 0 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {D7D8B105-5FAA-543C-9139-1D77A716986C}
+      <SOURCE MIDI
+        HASDATA 1 960 QN
+        CCINTERP 32
+        POOLEDEVTS {58A809AF-10A0-556C-81E8-9B29645CCEFD}
+        E 0 90 3c 7f
+        E 192 80 3c 00
+        E 6528 b0 7b 00
+        CCINTERP 32
+        CHASE_CC_TAKEOFFS 1
+        GUID {35DA30BF-EB08-5651-A86C-1EF16BA3EE21}
+        IGNTEMPO 0 120 4 4
+        SRCCOLOR 49
+        EVTFILTER 0 -1 -1 -1 -1 0 0 0 0 -1 -1 -1 -1 0 -1 0 -1 -1
+      >
+    >
+  >
+  <TRACK {F09BFED6-54BD-510C-9D6E-7A505132A93E}
+    NAME jump_step
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    PANLAWFLAGS 3
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0 0
+    FIXEDLANES 9 0 0 0 0
+    SEL 0
+    REC 0 0 1 0 0 0 0 0
+    VU 64
+    TRACKHEIGHT 0 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {F09BFED6-54BD-510C-9D6E-7A505132A93E}
+    PERF 0
+    MIDIOUT -1 -1
+    MAINSEND 1 0
+    <FXCHAIN
+      SHOW 0
+      LASTSEL 0
+      DOCKED 0
+      BYPASS 0 0 0
+      <JS Bururu-DAW/bururu_voice.jsfx ""
+        1 170 0 0 0 0 1 1 12 0 1 0 0 6 1 0.35 0 1 0 0 0 0 80 70 2 30 20 71 0 1 0 1 0 0 0 0 127 0 - - - - - - - - - - - - - - - - - - - - - - - - - -
+      >
+      MULTIFXLINK 0
+      FLOATPOS 0 0 0 0
+      FXID {23236547-7C8C-5353-92F7-6866557A7D9F}
+      WAK 0 0
+    >
+    <ITEM
+      POSITION 17.5
+      SNAPOFFS 0
+      LENGTH 3.5
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0 0 1 0 0 0 1 0 0 1 0 0
+      FADEOUT 1 0 0 1 0 0 0 1 0 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {C8E8F4E4-19EF-54BC-8BE9-0BEE04A3A10C}
+      IID 6
+      NAME ""
+      VOLPAN 1 0 1 -1
+      SOFFS 0 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {CDF69DD4-7237-5AE7-B2E5-8832CB92A3EF}
+      <SOURCE MIDI
+        HASDATA 1 960 QN
+        CCINTERP 32
+        POOLEDEVTS {EE5EB85D-D6D0-519A-8A7E-6D8E1BF1EC70}
+        E 0 90 3c 7f
+        E 192 80 3c 00
+        E 6528 b0 7b 00
+        CCINTERP 32
+        CHASE_CC_TAKEOFFS 1
+        GUID {A53CE50C-8823-5DBA-AD67-F6A2B855F445}
+        IGNTEMPO 0 120 4 4
+        SRCCOLOR 49
+        EVTFILTER 0 -1 -1 -1 -1 0 0 0 0 -1 -1 -1 -1 0 -1 0 -1 -1
+      >
+    >
+  >
+  <TRACK {C8AAC8FD-0B57-5FBA-AF92-2F99B1974337}
+    NAME hangar_ready
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    PANLAWFLAGS 3
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0 0
+    FIXEDLANES 9 0 0 0 0
+    SEL 0
+    REC 0 0 1 0 0 0 0 0
+    VU 64
+    TRACKHEIGHT 0 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {C8AAC8FD-0B57-5FBA-AF92-2F99B1974337}
+    PERF 0
+    MIDIOUT -1 -1
+    MAINSEND 1 0
+    <FXCHAIN
+      SHOW 0
+      LASTSEL 0
+      DOCKED 0
+      BYPASS 0 0 0
+      <JS Bururu-DAW/bururu_voice.jsfx ""
+        0 180 0 0 0 0 2 1 50 0 1 0 0 30 1 0.35 1 1 0 0 0 0 80 70 2 30 20 18 0 1 0 1 0 0 0 0 127 0 - - - - - - - - - - - - - - - - - - - - - - - - - -
+      >
+      MULTIFXLINK 0
+      FLOATPOS 0 0 0 0
+      FXID {51E34E44-F58F-53A2-AC4E-C26A561DCC84}
+      WAK 0 0
+      BYPASS 0 0 0
+      <JS Bururu-DAW/bururu_voice.jsfx ""
+        0 240 0 0 0 120 2 1 50 0 1 0 0 50 1 0.35 1 1 0 0 0 0 80 70 2 30 20 19 0 1 0 1 0 0 0 0 127 0 - - - - - - - - - - - - - - - - - - - - - - - - - -
+      >
+      MULTIFXLINK 0
+      FLOATPOS 0 0 0 0
+      FXID {52BE558B-7EC2-5911-AD5F-5EE2C5CD04D4}
+      WAK 0 0
+    >
+    <ITEM
+      POSITION 21
+      SNAPOFFS 0
+      LENGTH 3.5
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0 0 1 0 0 0 1 0 0 1 0 0
+      FADEOUT 1 0 0 1 0 0 0 1 0 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {79D292E9-B600-5550-85EC-B5944ED9FF08}
+      IID 7
+      NAME ""
+      VOLPAN 1 0 1 -1
+      SOFFS 0 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {72F17820-7D95-55BE-820F-7CB2A92367C2}
+      <SOURCE MIDI
+        HASDATA 1 960 QN
+        CCINTERP 32
+        POOLEDEVTS {DBF9B410-F5D4-56B9-876B-E36F68196669}
+        E 0 90 3c 7f
+        E 192 80 3c 00
+        E 6528 b0 7b 00
+        CCINTERP 32
+        CHASE_CC_TAKEOFFS 1
+        GUID {90445816-E24A-5D87-9AE4-F91ABF20318B}
+        IGNTEMPO 0 120 4 4
+        SRCCOLOR 49
+        EVTFILTER 0 -1 -1 -1 -1 0 0 0 0 -1 -1 -1 -1 0 -1 0 -1 -1
+      >
+    >
+  >
+  <TRACK {CECAD758-554D-5897-8F5F-177E1303B2BB}
+    NAME notice
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    PANLAWFLAGS 3
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0 0
+    FIXEDLANES 9 0 0 0 0
+    SEL 0
+    REC 0 0 1 0 0 0 0 0
+    VU 64
+    TRACKHEIGHT 0 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {CECAD758-554D-5897-8F5F-177E1303B2BB}
+    PERF 0
+    MIDIOUT -1 -1
+    MAINSEND 1 0
+    <FXCHAIN
+      SHOW 0
+      LASTSEL 0
+      DOCKED 0
+      BYPASS 0 0 0
+      <JS Bururu-DAW/bururu_voice.jsfx ""
+        0 170 0 0 0 0 5 1 70 0 1 0 0 20 1 0.45 1 1 0 0 0 0 80 70 2 30 20 67 0 1 0 1 0 0 0 0 127 0 - - - - - - - - - - - - - - - - - - - - - - - - - -
+      >
+      MULTIFXLINK 0
+      FLOATPOS 0 0 0 0
+      FXID {DC4F8AC0-F2C4-54A0-BE65-B8FBC7A74993}
+      WAK 0 0
+      BYPASS 0 0 0
+      <JS Bururu-DAW/bururu_voice.jsfx ""
+        0 170 0 0 0 180 5 1 70 0 1 0 0 20 1 0.45 1 1 0 0 0 0 80 70 2 30 20 68 0 1 0 1 0 0 0 0 127 0 - - - - - - - - - - - - - - - - - - - - - - - - - -
+      >
+      MULTIFXLINK 0
+      FLOATPOS 0 0 0 0
+      FXID {901C1E7B-7DA9-5EEA-A1EC-444BF1EE3672}
+      WAK 0 0
+    >
+    <ITEM
+      POSITION 24.5
+      SNAPOFFS 0
+      LENGTH 3.5
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0 0 1 0 0 0 1 0 0 1 0 0
+      FADEOUT 1 0 0 1 0 0 0 1 0 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {464F04E8-87AF-5234-8DC8-2C032F7A4FBE}
+      IID 8
+      NAME ""
+      VOLPAN 1 0 1 -1
+      SOFFS 0 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {4119E015-8E88-59E8-A9E9-AA0272476640}
+      <SOURCE MIDI
+        HASDATA 1 960 QN
+        CCINTERP 32
+        POOLEDEVTS {355A3669-FD98-5E27-A0AC-B680E93763A3}
+        E 0 90 3c 7f
+        E 192 80 3c 00
+        E 6528 b0 7b 00
+        CCINTERP 32
+        CHASE_CC_TAKEOFFS 1
+        GUID {218B152F-3E3C-5F26-AE1F-0F57427BE495}
+        IGNTEMPO 0 120 4 4
+        SRCCOLOR 49
+        EVTFILTER 0 -1 -1 -1 -1 0 0 0 0 -1 -1 -1 -1 0 -1 0 -1 -1
+      >
+    >
+  >
+  <TRACK {1C63CFC8-6E1B-5404-873D-F1BDE1110434}
+    NAME elevator
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    PANLAWFLAGS 3
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0 0
+    FIXEDLANES 9 0 0 0 0
+    SEL 0
+    REC 0 0 1 0 0 0 0 0
+    VU 64
+    TRACKHEIGHT 0 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {1C63CFC8-6E1B-5404-873D-F1BDE1110434}
+    PERF 0
+    MIDIOUT -1 -1
+    MAINSEND 1 0
+    <FXCHAIN
+      SHOW 0
+      LASTSEL 0
+      DOCKED 0
+      BYPASS 0 0 0
+      <JS Bururu-DAW/bururu_voice.jsfx ""
+        7 170 0 0 0 0 300 1 400 0 1 0 0 500 1 0.15 1 1 0 0 0 0 80 30 2 30 20 4 0 1 0 1 0 0 0 0 127 0 - - - - - - - - - - - - - - - - - - - - - - - - - -
+      >
+      MULTIFXLINK 0
+      FLOATPOS 0 0 0 0
+      FXID {1D6F24E7-28DC-5505-89FB-71A34FAA31DA}
+      WAK 0 0
+    >
+    <ITEM
+      POSITION 28
+      SNAPOFFS 0
+      LENGTH 3.5
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0 0 1 0 0 0 1 0 0 1 0 0
+      FADEOUT 1 0 0 1 0 0 0 1 0 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {AFF10BD0-5B2C-5BBB-9677-5BA91CE3B8CF}
+      IID 9
+      NAME ""
+      VOLPAN 1 0 1 -1
+      SOFFS 0 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {B6CD806D-9F47-5447-B1FF-EFC73D2024C2}
+      <SOURCE MIDI
+        HASDATA 1 960 QN
+        CCINTERP 32
+        POOLEDEVTS {CB86A0F0-DFE1-59A4-9A26-27EB418D46EC}
+        E 0 90 3c 7f
+        E 192 80 3c 00
+        E 6528 b0 7b 00
+        CCINTERP 32
+        CHASE_CC_TAKEOFFS 1
+        GUID {11E7E655-DB0A-515D-BFEF-3E1AA7FD9A0C}
+        IGNTEMPO 0 120 4 4
+        SRCCOLOR 49
+        EVTFILTER 0 -1 -1 -1 -1 0 0 0 0 -1 -1 -1 -1 0 -1 0 -1 -1
+      >
+    >
+  >
+  <TRACK {62CA21B3-DBE2-5539-B5FA-32D46F1A8DAF}
+    NAME stowed
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    PANLAWFLAGS 3
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0 0
+    FIXEDLANES 9 0 0 0 0
+    SEL 0
+    REC 0 0 1 0 0 0 0 0
+    VU 64
+    TRACKHEIGHT 0 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {62CA21B3-DBE2-5539-B5FA-32D46F1A8DAF}
+    PERF 0
+    MIDIOUT -1 -1
+    MAINSEND 1 0
+    <FXCHAIN
+      SHOW 0
+      LASTSEL 0
+      DOCKED 0
+      BYPASS 0 0 0
+      <JS Bururu-DAW/bururu_voice.jsfx ""
+        0 150 0 0 0 0 2 1 60 0 1 0 0 120 1 0.5 1 1 0 0 0 0 80 70 2 30 20 5 0 1 0 1 0 0 0 0 127 0 - - - - - - - - - - - - - - - - - - - - - - - - - -
+      >
+      MULTIFXLINK 0
+      FLOATPOS 0 0 0 0
+      FXID {E2424E8A-C88D-5BB2-BB45-FCC3936CCF60}
+      WAK 0 0
+      BYPASS 0 0 0
+      <JS Bururu-DAW/bururu_voice.jsfx ""
+        0 130 0 0 0 220 2 1 60 0 1 0 0 200 1 0.5 1 1 0 0 0 0 80 70 2 30 20 6 0 1 0 1 0 0 0 0 127 0 - - - - - - - - - - - - - - - - - - - - - - - - - -
+      >
+      MULTIFXLINK 0
+      FLOATPOS 0 0 0 0
+      FXID {F70F4FD2-6673-50F4-96E0-1B3E69EA6247}
+      WAK 0 0
+      BYPASS 0 0 0
+      <JS Bururu-DAW/bururu_voice.jsfx ""
+        6 300 0 0 0 250 50 1 0 0 1 0 0 400 1 0.15 1 1 0 0 0 0 120 70 2 30 20 7 0 1 0 1 0 0 0 0 127 0 - - - - - - - - - - - - - - - - - - - - - - - - - -
+      >
+      MULTIFXLINK 0
+      FLOATPOS 0 0 0 0
+      FXID {E94D7269-FE6F-5049-80DE-2D7BD22D8EB8}
+      WAK 0 0
+    >
+    <ITEM
+      POSITION 31.5
+      SNAPOFFS 0
+      LENGTH 3.5
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0 0 1 0 0 0 1 0 0 1 0 0
+      FADEOUT 1 0 0 1 0 0 0 1 0 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {BEA32A4F-12E1-5F00-9097-E4A11026E9CD}
+      IID 10
+      NAME ""
+      VOLPAN 1 0 1 -1
+      SOFFS 0 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {3EA00C23-79B2-561B-BBD3-CE26881A8DE9}
+      <SOURCE MIDI
+        HASDATA 1 960 QN
+        CCINTERP 32
+        POOLEDEVTS {69E4A4C8-99A8-509A-B8C2-817CAE827577}
+        E 0 90 3c 7f
+        E 192 80 3c 00
+        E 6528 b0 7b 00
+        CCINTERP 32
+        CHASE_CC_TAKEOFFS 1
+        GUID {6AC61FBB-B8B1-510F-A588-B9D412676C31}
+        IGNTEMPO 0 120 4 4
+        SRCCOLOR 49
+        EVTFILTER 0 -1 -1 -1 -1 0 0 0 0 -1 -1 -1 -1 0 -1 0 -1 -1
+      >
+    >
+  >
+  <TRACK {A897A1AF-0FC6-55D3-8EC3-7ED1D72E581D}
+    NAME crash
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    PANLAWFLAGS 3
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0 0
+    FIXEDLANES 9 0 0 0 0
+    SEL 0
+    REC 0 0 1 0 0 0 0 0
+    VU 64
+    TRACKHEIGHT 0 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {A897A1AF-0FC6-55D3-8EC3-7ED1D72E581D}
+    PERF 0
+    MIDIOUT -1 -1
+    MAINSEND 1 0
+    <FXCHAIN
+      SHOW 0
+      LASTSEL 0
+      DOCKED 0
+      BYPASS 0 0 0
+      <JS Bururu-DAW/bururu_voice.jsfx ""
+        1 120 0 0 0 0 2 1 60 0 1 0 0 220 1 0.5 1 1 0 0 0 0 80 70 2 30 20 8 0 1 0 1 0 0 0 0 127 0 - - - - - - - - - - - - - - - - - - - - - - - - - -
+      >
+      MULTIFXLINK 0
+      FLOATPOS 0 0 0 0
+      FXID {CC8C84BD-A867-5160-8FAF-4F93035BE05D}
+      WAK 0 0
+      BYPASS 0 0 0
+      <JS Bururu-DAW/bururu_voice.jsfx ""
+        6 220 0 0 0 0 2 1 40 0 1 0 0 250 1 0.28 1 1 0 0 0 0 120 70 2 30 20 9 0 1 0 1 0 0 0 0 127 0 - - - - - - - - - - - - - - - - - - - - - - - - - -
+      >
+      MULTIFXLINK 0
+      FLOATPOS 0 0 0 0
+      FXID {03F7FEB4-2B54-5A09-A1B8-3BA1D4379791}
+      WAK 0 0
+    >
+    <ITEM
+      POSITION 35
+      SNAPOFFS 0
+      LENGTH 3.5
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0 0 1 0 0 0 1 0 0 1 0 0
+      FADEOUT 1 0 0 1 0 0 0 1 0 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {54984EB0-ECF3-5507-AA30-2DCA73336FF2}
+      IID 11
+      NAME ""
+      VOLPAN 1 0 1 -1
+      SOFFS 0 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {8782CE31-9A11-50D6-AE68-423B922C3067}
+      <SOURCE MIDI
+        HASDATA 1 960 QN
+        CCINTERP 32
+        POOLEDEVTS {5D55C869-CD51-560E-A9B7-80077CAD2024}
+        E 0 90 3c 7f
+        E 192 80 3c 00
+        E 6528 b0 7b 00
+        CCINTERP 32
+        CHASE_CC_TAKEOFFS 1
+        GUID {0A4EB890-94F9-5B09-A096-676042618A8A}
+        IGNTEMPO 0 120 4 4
+        SRCCOLOR 49
+        EVTFILTER 0 -1 -1 -1 -1 0 0 0 0 -1 -1 -1 -1 0 -1 0 -1 -1
+      >
+    >
+  >
+  <TRACK {A73041E6-B4A6-5363-B1FB-D8749FE82FFF}
+    NAME died
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    PANLAWFLAGS 3
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0 0
+    FIXEDLANES 9 0 0 0 0
+    SEL 0
+    REC 0 0 1 0 0 0 0 0
+    VU 64
+    TRACKHEIGHT 0 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {A73041E6-B4A6-5363-B1FB-D8749FE82FFF}
+    PERF 0
+    MIDIOUT -1 -1
+    MAINSEND 1 0
+    <FXCHAIN
+      SHOW 0
+      LASTSEL 0
+      DOCKED 0
+      BYPASS 0 0 0
+      <JS Bururu-DAW/bururu_voice.jsfx ""
+        0 180 110 0 0 0 10 1 300 0 1 0 0 1100 2 0.58 1 1 0 0 0 0 80 70 2 30 20 10 0 1 0 1 0 0 0 0 127 0 - - - - - - - - - - - - - - - - - - - - - - - - - -
+      >
+      MULTIFXLINK 0
+      FLOATPOS 0 0 0 0
+      FXID {005D5E71-5D94-5072-90CA-A2C053DCA504}
+      WAK 0 0
+      BYPASS 0 0 0
+      <JS Bururu-DAW/bururu_voice.jsfx ""
+        6 250 0 0 0 0 10 1 150 0 1 0 0 600 1 0.25 1 1 0 0 0 0 120 70 2 30 20 11 0 1 0 1 0 0 0 0 127 0 - - - - - - - - - - - - - - - - - - - - - - - - - -
+      >
+      MULTIFXLINK 0
+      FLOATPOS 0 0 0 0
+      FXID {DA3E7DC9-48E3-59A6-AE82-F67A08B8729D}
+      WAK 0 0
+    >
+    <ITEM
+      POSITION 38.5
+      SNAPOFFS 0
+      LENGTH 3.5
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0 0 1 0 0 0 1 0 0 1 0 0
+      FADEOUT 1 0 0 1 0 0 0 1 0 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {8D87FD57-FD4C-5195-818B-8D0328C7CE4A}
+      IID 12
+      NAME ""
+      VOLPAN 1 0 1 -1
+      SOFFS 0 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {2D8583AE-6533-5A44-94B9-2838F8F9C451}
+      <SOURCE MIDI
+        HASDATA 1 960 QN
+        CCINTERP 32
+        POOLEDEVTS {D2F1660F-9D81-5CD7-9BAB-F63BC7E874AF}
+        E 0 90 3c 7f
+        E 192 80 3c 00
+        E 6528 b0 7b 00
+        CCINTERP 32
+        CHASE_CC_TAKEOFFS 1
+        GUID {7DD62DD3-A203-5E91-AED8-0A6F28F52DA4}
+        IGNTEMPO 0 120 4 4
+        SRCCOLOR 49
+        EVTFILTER 0 -1 -1 -1 -1 0 0 0 0 -1 -1 -1 -1 0 -1 0 -1 -1
+      >
+    >
+  >
+  <TRACK {C146D81F-0D21-5978-A953-3A84A31D993B}
+    NAME heartbeat
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    PANLAWFLAGS 3
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0 0
+    FIXEDLANES 9 0 0 0 0
+    SEL 0
+    REC 0 0 1 0 0 0 0 0
+    VU 64
+    TRACKHEIGHT 0 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {C146D81F-0D21-5978-A953-3A84A31D993B}
+    PERF 0
+    MIDIOUT -1 -1
+    MAINSEND 1 0
+    <FXCHAIN
+      SHOW 0
+      LASTSEL 0
+      DOCKED 0
+      BYPASS 0 0 0
+      <JS Bururu-DAW/bururu_voice.jsfx ""
+        0 150 0 0 0 0 5 1 40 0 1 0 0 25 1 0.35 1 1 0 0 0 0 80 70 2 30 20 12 0 1 0 1 0 0 0 0 127 0 - - - - - - - - - - - - - - - - - - - - - - - - - -
+      >
+      MULTIFXLINK 0
+      FLOATPOS 0 0 0 0
+      FXID {1A70E73F-3BF6-5AEF-B2A5-ABA1BD258EAA}
+      WAK 0 0
+      BYPASS 0 0 0
+      <JS Bururu-DAW/bururu_voice.jsfx ""
+        0 130 0 0 0 200 5 1 50 0 1 0 0 35 1 0.35 1 1 0 0 0 0 80 70 2 30 20 13 0 1 0 1 0 0 0 0 127 0 - - - - - - - - - - - - - - - - - - - - - - - - - -
+      >
+      MULTIFXLINK 0
+      FLOATPOS 0 0 0 0
+      FXID {800FEEC4-F61F-59E6-88D7-AD5C78410C23}
+      WAK 0 0
+    >
+    <ITEM
+      POSITION 42
+      SNAPOFFS 0
+      LENGTH 3.5
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0 0 1 0 0 0 1 0 0 1 0 0
+      FADEOUT 1 0 0 1 0 0 0 1 0 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {A7A53631-C0C0-52E4-A1F7-BC0D252D6E0C}
+      IID 13
+      NAME ""
+      VOLPAN 1 0 1 -1
+      SOFFS 0 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {CDA3811E-BB21-51BA-9B77-8A053ED25E6A}
+      <SOURCE MIDI
+        HASDATA 1 960 QN
+        CCINTERP 32
+        POOLEDEVTS {7154E4E1-C981-595F-8B8B-E11DA374038A}
+        E 0 90 3c 7f
+        E 192 80 3c 00
+        E 6528 b0 7b 00
+        CCINTERP 32
+        CHASE_CC_TAKEOFFS 1
+        GUID {D2C5AD12-9DB7-5A59-8083-8ED8F7903182}
+        IGNTEMPO 0 120 4 4
+        SRCCOLOR 49
+        EVTFILTER 0 -1 -1 -1 -1 0 0 0 0 -1 -1 -1 -1 0 -1 0 -1 -1
+      >
+    >
+  >
+  <TRACK {706AAB3D-A18E-5E61-88C2-38ABE5CEA944}
+    NAME injury
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    PANLAWFLAGS 3
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0 0
+    FIXEDLANES 9 0 0 0 0
+    SEL 0
+    REC 0 0 1 0 0 0 0 0
+    VU 64
+    TRACKHEIGHT 0 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {706AAB3D-A18E-5E61-88C2-38ABE5CEA944}
+    PERF 0
+    MIDIOUT -1 -1
+    MAINSEND 1 0
+    <FXCHAIN
+      SHOW 0
+      LASTSEL 0
+      DOCKED 0
+      BYPASS 0 0 0
+      <JS Bururu-DAW/bururu_voice.jsfx ""
+        0 150 0 0 0 0 3 1 40 0 1 0 0 120 1 0.4 1 1 0 0 0 0 80 70 2 30 20 14 0 1 0 1 0 0 0 0 127 0 - - - - - - - - - - - - - - - - - - - - - - - - - -
+      >
+      MULTIFXLINK 0
+      FLOATPOS 0 0 0 0
+      FXID {665F8228-4EEE-50DA-8CF1-A3A291BF32B0}
+      WAK 0 0
+    >
+    <ITEM
+      POSITION 45.5
+      SNAPOFFS 0
+      LENGTH 3.5
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0 0 1 0 0 0 1 0 0 1 0 0
+      FADEOUT 1 0 0 1 0 0 0 1 0 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {13487214-211C-5183-8D4E-05B0754690C9}
+      IID 14
+      NAME ""
+      VOLPAN 1 0 1 -1
+      SOFFS 0 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {29B25161-6784-5852-9281-9C9686072FE6}
+      <SOURCE MIDI
+        HASDATA 1 960 QN
+        CCINTERP 32
+        POOLEDEVTS {635BAA5E-BE68-5A1C-9D7B-F287039324E5}
+        E 0 90 3c 7f
+        E 192 80 3c 00
+        E 6528 b0 7b 00
+        CCINTERP 32
+        CHASE_CC_TAKEOFFS 1
+        GUID {DE39DCC3-24E8-5A71-B763-16B198182CA6}
+        IGNTEMPO 0 120 4 4
+        SRCCOLOR 49
+        EVTFILTER 0 -1 -1 -1 -1 0 0 0 0 -1 -1 -1 -1 0 -1 0 -1 -1
+      >
+    >
+  >
+  <TRACK {E87AA0D9-03B8-5FEA-B865-4B71AC63E466}
+    NAME healed
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    PANLAWFLAGS 3
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0 0
+    FIXEDLANES 9 0 0 0 0
+    SEL 0
+    REC 0 0 1 0 0 0 0 0
+    VU 64
+    TRACKHEIGHT 0 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {E87AA0D9-03B8-5FEA-B865-4B71AC63E466}
+    PERF 0
+    MIDIOUT -1 -1
+    MAINSEND 1 0
+    <FXCHAIN
+      SHOW 0
+      LASTSEL 0
+      DOCKED 0
+      BYPASS 0 0 0
+      <JS Bururu-DAW/bururu_voice.jsfx ""
+        0 140 190 0 0 0 200 1 100 0 1 0 0 300 1 0.3 1 1 0 0 0 0 80 70 2 30 20 15 0 1 0 1 0 0 0 0 127 0 - - - - - - - - - - - - - - - - - - - - - - - - - -
+      >
+      MULTIFXLINK 0
+      FLOATPOS 0 0 0 0
+      FXID {E720ED7E-91FB-5EC1-A95D-BA8F36C50E07}
+      WAK 0 0
+    >
+    <ITEM
+      POSITION 49
+      SNAPOFFS 0
+      LENGTH 3.5
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0 0 1 0 0 0 1 0 0 1 0 0
+      FADEOUT 1 0 0 1 0 0 0 1 0 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {ADC1C699-33EF-552E-B72B-18CAD373CA94}
+      IID 15
+      NAME ""
+      VOLPAN 1 0 1 -1
+      SOFFS 0 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {87C5AF13-1D76-576C-9AEE-F0CB7CF0C29A}
+      <SOURCE MIDI
+        HASDATA 1 960 QN
+        CCINTERP 32
+        POOLEDEVTS {30207689-22D6-580B-AB8B-B45C679ECF7F}
+        E 0 90 3c 7f
+        E 192 80 3c 00
+        E 6528 b0 7b 00
+        CCINTERP 32
+        CHASE_CC_TAKEOFFS 1
+        GUID {5364064E-654D-5F14-BC67-F8F76AFEB9A7}
+        IGNTEMPO 0 120 4 4
+        SRCCOLOR 49
+        EVTFILTER 0 -1 -1 -1 -1 0 0 0 0 -1 -1 -1 -1 0 -1 0 -1 -1
+      >
+    >
+  >
+  <TRACK {45BAD172-31E1-590D-AC31-839E68F02095}
+    NAME zone_in
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    PANLAWFLAGS 3
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0 0
+    FIXEDLANES 9 0 0 0 0
+    SEL 0
+    REC 0 0 1 0 0 0 0 0
+    VU 64
+    TRACKHEIGHT 0 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {45BAD172-31E1-590D-AC31-839E68F02095}
+    PERF 0
+    MIDIOUT -1 -1
+    MAINSEND 1 0
+    <FXCHAIN
+      SHOW 0
+      LASTSEL 0
+      DOCKED 0
+      BYPASS 0 0 0
+      <JS Bururu-DAW/bururu_voice.jsfx ""
+        0 200 0 0 0 0 2 1 30 0 1 0 0 20 1 0.3 1 1 0 0 0 0 80 70 2 30 20 16 0 1 0 1 0 0 0 0 127 0 - - - - - - - - - - - - - - - - - - - - - - - - - -
+      >
+      MULTIFXLINK 0
+      FLOATPOS 0 0 0 0
+      FXID {0842A5D7-254A-5251-96E6-99D90B3EEA07}
+      WAK 0 0
+      BYPASS 0 0 0
+      <JS Bururu-DAW/bururu_voice.jsfx ""
+        0 160 0 0 0 140 2 1 30 0 1 0 0 20 1 0.3 1 1 0 0 0 0 80 70 2 30 20 17 0 1 0 1 0 0 0 0 127 0 - - - - - - - - - - - - - - - - - - - - - - - - - -
+      >
+      MULTIFXLINK 0
+      FLOATPOS 0 0 0 0
+      FXID {49C7E323-498B-54DA-A2F2-F4A4E6B182F6}
+      WAK 0 0
+    >
+    <ITEM
+      POSITION 52.5
+      SNAPOFFS 0
+      LENGTH 3.5
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0 0 1 0 0 0 1 0 0 1 0 0
+      FADEOUT 1 0 0 1 0 0 0 1 0 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {36219065-8CCB-5E49-8897-E99FC1DD2676}
+      IID 16
+      NAME ""
+      VOLPAN 1 0 1 -1
+      SOFFS 0 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {A6326595-B1C7-548B-A42D-599BD098664D}
+      <SOURCE MIDI
+        HASDATA 1 960 QN
+        CCINTERP 32
+        POOLEDEVTS {623E3FA0-A8AB-5D45-ADA6-51061EBD06D9}
+        E 0 90 3c 7f
+        E 192 80 3c 00
+        E 6528 b0 7b 00
+        CCINTERP 32
+        CHASE_CC_TAKEOFFS 1
+        GUID {F5D90E20-A7A7-5D4D-9A08-9EC6A58D037E}
+        IGNTEMPO 0 120 4 4
+        SRCCOLOR 49
+        EVTFILTER 0 -1 -1 -1 -1 0 0 0 0 -1 -1 -1 -1 0 -1 0 -1 -1
+      >
+    >
+  >
+  <TRACK {DFCD6A85-47A7-5953-959D-60E8A4F680A5}
+    NAME zone_out
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    PANLAWFLAGS 3
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0 0
+    FIXEDLANES 9 0 0 0 0
+    SEL 0
+    REC 0 0 1 0 0 0 0 0
+    VU 64
+    TRACKHEIGHT 0 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {DFCD6A85-47A7-5953-959D-60E8A4F680A5}
+    PERF 0
+    MIDIOUT -1 -1
+    MAINSEND 1 0
+    <FXCHAIN
+      SHOW 0
+      LASTSEL 0
+      DOCKED 0
+      BYPASS 0 0 0
+      <JS Bururu-DAW/bururu_voice.jsfx ""
+        0 160 0 0 0 0 2 1 30 0 1 0 0 20 1 0.3 1 1 0 0 0 0 80 70 2 30 20 18 0 1 0 1 0 0 0 0 127 0 - - - - - - - - - - - - - - - - - - - - - - - - - -
+      >
+      MULTIFXLINK 0
+      FLOATPOS 0 0 0 0
+      FXID {85DF04BF-0BE3-51DB-BE8A-E8C293DE4367}
+      WAK 0 0
+      BYPASS 0 0 0
+      <JS Bururu-DAW/bururu_voice.jsfx ""
+        0 200 0 0 0 140 2 1 30 0 1 0 0 20 1 0.3 1 1 0 0 0 0 80 70 2 30 20 19 0 1 0 1 0 0 0 0 127 0 - - - - - - - - - - - - - - - - - - - - - - - - - -
+      >
+      MULTIFXLINK 0
+      FLOATPOS 0 0 0 0
+      FXID {B50A554A-9EE0-5862-96E1-877C19B3B57C}
+      WAK 0 0
+    >
+    <ITEM
+      POSITION 56
+      SNAPOFFS 0
+      LENGTH 3.5
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0 0 1 0 0 0 1 0 0 1 0 0
+      FADEOUT 1 0 0 1 0 0 0 1 0 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {FEDA70B1-ADA1-5C8B-903A-04A4D1FC6A80}
+      IID 17
+      NAME ""
+      VOLPAN 1 0 1 -1
+      SOFFS 0 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {F744F779-F582-5FBA-A360-2CAC6096B8B9}
+      <SOURCE MIDI
+        HASDATA 1 960 QN
+        CCINTERP 32
+        POOLEDEVTS {77F8CC45-FC89-5568-A740-D0DAEE8C10D3}
+        E 0 90 3c 7f
+        E 192 80 3c 00
+        E 6528 b0 7b 00
+        CCINTERP 32
+        CHASE_CC_TAKEOFFS 1
+        GUID {192DC21A-2CFC-5A3E-BFEC-02E4F9C787A5}
+        IGNTEMPO 0 120 4 4
+        SRCCOLOR 49
+        EVTFILTER 0 -1 -1 -1 -1 0 0 0 0 -1 -1 -1 -1 0 -1 0 -1 -1
+      >
+    >
+  >
+  <TRACK {A77CD9DA-B816-591E-8040-8749B18A0366}
+    NAME crime
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    PANLAWFLAGS 3
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0 0
+    FIXEDLANES 9 0 0 0 0
+    SEL 0
+    REC 0 0 1 0 0 0 0 0
+    VU 64
+    TRACKHEIGHT 0 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {A77CD9DA-B816-591E-8040-8749B18A0366}
+    PERF 0
+    MIDIOUT -1 -1
+    MAINSEND 1 0
+    <FXCHAIN
+      SHOW 0
+      LASTSEL 0
+      DOCKED 0
+      BYPASS 0 0 0
+      <JS Bururu-DAW/bururu_voice.jsfx ""
+        1 200 0 0 0 0 1 1 12 0 1 0 0 6 1 0.35 1 1 0 0 0 0 80 70 2 30 20 20 0 1 0 1 0 0 0 0 127 0 - - - - - - - - - - - - - - - - - - - - - - - - - -
+      >
+      MULTIFXLINK 0
+      FLOATPOS 0 0 0 0
+      FXID {136B5B39-BBD8-5376-93DE-D01DBE2AC09C}
+      WAK 0 0
+      BYPASS 0 0 0
+      <JS Bururu-DAW/bururu_voice.jsfx ""
+        1 200 0 0 0 160 1 1 12 0 1 0 0 6 1 0.35 1 1 0 0 0 0 80 70 2 30 20 21 0 1 0 1 0 0 0 0 127 0 - - - - - - - - - - - - - - - - - - - - - - - - - -
+      >
+      MULTIFXLINK 0
+      FLOATPOS 0 0 0 0
+      FXID {C9FFF8EE-07E5-5F2D-A8D3-239A7FCFC70E}
+      WAK 0 0
+      BYPASS 0 0 0
+      <JS Bururu-DAW/bururu_voice.jsfx ""
+        1 200 0 0 0 320 1 1 12 0 1 0 0 6 1 0.35 1 1 0 0 0 0 80 70 2 30 20 22 0 1 0 1 0 0 0 0 127 0 - - - - - - - - - - - - - - - - - - - - - - - - - -
+      >
+      MULTIFXLINK 0
+      FLOATPOS 0 0 0 0
+      FXID {687A68E0-27C4-5F04-B23B-6E83191F679F}
+      WAK 0 0
+    >
+    <ITEM
+      POSITION 59.5
+      SNAPOFFS 0
+      LENGTH 3.5
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0 0 1 0 0 0 1 0 0 1 0 0
+      FADEOUT 1 0 0 1 0 0 0 1 0 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {6C730BDD-CBF7-54A1-9D5B-2545CD68830D}
+      IID 18
+      NAME ""
+      VOLPAN 1 0 1 -1
+      SOFFS 0 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {50BEF9D0-2082-5149-B7CB-92D2708E691F}
+      <SOURCE MIDI
+        HASDATA 1 960 QN
+        CCINTERP 32
+        POOLEDEVTS {83935EAC-F0F6-5E8E-96E3-1068DA734994}
+        E 0 90 3c 7f
+        E 192 80 3c 00
+        E 6528 b0 7b 00
+        CCINTERP 32
+        CHASE_CC_TAKEOFFS 1
+        GUID {BA270621-BD65-5328-A564-6C2699D5B0E4}
+        IGNTEMPO 0 120 4 4
+        SRCCOLOR 49
+        EVTFILTER 0 -1 -1 -1 -1 0 0 0 0 -1 -1 -1 -1 0 -1 0 -1 -1
+      >
+    >
+  >
+  <TRACK {14A02DFC-B1FE-563E-B090-E3A9B25FB3EC}
+    NAME attacked
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    PANLAWFLAGS 3
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0 0
+    FIXEDLANES 9 0 0 0 0
+    SEL 0
+    REC 0 0 1 0 0 0 0 0
+    VU 64
+    TRACKHEIGHT 0 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {14A02DFC-B1FE-563E-B090-E3A9B25FB3EC}
+    PERF 0
+    MIDIOUT -1 -1
+    MAINSEND 1 0
+    <FXCHAIN
+      SHOW 0
+      LASTSEL 0
+      DOCKED 0
+      BYPASS 0 0 0
+      <JS Bururu-DAW/bururu_voice.jsfx ""
+        1 140 0 0 0 0 2 1 50 0 1 0 0 150 1 0.6 1 1 0 0 0 0 80 70 2 30 20 23 0 1 0 1 0 0 0 0 127 0 - - - - - - - - - - - - - - - - - - - - - - - - - -
+      >
+      MULTIFXLINK 0
+      FLOATPOS 0 0 0 0
+      FXID {152A11DD-6F79-5077-B94C-EEF9E21949BC}
+      WAK 0 0
+      BYPASS 0 0 0
+      <JS Bururu-DAW/bururu_voice.jsfx ""
+        6 220 0 0 0 0 2 1 80 0 1 0 0 250 1 0.3 1 1 35 0.8 0 0 160 70 2 30 20 24 0 1 0 1 0 0 0 0 127 0 - - - - - - - - - - - - - - - - - - - - - - - - - -
+      >
+      MULTIFXLINK 0
+      FLOATPOS 0 0 0 0
+      FXID {0679694C-F952-511A-88BD-37021361758D}
+      WAK 0 0
+      BYPASS 0 0 0
+      <JS Bururu-DAW/bururu_voice.jsfx ""
+        1 120 0 0 0 220 2 1 40 0 1 0 0 120 1 0.4 1 1 0 0 0 0 80 70 2 30 20 25 0 1 0 1 0 0 0 0 127 0 - - - - - - - - - - - - - - - - - - - - - - - - - -
+      >
+      MULTIFXLINK 0
+      FLOATPOS 0 0 0 0
+      FXID {BF1257FD-9397-51CC-B83B-96C5319DCC7A}
+      WAK 0 0
+    >
+    <ITEM
+      POSITION 63
+      SNAPOFFS 0
+      LENGTH 3.5
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0 0 1 0 0 0 1 0 0 1 0 0
+      FADEOUT 1 0 0 1 0 0 0 1 0 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {3EDE11DD-DC61-532D-981B-8996DF8C8A92}
+      IID 19
+      NAME ""
+      VOLPAN 1 0 1 -1
+      SOFFS 0 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {CCF4CE08-637C-5920-B977-9A420E641F5C}
+      <SOURCE MIDI
+        HASDATA 1 960 QN
+        CCINTERP 32
+        POOLEDEVTS {7563A339-70DC-5D8E-B101-20BCE9A5EE55}
+        E 0 90 3c 7f
+        E 192 80 3c 00
+        E 6528 b0 7b 00
+        CCINTERP 32
+        CHASE_CC_TAKEOFFS 1
+        GUID {D6766D7A-5F97-5437-A9FE-46EF7C1E8F73}
+        IGNTEMPO 0 120 4 4
+        SRCCOLOR 49
+        EVTFILTER 0 -1 -1 -1 -1 0 0 0 0 -1 -1 -1 -1 0 -1 0 -1 -1
+      >
+    >
+  >
+  <TRACK {820C3F64-3E8E-5560-A269-D69716D01DA8}
+    NAME low_fuel
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    PANLAWFLAGS 3
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0 0
+    FIXEDLANES 9 0 0 0 0
+    SEL 0
+    REC 0 0 1 0 0 0 0 0
+    VU 64
+    TRACKHEIGHT 0 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {820C3F64-3E8E-5560-A269-D69716D01DA8}
+    PERF 0
+    MIDIOUT -1 -1
+    MAINSEND 1 0
+    <FXCHAIN
+      SHOW 0
+      LASTSEL 0
+      DOCKED 0
+      BYPASS 0 0 0
+      <JS Bururu-DAW/bururu_voice.jsfx ""
+        1 160 0 0 0 0 1 1 12 0 1 0 0 6 1 0.3 1 1 0 0 0 0 80 70 2 30 20 42 0 1 0 1 0 0 0 0 127 0 - - - - - - - - - - - - - - - - - - - - - - - - - -
+      >
+      MULTIFXLINK 0
+      FLOATPOS 0 0 0 0
+      FXID {B869B1F4-AFEB-5DF5-A159-64B7631381C5}
+      WAK 0 0
+      BYPASS 0 0 0
+      <JS Bururu-DAW/bururu_voice.jsfx ""
+        1 160 0 0 0 160 1 1 12 0 1 0 0 6 1 0.3 1 1 0 0 0 0 80 70 2 30 20 43 0 1 0 1 0 0 0 0 127 0 - - - - - - - - - - - - - - - - - - - - - - - - - -
+      >
+      MULTIFXLINK 0
+      FLOATPOS 0 0 0 0
+      FXID {38A905A7-49BD-5BDE-AEE7-82374459AED8}
+      WAK 0 0
+      BYPASS 0 0 0
+      <JS Bururu-DAW/bururu_voice.jsfx ""
+        1 160 0 0 0 320 1 1 12 0 1 0 0 6 1 0.3 1 1 0 0 0 0 80 70 2 30 20 44 0 1 0 1 0 0 0 0 127 0 - - - - - - - - - - - - - - - - - - - - - - - - - -
+      >
+      MULTIFXLINK 0
+      FLOATPOS 0 0 0 0
+      FXID {F3EE5ACB-64DD-506E-A0A3-82F909C541F5}
+      WAK 0 0
+    >
+    <ITEM
+      POSITION 66.5
+      SNAPOFFS 0
+      LENGTH 3.5
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0 0 1 0 0 0 1 0 0 1 0 0
+      FADEOUT 1 0 0 1 0 0 0 1 0 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {5E599478-C37A-506D-B4A2-CCB92F9B376C}
+      IID 20
+      NAME ""
+      VOLPAN 1 0 1 -1
+      SOFFS 0 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {E74E5ACF-6A0B-507C-8C1B-3A772E382ABF}
+      <SOURCE MIDI
+        HASDATA 1 960 QN
+        CCINTERP 32
+        POOLEDEVTS {3AD90BDD-384F-577D-884C-B26A146FD3C0}
+        E 0 90 3c 7f
+        E 192 80 3c 00
+        E 6528 b0 7b 00
+        CCINTERP 32
+        CHASE_CC_TAKEOFFS 1
+        GUID {DE1E1E96-BBC2-5CD6-9ED1-8A712C93A59B}
+        IGNTEMPO 0 120 4 4
+        SRCCOLOR 49
+        EVTFILTER 0 -1 -1 -1 -1 0 0 0 0 -1 -1 -1 -1 0 -1 0 -1 -1
+      >
+    >
+  >
+  <TRACK {A8E97E37-3A0B-5D24-A942-19C7603CA413}
+    NAME success
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    PANLAWFLAGS 3
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0 0
+    FIXEDLANES 9 0 0 0 0
+    SEL 0
+    REC 0 0 1 0 0 0 0 0
+    VU 64
+    TRACKHEIGHT 0 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {A8E97E37-3A0B-5D24-A942-19C7603CA413}
+    PERF 0
+    MIDIOUT -1 -1
+    MAINSEND 1 0
+    <FXCHAIN
+      SHOW 0
+      LASTSEL 0
+      DOCKED 0
+      BYPASS 0 0 0
+      <JS Bururu-DAW/bururu_voice.jsfx ""
+        0 150 0 0 0 0 2 1 40 0 1 0 0 40 1 0.5 1 1 0 0 0 0 80 70 2 30 20 58 0 1 0 1 0 0 0 0 127 0 - - - - - - - - - - - - - - - - - - - - - - - - - -
+      >
+      MULTIFXLINK 0
+      FLOATPOS 0 0 0 0
+      FXID {8A567C53-55AB-549B-BB88-2C70CCE2B702}
+      WAK 0 0
+      BYPASS 0 0 0
+      <JS Bururu-DAW/bururu_voice.jsfx ""
+        0 190 0 0 0 120 2 1 50 0 1 0 0 80 1 0.5 1 1 0 0 0 0 80 70 2 30 20 59 0 1 0 1 0 0 0 0 127 0 - - - - - - - - - - - - - - - - - - - - - - - - - -
+      >
+      MULTIFXLINK 0
+      FLOATPOS 0 0 0 0
+      FXID {2A7CCF38-3A32-5F5C-8E7C-E84D23D50DEB}
+      WAK 0 0
+    >
+    <ITEM
+      POSITION 70
+      SNAPOFFS 0
+      LENGTH 3.5
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0 0 1 0 0 0 1 0 0 1 0 0
+      FADEOUT 1 0 0 1 0 0 0 1 0 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {8D9CC6E2-2BE6-54C4-80CC-47F360FA526C}
+      IID 21
+      NAME ""
+      VOLPAN 1 0 1 -1
+      SOFFS 0 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {D8BCB259-0CA6-5F8E-B49A-12E2067623F6}
+      <SOURCE MIDI
+        HASDATA 1 960 QN
+        CCINTERP 32
+        POOLEDEVTS {E63A9538-BBE3-553D-BD1A-66EF779F83E1}
+        E 0 90 3c 7f
+        E 192 80 3c 00
+        E 6528 b0 7b 00
+        CCINTERP 32
+        CHASE_CC_TAKEOFFS 1
+        GUID {A80A7497-8095-5A8C-B54D-CC3C1C93238C}
+        IGNTEMPO 0 120 4 4
+        SRCCOLOR 49
+        EVTFILTER 0 -1 -1 -1 -1 0 0 0 0 -1 -1 -1 -1 0 -1 0 -1 -1
+      >
+    >
+  >
+  <TRACK {4602A968-5A09-57FA-96D0-F746C45AFD09}
+    NAME failure
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    PANLAWFLAGS 3
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0 0
+    FIXEDLANES 9 0 0 0 0
+    SEL 0
+    REC 0 0 1 0 0 0 0 0
+    VU 64
+    TRACKHEIGHT 0 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {4602A968-5A09-57FA-96D0-F746C45AFD09}
+    PERF 0
+    MIDIOUT -1 -1
+    MAINSEND 1 0
+    <FXCHAIN
+      SHOW 0
+      LASTSEL 0
+      DOCKED 0
+      BYPASS 0 0 0
+      <JS Bururu-DAW/bururu_voice.jsfx ""
+        0 190 0 0 0 0 2 1 40 0 1 0 0 40 1 0.5 1 1 0 0 0 0 80 70 2 30 20 34 0 1 0 1 0 0 0 0 127 0 - - - - - - - - - - - - - - - - - - - - - - - - - -
+      >
+      MULTIFXLINK 0
+      FLOATPOS 0 0 0 0
+      FXID {E56D7489-D5FF-5A60-991D-1805147A529E}
+      WAK 0 0
+      BYPASS 0 0 0
+      <JS Bururu-DAW/bururu_voice.jsfx ""
+        0 150 0 0 0 120 2 1 50 0 1 0 0 80 1 0.5 1 1 0 0 0 0 80 70 2 30 20 35 0 1 0 1 0 0 0 0 127 0 - - - - - - - - - - - - - - - - - - - - - - - - - -
+      >
+      MULTIFXLINK 0
+      FLOATPOS 0 0 0 0
+      FXID {69C27B9E-C99F-558A-8AED-ECC1DAD21702}
+      WAK 0 0
+    >
+    <ITEM
+      POSITION 73.5
+      SNAPOFFS 0
+      LENGTH 3.5
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0 0 1 0 0 0 1 0 0 1 0 0
+      FADEOUT 1 0 0 1 0 0 0 1 0 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {08393C97-233B-5A29-8696-CF400117CCA7}
+      IID 22
+      NAME ""
+      VOLPAN 1 0 1 -1
+      SOFFS 0 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {57F1D608-9EF8-53D2-AA5A-A45424C6B0CE}
+      <SOURCE MIDI
+        HASDATA 1 960 QN
+        CCINTERP 32
+        POOLEDEVTS {69BB4B75-5239-5A3E-B098-F864F32FD520}
+        E 0 90 3c 7f
+        E 192 80 3c 00
+        E 6528 b0 7b 00
+        CCINTERP 32
+        CHASE_CC_TAKEOFFS 1
+        GUID {A5D4ABE4-5957-503A-BAC3-4A301FA135DB}
+        IGNTEMPO 0 120 4 4
+        SRCCOLOR 49
+        EVTFILTER 0 -1 -1 -1 -1 0 0 0 0 -1 -1 -1 -1 0 -1 0 -1 -1
+      >
+    >
+  >
+  <TRACK {6240D7E3-B91F-58D0-BAFE-0D023CAAA14C}
+    NAME tick
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    PANLAWFLAGS 3
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0 0
+    FIXEDLANES 9 0 0 0 0
+    SEL 0
+    REC 0 0 1 0 0 0 0 0
+    VU 64
+    TRACKHEIGHT 0 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {6240D7E3-B91F-58D0-BAFE-0D023CAAA14C}
+    PERF 0
+    MIDIOUT -1 -1
+    MAINSEND 1 0
+    <FXCHAIN
+      SHOW 0
+      LASTSEL 0
+      DOCKED 0
+      BYPASS 0 0 0
+      <JS Bururu-DAW/bururu_voice.jsfx ""
+        1 160 0 0 0 0 1 1 12 0 1 0 0 6 1 0.3 1 1 0 0 0 0 80 70 2 30 20 28 0 1 0 1 0 0 0 0 127 0 - - - - - - - - - - - - - - - - - - - - - - - - - -
+      >
+      MULTIFXLINK 0
+      FLOATPOS 0 0 0 0
+      FXID {A0023650-B53F-51FD-9FDF-EAB9BB80AF31}
+      WAK 0 0
+    >
+    <ITEM
+      POSITION 77
+      SNAPOFFS 0
+      LENGTH 3.5
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0 0 1 0 0 0 1 0 0 1 0 0
+      FADEOUT 1 0 0 1 0 0 0 1 0 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {AB0B5463-0080-524E-AC3E-CC0441474197}
+      IID 23
+      NAME ""
+      VOLPAN 1 0 1 -1
+      SOFFS 0 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {EC269C8A-180D-518C-9F58-736E1CCA993A}
+      <SOURCE MIDI
+        HASDATA 1 960 QN
+        CCINTERP 32
+        POOLEDEVTS {400373A3-96A8-5296-A450-A2357390868F}
+        E 0 90 3c 7f
+        E 192 80 3c 00
+        E 6528 b0 7b 00
+        CCINTERP 32
+        CHASE_CC_TAKEOFFS 1
+        GUID {FF12FD98-9D6C-5B22-8547-D9357E1B63D9}
+        IGNTEMPO 0 120 4 4
+        SRCCOLOR 49
+        EVTFILTER 0 -1 -1 -1 -1 0 0 0 0 -1 -1 -1 -1 0 -1 0 -1 -1
+      >
+    >
+  >
+  <TRACK {2E46C3D3-BCEE-5536-8E22-6E557460B81B}
+    NAME sparkle
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    PANLAWFLAGS 3
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0 0
+    FIXEDLANES 9 0 0 0 0
+    SEL 0
+    REC 0 0 1 0 0 0 0 0
+    VU 64
+    TRACKHEIGHT 0 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {2E46C3D3-BCEE-5536-8E22-6E557460B81B}
+    PERF 0
+    MIDIOUT -1 -1
+    MAINSEND 1 0
+    <FXCHAIN
+      SHOW 0
+      LASTSEL 0
+      DOCKED 0
+      BYPASS 0 0 0
+      <JS Bururu-DAW/bururu_voice.jsfx ""
+        0 170 0 0 0 0 2 1 20 0 1 0 0 30 1 0.3 1 1 0 0 0 0 80 70 2 30 20 26 0 1 0 1 0 0 0 0 127 0 - - - - - - - - - - - - - - - - - - - - - - - - - -
+      >
+      MULTIFXLINK 0
+      FLOATPOS 0 0 0 0
+      FXID {EAEF6C87-A4B6-5D55-8103-271DF7AE03DE}
+      WAK 0 0
+      BYPASS 0 0 0
+      <JS Bururu-DAW/bururu_voice.jsfx ""
+        0 200 0 0 0 110 2 1 20 0 1 0 0 30 1 0.3 1 1 0 0 0 0 80 70 2 30 20 27 0 1 0 1 0 0 0 0 127 0 - - - - - - - - - - - - - - - - - - - - - - - - - -
+      >
+      MULTIFXLINK 0
+      FLOATPOS 0 0 0 0
+      FXID {2DD51624-5678-51CA-B57D-8606616D4159}
+      WAK 0 0
+      BYPASS 0 0 0
+      <JS Bururu-DAW/bururu_voice.jsfx ""
+        0 230 0 0 0 220 2 1 20 0 1 0 0 30 1 0.3 1 1 0 0 0 0 80 70 2 30 20 28 0 1 0 1 0 0 0 0 127 0 - - - - - - - - - - - - - - - - - - - - - - - - - -
+      >
+      MULTIFXLINK 0
+      FLOATPOS 0 0 0 0
+      FXID {D52A32BD-19E4-5D8C-89FC-0DEBD715C7BA}
+      WAK 0 0
+    >
+    <ITEM
+      POSITION 80.5
+      SNAPOFFS 0
+      LENGTH 3.5
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0 0 1 0 0 0 1 0 0 1 0 0
+      FADEOUT 1 0 0 1 0 0 0 1 0 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {DA2C7619-1731-5A25-A2EB-481CC5B3ACD6}
+      IID 24
+      NAME ""
+      VOLPAN 1 0 1 -1
+      SOFFS 0 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {DCFF4D5A-D96C-56F4-97D0-FD2457BD8C33}
+      <SOURCE MIDI
+        HASDATA 1 960 QN
+        CCINTERP 32
+        POOLEDEVTS {720DDEFF-0D97-54DC-8D93-EF6597CDDBE1}
+        E 0 90 3c 7f
+        E 192 80 3c 00
+        E 6528 b0 7b 00
+        CCINTERP 32
+        CHASE_CC_TAKEOFFS 1
+        GUID {99314ECF-A5A7-55F8-8A97-C42DC4DF5A1F}
+        IGNTEMPO 0 120 4 4
+        SRCCOLOR 49
+        EVTFILTER 0 -1 -1 -1 -1 0 0 0 0 -1 -1 -1 -1 0 -1 0 -1 -1
+      >
+    >
+  >
+  <TRACK {5FC89537-840A-53A1-80C0-1C199F72B2B9}
+    NAME purchase
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    PANLAWFLAGS 3
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0 0
+    FIXEDLANES 9 0 0 0 0
+    SEL 0
+    REC 0 0 1 0 0 0 0 0
+    VU 64
+    TRACKHEIGHT 0 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {5FC89537-840A-53A1-80C0-1C199F72B2B9}
+    PERF 0
+    MIDIOUT -1 -1
+    MAINSEND 1 0
+    <FXCHAIN
+      SHOW 0
+      LASTSEL 0
+      DOCKED 0
+      BYPASS 0 0 0
+      <JS Bururu-DAW/bururu_voice.jsfx ""
+        0 180 0 0 0 0 2 1 30 0 1 0 0 60 1 0.35 1 1 0 0 0 0 80 70 2 30 20 29 0 1 0 1 0 0 0 0 127 0 - - - - - - - - - - - - - - - - - - - - - - - - - -
+      >
+      MULTIFXLINK 0
+      FLOATPOS 0 0 0 0
+      FXID {A22F463E-EC59-5AF5-98FB-EA8DA941C348}
+      WAK 0 0
+      BYPASS 0 0 0
+      <JS Bururu-DAW/bururu_voice.jsfx ""
+        0 150 0 0 0 180 2 1 50 0 1 0 0 120 1 0.35 1 1 0 0 0 0 80 70 2 30 20 30 0 1 0 1 0 0 0 0 127 0 - - - - - - - - - - - - - - - - - - - - - - - - - -
+      >
+      MULTIFXLINK 0
+      FLOATPOS 0 0 0 0
+      FXID {04AA726F-C900-5DA8-95A6-D6D4F9947046}
+      WAK 0 0
+    >
+    <ITEM
+      POSITION 84
+      SNAPOFFS 0
+      LENGTH 3.5
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0 0 1 0 0 0 1 0 0 1 0 0
+      FADEOUT 1 0 0 1 0 0 0 1 0 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {1DBB49DE-C7E8-5C82-919E-FE035C7FD0F1}
+      IID 25
+      NAME ""
+      VOLPAN 1 0 1 -1
+      SOFFS 0 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {8920BA8B-D46B-5C26-BD86-31130418CAAA}
+      <SOURCE MIDI
+        HASDATA 1 960 QN
+        CCINTERP 32
+        POOLEDEVTS {81D18FDD-1081-5334-8CC6-6D13A7A453A2}
+        E 0 90 3c 7f
+        E 192 80 3c 00
+        E 6528 b0 7b 00
+        CCINTERP 32
+        CHASE_CC_TAKEOFFS 1
+        GUID {2B2230CF-FA9B-5DB0-9D6B-880C442A7AEC}
+        IGNTEMPO 0 120 4 4
+        SRCCOLOR 49
+        EVTFILTER 0 -1 -1 -1 -1 0 0 0 0 -1 -1 -1 -1 0 -1 0 -1 -1
+      >
+    >
+  >
+  <TRACK {006CB612-E482-5D63-A953-4F1DC48F11ED}
+    NAME boost
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    PANLAWFLAGS 3
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 2 -1
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0 0
+    FIXEDLANES 9 0 0 0 0
+    SEL 0
+    REC 0 0 1 0 0 0 0 0
+    VU 64
+    TRACKHEIGHT 0 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {006CB612-E482-5D63-A953-4F1DC48F11ED}
+    PERF 0
+    MIDIOUT -1 -1
+    MAINSEND 1 0
+    <FXCHAIN
+      SHOW 0
+      LASTSEL 0
+      DOCKED 0
+      BYPASS 0 0 0
+      <JS Bururu-DAW/bururu_voice.jsfx ""
+        0 150 190 0 0 0 120 1 200 0 1 0 0 450 1 0.45 1 1 0 0 0 0 80 70 2 30 20 31 0 1 0 1 0 0 0 0 127 0 - - - - - - - - - - - - - - - - - - - - - - - - - -
+      >
+      MULTIFXLINK 0
+      FLOATPOS 0 0 0 0
+      FXID {0CE93C89-0CF0-5AEB-BE29-751F88EB4A7C}
+      WAK 0 0
+      BYPASS 0 0 0
+      <JS Bururu-DAW/bururu_voice.jsfx ""
+        7 170 0 0 0 0 120 1 200 0 1 0 0 450 1 0.15 1 1 0 0 0 0 80 40 2 30 20 32 0 1 0 1 0 0 0 0 127 0 - - - - - - - - - - - - - - - - - - - - - - - - - -
+      >
+      MULTIFXLINK 0
+      FLOATPOS 0 0 0 0
+      FXID {0BB70EB0-C974-576F-9F47-0101828ADA74}
+      WAK 0 0
+    >
+    <ITEM
+      POSITION 87.5
+      SNAPOFFS 0
+      LENGTH 3.5
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0 0 1 0 0 0 1 0 0 1 0 0
+      FADEOUT 1 0 0 1 0 0 0 1 0 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {1C69F5AF-B9E0-596F-8F3D-274B22DFBD2E}
+      IID 26
+      NAME ""
+      VOLPAN 1 0 1 -1
+      SOFFS 0 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {4ACE4AEB-3171-5530-9F6C-78583E3F1D73}
+      <SOURCE MIDI
+        HASDATA 1 960 QN
+        CCINTERP 32
+        POOLEDEVTS {71CB279D-EB6D-5BB8-9895-35137635DA8C}
+        E 0 90 3c 7f
+        E 192 80 3c 00
+        E 6528 b0 7b 00
+        CCINTERP 32
+        CHASE_CC_TAKEOFFS 1
+        GUID {58A178DB-9B6A-5F30-B0C1-DBED80066230}
+        IGNTEMPO 0 120 4 4
+        SRCCOLOR 49
+        EVTFILTER 0 -1 -1 -1 -1 0 0 0 0 -1 -1 -1 -1 0 -1 0 -1 -1
+      >
+    >
+  >
+  <TRACK {3DDF5C1E-4DA9-55C3-A965-B93A2A5BD857}
+    NAME layers
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    PANLAWFLAGS 3
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 1 1
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0 0
+    FIXEDLANES 9 0 0 0 0
+    SEL 0
+    REC 0 0 1 0 0 0 0 0
+    VU 64
+    TRACKHEIGHT 0 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {3DDF5C1E-4DA9-55C3-A965-B93A2A5BD857}
+    PERF 0
+    MIDIOUT -1 -1
+    MAINSEND 1 0
+  >
+  <TRACK {4ABB850C-8A4A-5ACC-9DB0-7635AC4FD07C}
+    NAME jump_pulse
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    PANLAWFLAGS 3
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0 0
+    FIXEDLANES 9 0 0 0 0
+    SEL 0
+    REC 0 0 1 0 0 0 0 0
+    VU 64
+    TRACKHEIGHT 0 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {4ABB850C-8A4A-5ACC-9DB0-7635AC4FD07C}
+    PERF 0
+    MIDIOUT -1 -1
+    MAINSEND 1 0
+    <FXCHAIN
+      SHOW 0
+      LASTSEL 0
+      DOCKED 0
+      BYPASS 0 0 0
+      <JS Bururu-DAW/bururu_voice.jsfx ""
+        0 170 0 0 0 0 0 1 0 0 1 0 0 0 1 0.2 1 1 0 0 0 0 80 70 2 30 20 147 0 1 0 1 1 0 0 0 127 0 - - - - - - - - - - - - - - - - - - - - - - - - - -
+      >
+      MULTIFXLINK 0
+      FLOATPOS 0 0 0 0
+      FXID {3DA85F86-C04C-59C3-971F-BAE968404FB0}
+      WAK 0 0
+    >
+    <ITEM
+      POSITION 91
+      SNAPOFFS 0
+      LENGTH 2.5
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0 0 1 0 0 0 1 0 0 1 0 0
+      FADEOUT 1 0 0 1 0 0 0 1 0 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {B90C5A6A-8AED-5E23-B690-79BEB2E790F1}
+      IID 27
+      NAME ""
+      VOLPAN 1 0 1 -1
+      SOFFS 0 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {C6DF9C1F-09E2-5AE1-A44C-920EF1C57E4F}
+      <SOURCE MIDI
+        HASDATA 1 960 QN
+        CCINTERP 32
+        POOLEDEVTS {2D1C4F0A-4225-5F56-AD16-C99A8F684EF1}
+        E 0 90 3c 7f
+        E 4800 80 3c 00
+        E 0 b0 7b 00
+        CCINTERP 32
+        CHASE_CC_TAKEOFFS 1
+        GUID {C287F91B-DCB1-519C-883B-0916DB25DA14}
+        IGNTEMPO 0 120 4 4
+        SRCCOLOR 127
+        EVTFILTER 0 -1 -1 -1 -1 0 0 0 0 -1 -1 -1 -1 0 -1 0 -1 -1
+      >
+    >
+  >
+  <TRACK {00042884-E5FA-5507-B633-685DC7E94702}
+    NAME jump_swell
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    PANLAWFLAGS 3
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0 0
+    FIXEDLANES 9 0 0 0 0
+    SEL 0
+    REC 0 0 1 0 0 0 0 0
+    VU 64
+    TRACKHEIGHT 0 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {00042884-E5FA-5507-B633-685DC7E94702}
+    PERF 0
+    MIDIOUT -1 -1
+    MAINSEND 1 0
+    <FXCHAIN
+      SHOW 0
+      LASTSEL 0
+      DOCKED 0
+      BYPASS 0 0 0
+      <JS Bururu-DAW/bururu_voice.jsfx ""
+        0 170 0 0 0 0 0 1 0 0 1 0 0 0 1 0.3 1 1 0 0 0 0 80 70 2 30 20 148 0 1 0 1 1 0 0 0 127 0 - - - - - - - - - - - - - - - - - - - - - - - - - -
+      >
+      MULTIFXLINK 0
+      FLOATPOS 0 0 0 0
+      FXID {312AE2B7-93A2-5913-8D7D-DEF6C080DBAA}
+      WAK 0 0
+    >
+    <ITEM
+      POSITION 94.5
+      SNAPOFFS 0
+      LENGTH 2.5
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0 0 1 0 0 0 1 0 0 1 0 0
+      FADEOUT 1 0 0 1 0 0 0 1 0 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {EDF3BC9A-BDA7-5D44-B7AA-C6F57F2A77B7}
+      IID 28
+      NAME ""
+      VOLPAN 1 0 1 -1
+      SOFFS 0 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {72060F6C-3DBD-560F-B71A-80FC5316DFBE}
+      <SOURCE MIDI
+        HASDATA 1 960 QN
+        CCINTERP 32
+        POOLEDEVTS {25EC1B7A-B541-5EAA-AB41-162C265B3F3C}
+        E 0 90 3c 7f
+        E 4800 80 3c 00
+        E 0 b0 7b 00
+        CCINTERP 32
+        CHASE_CC_TAKEOFFS 1
+        GUID {6B644928-91E7-511E-9843-5BE9166A97FC}
+        IGNTEMPO 0 120 4 4
+        SRCCOLOR 127
+        EVTFILTER 0 -1 -1 -1 -1 0 0 0 0 -1 -1 -1 -1 0 -1 0 -1 -1
+      >
+    >
+  >
+  <TRACK {A168707E-570D-527E-9E16-419098003977}
+    NAME turn_waves
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    PANLAWFLAGS 3
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0 0
+    FIXEDLANES 9 0 0 0 0
+    SEL 0
+    REC 0 0 1 0 0 0 0 0
+    VU 64
+    TRACKHEIGHT 0 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {A168707E-570D-527E-9E16-419098003977}
+    PERF 0
+    MIDIOUT -1 -1
+    MAINSEND 1 0
+    <FXCHAIN
+      SHOW 0
+      LASTSEL 0
+      DOCKED 0
+      BYPASS 0 0 0
+      <JS Bururu-DAW/bururu_voice.jsfx ""
+        0 170 0 0 0 0 0 1 0 0 1 0 0 0 1 0.25 1 1 0 0 0 0 80 70 2 30 20 165 0 1 0 1 1 0 0 0 127 0 - - - - - - - - - - - - - - - - - - - - - - - - - -
+      >
+      MULTIFXLINK 0
+      FLOATPOS 0 0 0 0
+      FXID {64DACE73-A6DD-5CC3-9762-BF91DE4733D4}
+      WAK 0 0
+    >
+    <ITEM
+      POSITION 98
+      SNAPOFFS 0
+      LENGTH 2.5
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0 0 1 0 0 0 1 0 0 1 0 0
+      FADEOUT 1 0 0 1 0 0 0 1 0 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {1C46B448-F291-5D23-A219-7C6046CE3FDF}
+      IID 29
+      NAME ""
+      VOLPAN 1 0 1 -1
+      SOFFS 0 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {39D5E92F-F124-5A58-8B44-A3C2709679A1}
+      <SOURCE MIDI
+        HASDATA 1 960 QN
+        CCINTERP 32
+        POOLEDEVTS {D4B8A92C-7B30-5669-BF5F-F47F8D4889C2}
+        E 0 90 3c 7f
+        E 4800 80 3c 00
+        E 0 b0 7b 00
+        CCINTERP 32
+        CHASE_CC_TAKEOFFS 1
+        GUID {576CEAC5-1C8C-53B5-9F2A-DA8BDDFFBBC5}
+        IGNTEMPO 0 120 4 4
+        SRCCOLOR 127
+        EVTFILTER 0 -1 -1 -1 -1 0 0 0 0 -1 -1 -1 -1 0 -1 0 -1 -1
+      >
+    >
+  >
+  <TRACK {9D0F9885-449E-5D2F-9311-F32FB23AB051}
+    NAME turn_push
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    PANLAWFLAGS 3
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0 0
+    FIXEDLANES 9 0 0 0 0
+    SEL 0
+    REC 0 0 1 0 0 0 0 0
+    VU 64
+    TRACKHEIGHT 0 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {9D0F9885-449E-5D2F-9311-F32FB23AB051}
+    PERF 0
+    MIDIOUT -1 -1
+    MAINSEND 1 0
+    <FXCHAIN
+      SHOW 0
+      LASTSEL 0
+      DOCKED 0
+      BYPASS 0 0 0
+      <JS Bururu-DAW/bururu_voice.jsfx ""
+        0 170 0 0 0 0 0 1 0 0 1 0 0 0 1 0.3 1 1 0 0 0 0 80 70 2 30 20 166 0 1 0 1 1 0 0 0 127 0 - - - - - - - - - - - - - - - - - - - - - - - - - -
+      >
+      MULTIFXLINK 0
+      FLOATPOS 0 0 0 0
+      FXID {FCC2BB41-B079-5D06-94B1-9A61AF632064}
+      WAK 0 0
+    >
+    <ITEM
+      POSITION 101.5
+      SNAPOFFS 0
+      LENGTH 2.5
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0 0 1 0 0 0 1 0 0 1 0 0
+      FADEOUT 1 0 0 1 0 0 0 1 0 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {5691CD87-939A-5938-9D4E-133390EEE9F2}
+      IID 30
+      NAME ""
+      VOLPAN 1 0 1 -1
+      SOFFS 0 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {6B5A4E8F-7252-5E96-A3F9-DD1DD5B5FFC5}
+      <SOURCE MIDI
+        HASDATA 1 960 QN
+        CCINTERP 32
+        POOLEDEVTS {0DC057DE-C9C0-5E8D-9A36-ED8415F813F1}
+        E 0 90 3c 7f
+        E 4800 80 3c 00
+        E 0 b0 7b 00
+        CCINTERP 32
+        CHASE_CC_TAKEOFFS 1
+        GUID {A9903F06-F709-58F3-B738-AF5B91C1E48C}
+        IGNTEMPO 0 120 4 4
+        SRCCOLOR 127
+        EVTFILTER 0 -1 -1 -1 -1 0 0 0 0 -1 -1 -1 -1 0 -1 0 -1 -1
+      >
+    >
+  >
+  <TRACK {54895625-090C-5C69-8DA6-8E11E16F4396}
+    NAME fire_light
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    PANLAWFLAGS 3
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 2 -1
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0 0
+    FIXEDLANES 9 0 0 0 0
+    SEL 0
+    REC 0 0 1 0 0 0 0 0
+    VU 64
+    TRACKHEIGHT 0 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {54895625-090C-5C69-8DA6-8E11E16F4396}
+    PERF 0
+    MIDIOUT -1 -1
+    MAINSEND 1 0
+    <FXCHAIN
+      SHOW 0
+      LASTSEL 0
+      DOCKED 0
+      BYPASS 0 0 0
+      <JS Bururu-DAW/bururu_voice.jsfx ""
+        0 170 0 0 0 0 0 1 0 0 1 0 0 0 1 0.2 1 1 0 0 8 0.3 80 70 2 30 20 33 0 1 0 1 1 0 0 0 127 0 - - - - - - - - - - - - - - - - - - - - - - - - - -
+      >
+      MULTIFXLINK 0
+      FLOATPOS 0 0 0 0
+      FXID {E2B2E951-B8FD-50F8-A102-787CD003A048}
+      WAK 0 0
+    >
+    <ITEM
+      POSITION 105
+      SNAPOFFS 0
+      LENGTH 2.5
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0 0 1 0 0 0 1 0 0 1 0 0
+      FADEOUT 1 0 0 1 0 0 0 1 0 0 1 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {5A51E4AA-1643-561D-BAE1-56EEE9CF2F94}
+      IID 31
+      NAME ""
+      VOLPAN 1 0 1 -1
+      SOFFS 0 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {D45F0B85-23D5-57D4-AB2B-3FDC241456E7}
+      <SOURCE MIDI
+        HASDATA 1 960 QN
+        CCINTERP 32
+        POOLEDEVTS {4E068FA4-7897-5295-BC6F-5EBBE846F502}
+        E 0 90 3c 7f
+        E 4800 80 3c 00
+        E 0 b0 7b 00
+        CCINTERP 32
+        CHASE_CC_TAKEOFFS 1
+        GUID {7A1081FC-E79A-534E-B131-3480FA3D0C2C}
+        IGNTEMPO 0 120 4 4
+        SRCCOLOR 127
+        EVTFILTER 0 -1 -1 -1 -1 0 0 0 0 -1 -1 -1 -1 0 -1 0 -1 -1
+      >
+    >
+  >
+>

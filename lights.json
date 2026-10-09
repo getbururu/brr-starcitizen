@@ -1,0 +1,70 @@
+// What the controller shows: the lightbar, the adaptive triggers, the
+// player LEDs and the mic LED.
+//
+// Each table works field by field: per field, the highest priority row
+// whose "if" holds and that sets the field wins, so a row can change one
+// field (the armistice row only dims) and leave the rest to the rows
+// below. Colours and trigger effects are keys of the colors and triggers
+// settings. The helpers (lib.*) are in lua/lib.lua; state.* is
+// lua/state.lua's.
+{
+  "format": 1,
+
+  // the lightbar: the base colour is your health (lightbar_base "health")
+  // or the star system you are in ("system", with an injury over it); then
+  // the situations over it, later rows over earlier ones
+  "lightbar": {
+    "healthy":  { "priority": 0, "color": "healthy", "bright": 1 },
+    "stanton":  { "priority": 1, "if": "settings.lightbar_base == 'system' and state.system == 'stanton'", "color": "stanton" },
+    "pyro":     { "priority": 2, "if": "settings.lightbar_base == 'system' and state.system == 'pyro'", "color": "pyro" },
+    "nyx":      { "priority": 3, "if": "settings.lightbar_base == 'system' and state.system == 'nyx'", "color": "nyx" },
+    "injury_1": { "priority": 5, "if": "state.injury == 1", "color": "injury_1" },
+    "injury_2": { "priority": 6, "if": "state.injury == 2", "color": "injury_2" },
+    "injury_3": { "priority": 7, "if": "state.injury >= 3", "color": "injury_3" },
+
+    "armistice": { "priority": 20, "if": "state.armistice", "bright": 0.35 },
+    "jump":      { "priority": 30, "if": "lib.in_tunnel(t)", "color": "jump", "bright": "kit.breathe(t.unix_ms, 1, 0.4)" },
+    "downed":    { "priority": 40, "if": "lib.downed(t)", "color": "downed", "bright": "kit.breathe(t.unix_ms, 0.5, 0.2)" }
+  },
+
+  // the triggers: free in the main menu, while downed or dead and in an
+  // armistice zone; the ship's weapons in the pilot seat; on foot with
+  // something in hand. Nothing matched: no effect.
+  "triggers": {
+    "menu":          { "priority": 100, "if": "not lib.active(t)", "both": "none" },
+    "downed":        { "priority": 90, "if": "lib.downed(t) or lib.dead()", "both": "none" },
+    "armistice":     { "priority": 80, "if": "state.armistice", "both": "none" },
+    "piloting":      { "priority": 50, "if": "lib.piloting()", "l2": "ship_fire_l", "r2": "ship_fire_r" },
+    "on_foot_armed": { "priority": 40, "if": "lib.on_foot() and state.weapon_in_hand", "l2": "onfoot_l", "r2": "onfoot_r" }
+  },
+
+  // the player LEDs: the jump drive's steps (5 in the tunnel), else your
+  // place in a hangar queue
+  "leds": {
+    "jump":  { "priority": 20, "if": "lib.jump_leds(t) > 0", "count": "lib.jump_leds(t)" },
+    "queue": { "priority": 10, "if": "lib.in_queue(t)", "count": "gomath.min(5, state.queue_place)" }
+  },
+
+  // the mic LED stands for comms: pulsing on low fuel in the pilot seat,
+  // on where crimes go unreported
+  "mic": {
+    "low_fuel":  { "priority": 20, "if": "lib.low_fuel(t)", "mic": "pulse" },
+    "comms_off": { "priority": 10, "if": "state.unmonitored or state.comms_down", "mic": "on" }
+  },
+
+  // the flashes, started by the rules; among the flashes still showing the
+  // latest wins, and the died blink is over any flash until the respawn
+  "overlays": {
+    "hit":        { "layer": "lightbar", "color": "hit",       "ms": 600,                 "priority": 50 },
+    "crime":      { "layer": "lightbar", "color": "crime",     "ms": 2000, "blink_hz": 4, "priority": 50 },
+    "quantum":    { "layer": "lightbar", "color": "quantum",   "ms": 600,                 "priority": 50 },
+    "hangar":     { "layer": "lightbar", "color": "hangar",    "ms": 1000,                "priority": 50 },
+    "success":    { "layer": "lightbar", "color": "success",   "ms": 700,                 "priority": 50 },
+    "failure":    { "layer": "lightbar", "color": "failure",   "ms": 700,  "blink_hz": 4, "priority": 50 },
+    "blueprint":  { "layer": "lightbar", "color": "blueprint", "ms": 700,                 "priority": 50 },
+    "died":       { "layer": "lightbar", "color": "died",      "ms": 5000, "blink_hz": 3, "priority": 100 },
+
+    // a fatal collision: both triggers buzz
+    "crash_buzz": { "layer": "triggers", "trigger": "hit", "ms": 400, "priority": 50 }
+  }
+}

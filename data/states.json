@@ -1,0 +1,24 @@
+// Names from Game.log that the mod counts on. An add-on can patch them with
+// overrides/starcitizen/data/states.patch.json.
+//
+// The jump drive writes "<Jump Drive State Changed> Now <state>". Its
+// states are the game's own list (ItemJumpDriveState in the game files):
+// Idle, EntryChecks, Tuning, RequestingJump, WaitingForOpen, Entering,
+// Transiting, Exiting and Failing. Public logs show the first five; the
+// tunnel states are still to be seen in a real 4.10 log.
+//
+// jump_steps: the states before the tunnel, and how many player LEDs each
+// lights.
+// tunnel: the states that start the jump tunnel.
+// arrived: the states that end the tunnel with an arrival. Any other state
+// ends it without one.
+//
+// not_ships: control token lines also name things you do not fly, such as
+// placeholders, ship modules and AI ships. A vehicle whose name, in lower
+// case, holds one of these is left out.
+{
+  "jump_steps": { "EntryChecks": 1, "Tuning": 2, "RequestingJump": 3, "WaitingForOpen": 4 },
+  "tunnel": ["Entering", "Transiting"],
+  "arrived": ["Exiting", "Idle"],
+  "not_ships": ["default", "dummy", "placeholder", "template", "test_", "_test", "prototype_", "_module", "_ai_", "_npc"]
+}

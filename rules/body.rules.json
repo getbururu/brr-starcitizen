@@ -1,0 +1,28 @@
+// Your body: injuries, deaths, the med bed, crashes. The heartbeat while
+// downed is Lua (lua/flight.lua), since it repeats.
+{
+  "format": 1,
+  "rules": {
+    // you flew the ship that crashed (state.lua checks PlayerPilot and the
+    // ship)
+    "crash": { "on": "gamelog:collision", "if": "lib.moment('crash')",
+               "do": [ { "play": "crash" }, { "overlay": "hit" }, { "overlay": "crash_buzz" } ] },
+
+    // your own death: mainly logged when your ship is destroyed
+    "died": { "on": "gamelog:dead", "if": "lib.moment('died')", "do": [ { "play": "died" }, { "overlay": "died" } ] },
+
+    "respawned": { "on": "gamelog:spawned", "if": "lib.moment('respawned')",
+                   "do": [ { "play": { "feel": "qt_arrive", "scale": 0.5 } }, { "overlay_stop": "died" } ] },
+
+    // one thud for a minor injury, two for a moderate one, three for a
+    // major or severe one
+    "injury_1": { "on": "gamelog:notification", "if": "lib.note(ev) == 'injury_1'", "play": "injury" },
+    "injury_2": { "on": "gamelog:notification", "if": "lib.note(ev) == 'injury_2'",
+                  "do": [ { "play": "injury" }, { "play": { "feel": "injury", "delay_ms": 180 } } ] },
+    "injury_3": { "on": "gamelog:notification", "if": "lib.note(ev) == 'injury_3'",
+                  "do": [ { "play": "injury" }, { "play": { "feel": "injury", "delay_ms": 180 } },
+                          { "play": { "feel": "injury", "delay_ms": 360 } } ] },
+
+    "healed": { "on": "gamelog:med_bed", "if": "lib.moment('healed')", "play": "healed" }
+  }
+}

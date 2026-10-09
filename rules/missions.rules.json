@@ -1,0 +1,27 @@
+// Contracts, objectives, blueprints, rewards, refinery orders, the party
+// and shops. A contract's end comes from its tagged line, which does not
+// depend on the game's language; only "accepted" needs the notification.
+{
+  "format": 1,
+  "rules": {
+    "contract_accepted": { "on": "gamelog:notification", "if": "lib.note(ev) == 'contract_accepted'", "play": "notice" },
+
+    // your own contracts; an abandoned one plays nothing
+    "contract_complete": { "on": "gamelog:mission_end", "if": "lib.is_me(ev.player) and ev.how == 'Complete'",
+                           "do": [ { "play": "success" }, { "overlay": "success" } ] },
+    "contract_failed":   { "on": "gamelog:mission_end", "if": "lib.is_me(ev.player) and ev.how == 'Fail'",
+                           "do": [ { "play": "failure" }, { "overlay": "failure" } ] },
+
+    "objective_complete": { "on": "gamelog:notification", "if": "lib.note(ev) == 'objective_complete'", "play": "tick" },
+
+    "blueprint": { "on": "gamelog:notification", "if": "lib.note(ev) == 'blueprint'",
+                   "do": [ { "play": "sparkle" }, { "overlay": "blueprint" } ] },
+    "rewards":   { "on": "gamelog:notification", "if": "lib.note(ev) == 'rewards'",
+                   "do": [ { "play": "sparkle" }, { "overlay": "blueprint" } ] },
+
+    "refinery_done": { "on": "gamelog:notification", "if": "lib.note(ev) == 'refinery_done'", "play": "notice" },
+    "party_joined":  { "on": "gamelog:notification", "if": "lib.note(ev) == 'party_joined'", "play": "notice" },
+
+    "purchase": { "on": "gamelog:shop", "if": "ev.result == 'Success' and ev.type == 'Buying'", "play": "purchase" }
+  }
+}

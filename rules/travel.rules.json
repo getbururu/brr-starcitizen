@@ -1,0 +1,41 @@
+// Quantum travel and jump points. The quantum lines name the ship whose
+// drive is used, so they play only for the ship you pilot. No line marks
+// the quantum spool or the start of the travel. The jump drive's states
+// mark the steps before a jump and the tunnel (data/states.json).
+{
+  "format": 1,
+  "rules": {
+    // about 1.4 target lines per real jump, so a cooldown
+    "qt_target": { "on": "gamelog:qt_target", "cooldown_ms": 3000,
+                   "if": "settings.quantum_feel ~= 'off' and lib.my_ship(ev.id)", "play": "qt_target" },
+
+    "qt_arrive":      { "on": "gamelog:qt_arrived", "if": "settings.quantum_feel == 'swell' and lib.my_ship(ev.id)",
+                        "play": "qt_arrive" },
+    "qt_arrive_taps": { "on": "gamelog:qt_arrived", "if": "settings.quantum_feel == 'taps' and lib.my_ship(ev.id)",
+                        "play": "qt_arrive_taps" },
+    "qt_flash":       { "on": "gamelog:qt_arrived", "if": "lib.my_ship(ev.id)", "do": [ { "overlay": "quantum" } ] },
+
+    // a tick for each step of the jump drive: EntryChecks, Tuning,
+    // RequestingJump, WaitingForOpen
+    "jump_step": { "on": "gamelog:jump_drive", "if": "lib.moment('jump_step')", "play": "jump_step" },
+
+    // out of the jump tunnel in the next system
+    "jump_arrived": { "on": "gamelog:jump_drive", "if": "lib.moment('jump_arrived')",
+                      "play": { "feel": "qt_arrive", "scale": 0.7 } }
+  },
+  "layers": {
+    // into the jump tunnel: one soft swell, then quiet for the rest of it
+    "jump_swell": {
+      "feel": "jump_swell",
+      "if": "settings.jump_feel ~= 'off' and lib.tunnel_swell(t) > 0",
+      "level": "lib.tunnel_swell(t)"
+    },
+    // with the calm jump feel, a soft pulse every 1.5 s while you tune
+    // the jump
+    "jump_pulse": {
+      "feel": "jump_pulse",
+      "if": "settings.jump_feel == 'calm' and lib.tuning(t)",
+      "level": "0.5 - 0.5 * gomath.cos(6.283185307179586 * lib.tuning_secs(t) / 1.5)"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+# Made-up sample for the mod's tests: an excerpt in the shape of Star
+# Citizen's Game.log (4.x builds), written from the line formats in public
+# log parsers. It is not a real log. Names and ids are placeholders.
+# go run .github/logreplay/main.go -out tests/jump.replay.jsonl tests/logs/jump.log.txt
+#
+# A jump from Stanton to Pyro: the jump drive's steps, the tunnel and the
+# way out. The drive's tunnel states (Entering, Transiting, Exiting) are
+# the game's own names, still to be seen in a real 4.10 log
+# (data/states.json).
+# <2026-09-21T11:00:00.000Z> step: In the universe, in the pilot seat
+<2026-09-21T11:00:00.000Z> [Notice] <Legacy login response> [CIG-net] User Login Success - Handle[Pilot1] [Team_GameServices][Login]
+<2026-09-21T11:00:01.000Z> [Notice] <Context Establisher Done> establisher="Network" runningTime=20.1 map="megamap" gamerules="SC_Default" sessionId="00000000-0000-0000-0000-000000000000" [Team_Network][Network][Replication][Loading][Persistence]
+<2026-09-21T11:00:01.500Z> [Notice] Loading screen for Stanton : SC_Frontend closed after 21.04 seconds
+<2026-09-21T11:00:02.000Z> [Notice] [CSessionManager::OnClientSpawned] Spawned!
+<2026-09-21T11:00:03.000Z> [Notice] <Vehicle Control Flow> CVehicle::Initialize::<lambda_1>::operator (): Local client node [200000000001] granted control token for 'DRAK_Cutlass_Black_850000000001' [850000000001] [Team_CGP4][Vehicle]
+# <2026-09-21T11:00:10.000Z> step: The jump drive's steps: entry checks, tuning, the request, waiting for the jump point
+<2026-09-21T11:00:10.000Z> [Notice] <Jump Drive State Changed> Now EntryChecks | jumpdrive | NOT AUTH | EntryChecks | JDRV_Drake_S2_Default [850000000101] (in zone DRAK_Cutlass_Black_850000000001) [Team_CGP4][JumpDrive]
+<2026-09-21T11:00:12.000Z> [Notice] <Jump Drive State Changed> Now Tuning | jumpdrive | NOT AUTH | Tuning | JDRV_Drake_S2_Default [850000000101] (in zone DRAK_Cutlass_Black_850000000001) [Team_CGP4][JumpDrive]
+<2026-09-21T11:00:18.000Z> [Notice] <Jump Drive State Changed> Now RequestingJump | jumpdrive | NOT AUTH | RequestingJump | JDRV_Drake_S2_Default [850000000101] (in zone DRAK_Cutlass_Black_850000000001) [Team_CGP4][JumpDrive]
+<2026-09-21T11:00:19.000Z> [Notice] <Jump Drive State Changed> Now WaitingForOpen | jumpdrive | NOT AUTH | WaitingForOpen | JDRV_Drake_S2_Default [850000000101] (in zone DRAK_Cutlass_Black_850000000001) [Team_CGP4][JumpDrive]
+# <2026-09-21T11:00:22.000Z> step: Into the tunnel: one soft swell, the lightbar breathing, all five LEDs
+<2026-09-21T11:00:22.000Z> [Notice] <Jump Drive State Changed> Now Entering | jumpdrive | NOT AUTH | Entering | JDRV_Drake_S2_Default [850000000101] (in zone DRAK_Cutlass_Black_850000000001) [Team_CGP4][JumpDrive]
+<2026-09-21T11:00:24.000Z> [Notice] <Jump Drive State Changed> Now Transiting | jumpdrive | NOT AUTH | Transiting | JDRV_Drake_S2_Default [850000000101] (in zone DRAK_Cutlass_Black_850000000001) [Team_CGP4][JumpDrive]
+# <2026-09-21T11:00:36.000Z> step: Out of the tunnel in Pyro: a softer arrival, the lightbar back
+<2026-09-21T11:00:36.000Z> [Notice] <Jump Drive State Changed> Now Exiting | jumpdrive | NOT AUTH | Exiting | JDRV_Drake_S2_Default [850000000101] (in zone DRAK_Cutlass_Black_850000000001) [Team_CGP4][JumpDrive]
+<2026-09-21T11:00:38.000Z> [Notice] <Jump Drive State Changed> Now Idle | jumpdrive | NOT AUTH | Idle | JDRV_Drake_S2_Default [850000000101] (in zone DRAK_Cutlass_Black_850000000001) [Team_CGP4][JumpDrive]

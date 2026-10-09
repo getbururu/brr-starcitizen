@@ -1,0 +1,51 @@
+// The Star Citizen mod.
+{
+  "manifest": 1,
+  "id": "starcitizen",
+  "name": "Star Citizen",
+  "version": "0.1.0",
+  "api": "0.11",
+  "kind": "game",
+  "authors": ["Bururu"],
+  "license": "MIT",
+  "summary": "Haptics, adaptive triggers and lights for Star Citizen, from its Game.log.",
+  "homepage": "https://github.com/getbururu/mod-starcitizen",
+  "icon": "ship",
+
+  "games": {
+    "star-citizen": {
+      "name": "Star Citizen",
+      "process": {
+        "windows": { "game": ["StarCitizen.exe"], "launcher": ["RSI Launcher.exe"] }
+      },
+      "window": {
+        "windows": { "class": "CryENGINE" }
+      },
+      "markers": ["Bin64/StarCitizen.exe", "Data.p4k"],
+      "virtual_pad": "launcher_or_game",
+      "native_dualsense": false,
+      "anti_cheat": { "kind": "kernel", "notes": "Easy Anti-Cheat. The mod reads Game.log only." }
+    }
+  },
+
+  // {GameDir} is the channel folder of the running game (LIVE, PTU and so
+  // on), found from Bin64/StarCitizen.exe and the markers above
+  "paths": {
+    "log": { "path": "{GameDir}", "setting": "game_dir", "label": "Star Citizen folder" }
+  },
+
+  "dependencies": {},
+  "load_after": [], "load_before": [],
+
+  "entry": "lua/main.lua",
+  "demo": "demo/demo.replay.jsonl",
+  "feels": { "rumble_default": "none" },
+  "rule_env": { "lib": "lua/lib.lua" },
+  "outputs": ["haptics", "rumble", "triggers", "lightbar", "player_leds", "mic", "gyro_hold"],
+  "permissions": { "files": ["log"], "screen": false, "keyboard": false, "udp": [] },
+  "hooks": {
+    "turn@1":  { "doc": "Before the turn feel, with mode (push or waves), feel, level, swell and amount (read only): change mode, feel, level or swell; mode off plays nothing." },
+    "state@1": { "doc": "After each Game.log line the state reads, with the state (read only)." }
+  },
+  "os": ["windows"]
+}

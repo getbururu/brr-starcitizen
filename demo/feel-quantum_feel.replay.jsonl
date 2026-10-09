@@ -1,0 +1,8 @@
+{"replay":1,"mod":"starcitizen","mod_version":"0.1.0","bururu":"0.11.0","start_unix_ms":1790025000000,"poll_ms":25}
+{"t_ms":0,"sensor":"game","running":true,"in_front":true}
+{"t_ms":0,"sensor":"gamelog","raw":"<2026-09-21T21:10:00.000Z> [Notice] <Legacy login response> [CIG-net] User Login Success - Handle[Pilot1] [Team_GameServices][Login]"}
+{"t_ms":0,"sensor":"gamelog","raw":"<2026-09-21T21:10:00.000Z> [Notice] <Context Establisher Done> establisher=\"Network\" runningTime=20.1 map=\"megamap\" gamerules=\"SC_Default\" sessionId=\"00000000-0000-0000-0000-000000000000\" [Team_Network][Network][Replication][Loading][Persistence]"}
+{"t_ms":0,"sensor":"gamelog","raw":"<2026-09-21T21:10:00.000Z> [Notice] [CSessionManager::OnClientSpawned] Spawned!"}
+{"t_ms":0,"sensor":"gamelog","raw":"<2026-09-21T21:10:00.000Z> [Notice] <Vehicle Control Flow> CVehicle::Initialize::<lambda_1>::operator (): Local client node [200000000001] granted control token for 'DRAK_Cutlass_Black_850000000001' [850000000001] [Team_CGP4][Vehicle]"}
+{"t_ms":2000,"sensor":"gamelog","raw":"<2026-09-21T21:10:02.000Z> [Notice] <Player Selected Quantum Target - Local> [ItemNavigation][CL][416] | NOT AUTH | DRAK_Cutlass_Black_850000000001[850000000001]|CSCItemNavigation::OnPlayerSelectedQuantumTarget|Player has selected point OM-1_Hurston as their destination, routing locally [Team_CGP4][QuantumTravel]"}
+{"t_ms":6000,"sensor":"gamelog","raw":"<2026-09-21T21:10:06.000Z> [Notice] <Quantum Drive Arrived - Arrived at Final Destination> [ItemNavigation][CL][416] | NOT AUTH | DRAK_Cutlass_Black_850000000001[850000000001]|CSCItemNavigation::OnQuantumDriveArrived|Quantum Drive has arrived at final destination [Team_CGP4][QuantumTravel]"}

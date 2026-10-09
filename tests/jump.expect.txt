@@ -1,0 +1,1288 @@
+replay through starcitizen; starcitizen drives; ticks of 25 ms
+# In the universe, in the pilot seat
+@ 0.000
+  log Star Citizen started
+  read setup log warn "Star Citizen's folder is not known yet. Start the game, or set its folder on the Settings page."  origin=lua:starcitizen/lua/state.lua:511
+  read fact ship "None"  origin=lua:starcitizen/lua/state.lua:526
+  read fact system "Unknown"  origin=lua:starcitizen/lua/state.lua:526
+  read fact injury "None"  origin=lua:starcitizen/lua/state.lua:526
+  facts running=true active=false menu=true context="In the main menu"
+@ 1.000
+  facts running=true active=true menu=false context="On foot"
+  out L2 OFF [] R2 OFF [] light 0 255 60 @200 leds off mic off
+  shown light=healthy l2=- r2=-
+@ 1.500
+  read fact system "Stanton"  origin=lua:starcitizen/lua/state.lua:526
+  facts running=true active=true menu=false context="On foot in Stanton"
+@ 3.000
+  read play seat_in side=both scale=1 pan=0 amount=0 at=+0  origin=rule:starcitizen/seat_in
+  read fact ship "Cutlass Black"  origin=lua:starcitizen/lua/state.lua:526
+  facts running=true active=true menu=false context="Piloting a Cutlass Black in Stanton"
+  out L2 WEAPON [2 5 4] R2 WEAPON [2 5 6]
+  shown light=healthy l2=ship_fire_l r2=ship_fire_r
+  synth on on
+@ 3.500
+  synth off off
+audio 94619f61
+# The jump drive's steps: entry checks, tuning, the request, waiting for the jump point
+@ 10.000
+  read play jump_step side=both scale=1 pan=0 amount=0 at=+0  origin=rule:starcitizen/jump_step
+  out leds 1
+  synth off on
+@ 10.025
+  synth off off
+@ 12.000
+  read play jump_step side=both scale=1 pan=0 amount=0 at=+0  origin=rule:starcitizen/jump_step
+  out leds 2
+  synth off on
+@ 12.025
+  synth off off
+@ 18.000
+  read play jump_step side=both scale=1 pan=0 amount=0 at=+0  origin=rule:starcitizen/jump_step
+  out leds 3
+  synth off on
+@ 18.025
+  synth off off
+@ 19.000
+  read play jump_step side=both scale=1 pan=0 amount=0 at=+0  origin=rule:starcitizen/jump_step
+  out leds 4
+  synth off on
+@ 19.025
+  synth off off
+audio b638c72d
+# Into the tunnel: one soft swell, the lightbar breathing, all five LEDs
+@ 22.000
+  out light 140 170 255 @140 leds 5
+  shown light=jump l2=ship_fire_l r2=ship_fire_r
+@ 22.025
+  drive layer jump_swell feel=jump_swell level=0.007250000000000001 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @149
+  synth on on
+@ 22.050
+  drive layer jump_swell feel=jump_swell level=0.028000000000000004 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @159
+@ 22.075
+  drive layer jump_swell feel=jump_swell level=0.06075 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @167
+@ 22.100
+  drive layer jump_swell feel=jump_swell level=0.10400000000000002 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @175
+@ 22.125
+  drive layer jump_swell feel=jump_swell level=0.15625 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @182
+@ 22.150
+  drive layer jump_swell feel=jump_swell level=0.216 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @189
+@ 22.175
+  drive layer jump_swell feel=jump_swell level=0.28174999999999994 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @193
+@ 22.200
+  drive layer jump_swell feel=jump_swell level=0.3520000000000001 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @197
+@ 22.225
+  drive layer jump_swell feel=jump_swell level=0.4252500000000001 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @199
+@ 22.250
+  drive layer jump_swell feel=jump_swell level=0.5 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @200
+@ 22.275
+  drive layer jump_swell feel=jump_swell level=0.5747500000000001 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @199
+@ 22.300
+  drive layer jump_swell feel=jump_swell level=0.648 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @197
+@ 22.325
+  drive layer jump_swell feel=jump_swell level=0.71825 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @193
+@ 22.350
+  drive layer jump_swell feel=jump_swell level=0.7839999999999999 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @189
+@ 22.375
+  drive layer jump_swell feel=jump_swell level=0.84375 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @182
+@ 22.400
+  drive layer jump_swell feel=jump_swell level=0.8960000000000001 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @175
+@ 22.425
+  drive layer jump_swell feel=jump_swell level=0.9392499999999999 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @167
+@ 22.450
+  drive layer jump_swell feel=jump_swell level=0.972 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @159
+@ 22.475
+  drive layer jump_swell feel=jump_swell level=0.99275 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @149
+@ 22.500
+  drive layer jump_swell feel=jump_swell level=1 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @140
+@ 22.525
+  drive layer jump_swell feel=jump_swell level=0.99953515625 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @131
+@ 22.550
+  drive layer jump_swell feel=jump_swell level=0.99815625 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @121
+@ 22.575
+  drive layer jump_swell feel=jump_swell level=0.99588671875 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @113
+@ 22.600
+  drive layer jump_swell feel=jump_swell level=0.99275 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @105
+@ 22.625
+  drive layer jump_swell feel=jump_swell level=0.98876953125 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @98
+@ 22.650
+  drive layer jump_swell feel=jump_swell level=0.98396875 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @91
+@ 22.675
+  drive layer jump_swell feel=jump_swell level=0.97837109375 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @87
+@ 22.700
+  drive layer jump_swell feel=jump_swell level=0.972 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @83
+@ 22.725
+  drive layer jump_swell feel=jump_swell level=0.9648789062500001 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @81
+@ 22.750
+  drive layer jump_swell feel=jump_swell level=0.95703125 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @80
+@ 22.775
+  drive layer jump_swell feel=jump_swell level=0.94848046875 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @81
+@ 22.800
+  drive layer jump_swell feel=jump_swell level=0.93925 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @83
+@ 22.825
+  drive layer jump_swell feel=jump_swell level=0.92936328125 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @87
+@ 22.850
+  drive layer jump_swell feel=jump_swell level=0.91884375 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @91
+@ 22.875
+  drive layer jump_swell feel=jump_swell level=0.90771484375 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @98
+@ 22.900
+  drive layer jump_swell feel=jump_swell level=0.896 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @105
+@ 22.925
+  drive layer jump_swell feel=jump_swell level=0.88372265625 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @113
+@ 22.950
+  drive layer jump_swell feel=jump_swell level=0.87090625 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @121
+@ 22.975
+  drive layer jump_swell feel=jump_swell level=0.85757421875 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @131
+@ 23.000
+  drive layer jump_swell feel=jump_swell level=0.84375 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @140
+@ 23.025
+  drive layer jump_swell feel=jump_swell level=0.82945703125 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @149
+@ 23.050
+  drive layer jump_swell feel=jump_swell level=0.8147187499999999 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @159
+@ 23.075
+  drive layer jump_swell feel=jump_swell level=0.79955859375 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @167
+@ 23.100
+  drive layer jump_swell feel=jump_swell level=0.7839999999999999 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @175
+@ 23.125
+  drive layer jump_swell feel=jump_swell level=0.76806640625 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @182
+@ 23.150
+  drive layer jump_swell feel=jump_swell level=0.7517812500000001 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @189
+@ 23.175
+  drive layer jump_swell feel=jump_swell level=0.7351679687499999 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @193
+@ 23.200
+  drive layer jump_swell feel=jump_swell level=0.71825 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @197
+@ 23.225
+  drive layer jump_swell feel=jump_swell level=0.70105078125 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @199
+@ 23.250
+  drive layer jump_swell feel=jump_swell level=0.68359375 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @200
+@ 23.275
+  drive layer jump_swell feel=jump_swell level=0.66590234375 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @199
+@ 23.300
+  drive layer jump_swell feel=jump_swell level=0.6479999999999999 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @197
+@ 23.325
+  drive layer jump_swell feel=jump_swell level=0.62991015625 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @193
+@ 23.350
+  drive layer jump_swell feel=jump_swell level=0.61165625 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @189
+@ 23.375
+  drive layer jump_swell feel=jump_swell level=0.59326171875 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @182
+@ 23.400
+  drive layer jump_swell feel=jump_swell level=0.5747500000000001 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @175
+@ 23.425
+  drive layer jump_swell feel=jump_swell level=0.55614453125 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @167
+@ 23.450
+  drive layer jump_swell feel=jump_swell level=0.53746875 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @159
+@ 23.475
+  drive layer jump_swell feel=jump_swell level=0.5187460937499999 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @149
+@ 23.500
+  drive layer jump_swell feel=jump_swell level=0.5 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @140
+@ 23.525
+  drive layer jump_swell feel=jump_swell level=0.48125390625 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @131
+@ 23.550
+  drive layer jump_swell feel=jump_swell level=0.46253124999999995 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @121
+@ 23.575
+  drive layer jump_swell feel=jump_swell level=0.44385546875000004 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @113
+@ 23.600
+  drive layer jump_swell feel=jump_swell level=0.4252499999999999 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @105
+@ 23.625
+  drive layer jump_swell feel=jump_swell level=0.40673828125 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @98
+@ 23.650
+  drive layer jump_swell feel=jump_swell level=0.3883437500000001 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @91
+@ 23.675
+  drive layer jump_swell feel=jump_swell level=0.37008984374999987 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @87
+@ 23.700
+  drive layer jump_swell feel=jump_swell level=0.352 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @83
+@ 23.725
+  drive layer jump_swell feel=jump_swell level=0.3340976562499999 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @81
+@ 23.750
+  drive layer jump_swell feel=jump_swell level=0.31640625 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @80
+@ 23.775
+  drive layer jump_swell feel=jump_swell level=0.29894921875 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @81
+@ 23.800
+  drive layer jump_swell feel=jump_swell level=0.28174999999999994 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @83
+@ 23.825
+  drive layer jump_swell feel=jump_swell level=0.26483203125 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @87
+@ 23.850
+  drive layer jump_swell feel=jump_swell level=0.24821874999999993 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @91
+@ 23.875
+  drive layer jump_swell feel=jump_swell level=0.23193359375 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @98
+@ 23.900
+  drive layer jump_swell feel=jump_swell level=0.21600000000000008 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @105
+@ 23.925
+  drive layer jump_swell feel=jump_swell level=0.20044140624999995 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @113
+@ 23.950
+  drive layer jump_swell feel=jump_swell level=0.18528124999999995 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @121
+@ 23.975
+  drive layer jump_swell feel=jump_swell level=0.17054296874999997 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @131
+@ 24.000
+  drive layer jump_swell feel=jump_swell level=0.15625 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @140
+@ 24.025
+  drive layer jump_swell feel=jump_swell level=0.14242578125000005 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @149
+@ 24.050
+  drive layer jump_swell feel=jump_swell level=0.12909375000000012 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @159
+@ 24.075
+  drive layer jump_swell feel=jump_swell level=0.11627734374999987 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @167
+@ 24.100
+  drive layer jump_swell feel=jump_swell level=0.10399999999999987 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @175
+@ 24.125
+  drive layer jump_swell feel=jump_swell level=0.09228515625 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @182
+@ 24.150
+  drive layer jump_swell feel=jump_swell level=0.08115625000000004 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @189
+@ 24.175
+  drive layer jump_swell feel=jump_swell level=0.07063671875 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @193
+@ 24.200
+  drive layer jump_swell feel=jump_swell level=0.06074999999999997 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @197
+@ 24.225
+  drive layer jump_swell feel=jump_swell level=0.05151953124999997 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @199
+@ 24.250
+  drive layer jump_swell feel=jump_swell level=0.04296875 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @200
+@ 24.275
+  drive layer jump_swell feel=jump_swell level=0.03512109374999994 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @199
+@ 24.300
+  drive layer jump_swell feel=jump_swell level=0.028000000000000025 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @197
+@ 24.325
+  drive layer jump_swell feel=jump_swell level=0.021628906249999913 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @193
+@ 24.350
+  drive layer jump_swell feel=jump_swell level=0.01603124999999994 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @189
+@ 24.375
+  drive layer jump_swell feel=jump_swell level=0.01123046875 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @182
+@ 24.400
+  drive layer jump_swell feel=jump_swell level=0.007249999999999979 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @175
+@ 24.425
+  drive layer jump_swell feel=jump_swell level=0.004113281249999989 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @167
+@ 24.450
+  drive layer jump_swell feel=jump_swell level=0.0018437500000000329 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @159
+@ 24.475
+  drive layer jump_swell feel=jump_swell level=0.0004648437499999991 side=both  origin=rule:starcitizen/jump_swell
+  out light 140 170 255 @149
+@ 24.500
+  out light 140 170 255 @140
+@ 24.525
+  out light 140 170 255 @131
+  synth off off
+@ 24.550
+  out light 140 170 255 @121
+@ 24.575
+  out light 140 170 255 @113
+@ 24.600
+  out light 140 170 255 @105
+@ 24.625
+  out light 140 170 255 @98
+@ 24.650
+  out light 140 170 255 @91
+@ 24.675
+  out light 140 170 255 @87
+@ 24.700
+  out light 140 170 255 @83
+@ 24.725
+  out light 140 170 255 @81
+@ 24.750
+  out light 140 170 255 @80
+@ 24.775
+  out light 140 170 255 @81
+@ 24.800
+  out light 140 170 255 @83
+@ 24.825
+  out light 140 170 255 @87
+@ 24.850
+  out light 140 170 255 @91
+@ 24.875
+  out light 140 170 255 @98
+@ 24.900
+  out light 140 170 255 @105
+@ 24.925
+  out light 140 170 255 @113
+@ 24.950
+  out light 140 170 255 @121
+@ 24.975
+  out light 140 170 255 @131
+@ 25.000
+  out light 140 170 255 @140
+@ 25.025
+  out light 140 170 255 @149
+@ 25.050
+  out light 140 170 255 @159
+@ 25.075
+  out light 140 170 255 @167
+@ 25.100
+  out light 140 170 255 @175
+@ 25.125
+  out light 140 170 255 @182
+@ 25.150
+  out light 140 170 255 @189
+@ 25.175
+  out light 140 170 255 @193
+@ 25.200
+  out light 140 170 255 @197
+@ 25.225
+  out light 140 170 255 @199
+@ 25.250
+  out light 140 170 255 @200
+@ 25.275
+  out light 140 170 255 @199
+@ 25.300
+  out light 140 170 255 @197
+@ 25.325
+  out light 140 170 255 @193
+@ 25.350
+  out light 140 170 255 @189
+@ 25.375
+  out light 140 170 255 @182
+@ 25.400
+  out light 140 170 255 @175
+@ 25.425
+  out light 140 170 255 @167
+@ 25.450
+  out light 140 170 255 @159
+@ 25.475
+  out light 140 170 255 @149
+@ 25.500
+  out light 140 170 255 @140
+@ 25.525
+  out light 140 170 255 @131
+@ 25.550
+  out light 140 170 255 @121
+@ 25.575
+  out light 140 170 255 @113
+@ 25.600
+  out light 140 170 255 @105
+@ 25.625
+  out light 140 170 255 @98
+@ 25.650
+  out light 140 170 255 @91
+@ 25.675
+  out light 140 170 255 @87
+@ 25.700
+  out light 140 170 255 @83
+@ 25.725
+  out light 140 170 255 @81
+@ 25.750
+  out light 140 170 255 @80
+@ 25.775
+  out light 140 170 255 @81
+@ 25.800
+  out light 140 170 255 @83
+@ 25.825
+  out light 140 170 255 @87
+@ 25.850
+  out light 140 170 255 @91
+@ 25.875
+  out light 140 170 255 @98
+@ 25.900
+  out light 140 170 255 @105
+@ 25.925
+  out light 140 170 255 @113
+@ 25.950
+  out light 140 170 255 @121
+@ 25.975
+  out light 140 170 255 @131
+@ 26.000
+  out light 140 170 255 @140
+@ 26.025
+  out light 140 170 255 @149
+@ 26.050
+  out light 140 170 255 @159
+@ 26.075
+  out light 140 170 255 @167
+@ 26.100
+  out light 140 170 255 @175
+@ 26.125
+  out light 140 170 255 @182
+@ 26.150
+  out light 140 170 255 @189
+@ 26.175
+  out light 140 170 255 @193
+@ 26.200
+  out light 140 170 255 @197
+@ 26.225
+  out light 140 170 255 @199
+@ 26.250
+  out light 140 170 255 @200
+@ 26.275
+  out light 140 170 255 @199
+@ 26.300
+  out light 140 170 255 @197
+@ 26.325
+  out light 140 170 255 @193
+@ 26.350
+  out light 140 170 255 @189
+@ 26.375
+  out light 140 170 255 @182
+@ 26.400
+  out light 140 170 255 @175
+@ 26.425
+  out light 140 170 255 @167
+@ 26.450
+  out light 140 170 255 @159
+@ 26.475
+  out light 140 170 255 @149
+@ 26.500
+  out light 140 170 255 @140
+@ 26.525
+  out light 140 170 255 @131
+@ 26.550
+  out light 140 170 255 @121
+@ 26.575
+  out light 140 170 255 @113
+@ 26.600
+  out light 140 170 255 @105
+@ 26.625
+  out light 140 170 255 @98
+@ 26.650
+  out light 140 170 255 @91
+@ 26.675
+  out light 140 170 255 @87
+@ 26.700
+  out light 140 170 255 @83
+@ 26.725
+  out light 140 170 255 @81
+@ 26.750
+  out light 140 170 255 @80
+@ 26.775
+  out light 140 170 255 @81
+@ 26.800
+  out light 140 170 255 @83
+@ 26.825
+  out light 140 170 255 @87
+@ 26.850
+  out light 140 170 255 @91
+@ 26.875
+  out light 140 170 255 @98
+@ 26.900
+  out light 140 170 255 @105
+@ 26.925
+  out light 140 170 255 @113
+@ 26.950
+  out light 140 170 255 @121
+@ 26.975
+  out light 140 170 255 @131
+@ 27.000
+  out light 140 170 255 @140
+@ 27.025
+  out light 140 170 255 @149
+@ 27.050
+  out light 140 170 255 @159
+@ 27.075
+  out light 140 170 255 @167
+@ 27.100
+  out light 140 170 255 @175
+@ 27.125
+  out light 140 170 255 @182
+@ 27.150
+  out light 140 170 255 @189
+@ 27.175
+  out light 140 170 255 @193
+@ 27.200
+  out light 140 170 255 @197
+@ 27.225
+  out light 140 170 255 @199
+@ 27.250
+  out light 140 170 255 @200
+@ 27.275
+  out light 140 170 255 @199
+@ 27.300
+  out light 140 170 255 @197
+@ 27.325
+  out light 140 170 255 @193
+@ 27.350
+  out light 140 170 255 @189
+@ 27.375
+  out light 140 170 255 @182
+@ 27.400
+  out light 140 170 255 @175
+@ 27.425
+  out light 140 170 255 @167
+@ 27.450
+  out light 140 170 255 @159
+@ 27.475
+  out light 140 170 255 @149
+@ 27.500
+  out light 140 170 255 @140
+@ 27.525
+  out light 140 170 255 @131
+@ 27.550
+  out light 140 170 255 @121
+@ 27.575
+  out light 140 170 255 @113
+@ 27.600
+  out light 140 170 255 @105
+@ 27.625
+  out light 140 170 255 @98
+@ 27.650
+  out light 140 170 255 @91
+@ 27.675
+  out light 140 170 255 @87
+@ 27.700
+  out light 140 170 255 @83
+@ 27.725
+  out light 140 170 255 @81
+@ 27.750
+  out light 140 170 255 @80
+@ 27.775
+  out light 140 170 255 @81
+@ 27.800
+  out light 140 170 255 @83
+@ 27.825
+  out light 140 170 255 @87
+@ 27.850
+  out light 140 170 255 @91
+@ 27.875
+  out light 140 170 255 @98
+@ 27.900
+  out light 140 170 255 @105
+@ 27.925
+  out light 140 170 255 @113
+@ 27.950
+  out light 140 170 255 @121
+@ 27.975
+  out light 140 170 255 @131
+@ 28.000
+  out light 140 170 255 @140
+@ 28.025
+  out light 140 170 255 @149
+@ 28.050
+  out light 140 170 255 @159
+@ 28.075
+  out light 140 170 255 @167
+@ 28.100
+  out light 140 170 255 @175
+@ 28.125
+  out light 140 170 255 @182
+@ 28.150
+  out light 140 170 255 @189
+@ 28.175
+  out light 140 170 255 @193
+@ 28.200
+  out light 140 170 255 @197
+@ 28.225
+  out light 140 170 255 @199
+@ 28.250
+  out light 140 170 255 @200
+@ 28.275
+  out light 140 170 255 @199
+@ 28.300
+  out light 140 170 255 @197
+@ 28.325
+  out light 140 170 255 @193
+@ 28.350
+  out light 140 170 255 @189
+@ 28.375
+  out light 140 170 255 @182
+@ 28.400
+  out light 140 170 255 @175
+@ 28.425
+  out light 140 170 255 @167
+@ 28.450
+  out light 140 170 255 @159
+@ 28.475
+  out light 140 170 255 @149
+@ 28.500
+  out light 140 170 255 @140
+@ 28.525
+  out light 140 170 255 @131
+@ 28.550
+  out light 140 170 255 @121
+@ 28.575
+  out light 140 170 255 @113
+@ 28.600
+  out light 140 170 255 @105
+@ 28.625
+  out light 140 170 255 @98
+@ 28.650
+  out light 140 170 255 @91
+@ 28.675
+  out light 140 170 255 @87
+@ 28.700
+  out light 140 170 255 @83
+@ 28.725
+  out light 140 170 255 @81
+@ 28.750
+  out light 140 170 255 @80
+@ 28.775
+  out light 140 170 255 @81
+@ 28.800
+  out light 140 170 255 @83
+@ 28.825
+  out light 140 170 255 @87
+@ 28.850
+  out light 140 170 255 @91
+@ 28.875
+  out light 140 170 255 @98
+@ 28.900
+  out light 140 170 255 @105
+@ 28.925
+  out light 140 170 255 @113
+@ 28.950
+  out light 140 170 255 @121
+@ 28.975
+  out light 140 170 255 @131
+@ 29.000
+  out light 140 170 255 @140
+@ 29.025
+  out light 140 170 255 @149
+@ 29.050
+  out light 140 170 255 @159
+@ 29.075
+  out light 140 170 255 @167
+@ 29.100
+  out light 140 170 255 @175
+@ 29.125
+  out light 140 170 255 @182
+@ 29.150
+  out light 140 170 255 @189
+@ 29.175
+  out light 140 170 255 @193
+@ 29.200
+  out light 140 170 255 @197
+@ 29.225
+  out light 140 170 255 @199
+@ 29.250
+  out light 140 170 255 @200
+@ 29.275
+  out light 140 170 255 @199
+@ 29.300
+  out light 140 170 255 @197
+@ 29.325
+  out light 140 170 255 @193
+@ 29.350
+  out light 140 170 255 @189
+@ 29.375
+  out light 140 170 255 @182
+@ 29.400
+  out light 140 170 255 @175
+@ 29.425
+  out light 140 170 255 @167
+@ 29.450
+  out light 140 170 255 @159
+@ 29.475
+  out light 140 170 255 @149
+@ 29.500
+  out light 140 170 255 @140
+@ 29.525
+  out light 140 170 255 @131
+@ 29.550
+  out light 140 170 255 @121
+@ 29.575
+  out light 140 170 255 @113
+@ 29.600
+  out light 140 170 255 @105
+@ 29.625
+  out light 140 170 255 @98
+@ 29.650
+  out light 140 170 255 @91
+@ 29.675
+  out light 140 170 255 @87
+@ 29.700
+  out light 140 170 255 @83
+@ 29.725
+  out light 140 170 255 @81
+@ 29.750
+  out light 140 170 255 @80
+@ 29.775
+  out light 140 170 255 @81
+@ 29.800
+  out light 140 170 255 @83
+@ 29.825
+  out light 140 170 255 @87
+@ 29.850
+  out light 140 170 255 @91
+@ 29.875
+  out light 140 170 255 @98
+@ 29.900
+  out light 140 170 255 @105
+@ 29.925
+  out light 140 170 255 @113
+@ 29.950
+  out light 140 170 255 @121
+@ 29.975
+  out light 140 170 255 @131
+@ 30.000
+  out light 140 170 255 @140
+@ 30.025
+  out light 140 170 255 @149
+@ 30.050
+  out light 140 170 255 @159
+@ 30.075
+  out light 140 170 255 @167
+@ 30.100
+  out light 140 170 255 @175
+@ 30.125
+  out light 140 170 255 @182
+@ 30.150
+  out light 140 170 255 @189
+@ 30.175
+  out light 140 170 255 @193
+@ 30.200
+  out light 140 170 255 @197
+@ 30.225
+  out light 140 170 255 @199
+@ 30.250
+  out light 140 170 255 @200
+@ 30.275
+  out light 140 170 255 @199
+@ 30.300
+  out light 140 170 255 @197
+@ 30.325
+  out light 140 170 255 @193
+@ 30.350
+  out light 140 170 255 @189
+@ 30.375
+  out light 140 170 255 @182
+@ 30.400
+  out light 140 170 255 @175
+@ 30.425
+  out light 140 170 255 @167
+@ 30.450
+  out light 140 170 255 @159
+@ 30.475
+  out light 140 170 255 @149
+@ 30.500
+  out light 140 170 255 @140
+@ 30.525
+  out light 140 170 255 @131
+@ 30.550
+  out light 140 170 255 @121
+@ 30.575
+  out light 140 170 255 @113
+@ 30.600
+  out light 140 170 255 @105
+@ 30.625
+  out light 140 170 255 @98
+@ 30.650
+  out light 140 170 255 @91
+@ 30.675
+  out light 140 170 255 @87
+@ 30.700
+  out light 140 170 255 @83
+@ 30.725
+  out light 140 170 255 @81
+@ 30.750
+  out light 140 170 255 @80
+@ 30.775
+  out light 140 170 255 @81
+@ 30.800
+  out light 140 170 255 @83
+@ 30.825
+  out light 140 170 255 @87
+@ 30.850
+  out light 140 170 255 @91
+@ 30.875
+  out light 140 170 255 @98
+@ 30.900
+  out light 140 170 255 @105
+@ 30.925
+  out light 140 170 255 @113
+@ 30.950
+  out light 140 170 255 @121
+@ 30.975
+  out light 140 170 255 @131
+@ 31.000
+  out light 140 170 255 @140
+@ 31.025
+  out light 140 170 255 @149
+@ 31.050
+  out light 140 170 255 @159
+@ 31.075
+  out light 140 170 255 @167
+@ 31.100
+  out light 140 170 255 @175
+@ 31.125
+  out light 140 170 255 @182
+@ 31.150
+  out light 140 170 255 @189
+@ 31.175
+  out light 140 170 255 @193
+@ 31.200
+  out light 140 170 255 @197
+@ 31.225
+  out light 140 170 255 @199
+@ 31.250
+  out light 140 170 255 @200
+@ 31.275
+  out light 140 170 255 @199
+@ 31.300
+  out light 140 170 255 @197
+@ 31.325
+  out light 140 170 255 @193
+@ 31.350
+  out light 140 170 255 @189
+@ 31.375
+  out light 140 170 255 @182
+@ 31.400
+  out light 140 170 255 @175
+@ 31.425
+  out light 140 170 255 @167
+@ 31.450
+  out light 140 170 255 @159
+@ 31.475
+  out light 140 170 255 @149
+@ 31.500
+  out light 140 170 255 @140
+@ 31.525
+  out light 140 170 255 @131
+@ 31.550
+  out light 140 170 255 @121
+@ 31.575
+  out light 140 170 255 @113
+@ 31.600
+  out light 140 170 255 @105
+@ 31.625
+  out light 140 170 255 @98
+@ 31.650
+  out light 140 170 255 @91
+@ 31.675
+  out light 140 170 255 @87
+@ 31.700
+  out light 140 170 255 @83
+@ 31.725
+  out light 140 170 255 @81
+@ 31.750
+  out light 140 170 255 @80
+@ 31.775
+  out light 140 170 255 @81
+@ 31.800
+  out light 140 170 255 @83
+@ 31.825
+  out light 140 170 255 @87
+@ 31.850
+  out light 140 170 255 @91
+@ 31.875
+  out light 140 170 255 @98
+@ 31.900
+  out light 140 170 255 @105
+@ 31.925
+  out light 140 170 255 @113
+@ 31.950
+  out light 140 170 255 @121
+@ 31.975
+  out light 140 170 255 @131
+@ 32.000
+  out light 140 170 255 @140
+@ 32.025
+  out light 140 170 255 @149
+@ 32.050
+  out light 140 170 255 @159
+@ 32.075
+  out light 140 170 255 @167
+@ 32.100
+  out light 140 170 255 @175
+@ 32.125
+  out light 140 170 255 @182
+@ 32.150
+  out light 140 170 255 @189
+@ 32.175
+  out light 140 170 255 @193
+@ 32.200
+  out light 140 170 255 @197
+@ 32.225
+  out light 140 170 255 @199
+@ 32.250
+  out light 140 170 255 @200
+@ 32.275
+  out light 140 170 255 @199
+@ 32.300
+  out light 140 170 255 @197
+@ 32.325
+  out light 140 170 255 @193
+@ 32.350
+  out light 140 170 255 @189
+@ 32.375
+  out light 140 170 255 @182
+@ 32.400
+  out light 140 170 255 @175
+@ 32.425
+  out light 140 170 255 @167
+@ 32.450
+  out light 140 170 255 @159
+@ 32.475
+  out light 140 170 255 @149
+@ 32.500
+  out light 140 170 255 @140
+@ 32.525
+  out light 140 170 255 @131
+@ 32.550
+  out light 140 170 255 @121
+@ 32.575
+  out light 140 170 255 @113
+@ 32.600
+  out light 140 170 255 @105
+@ 32.625
+  out light 140 170 255 @98
+@ 32.650
+  out light 140 170 255 @91
+@ 32.675
+  out light 140 170 255 @87
+@ 32.700
+  out light 140 170 255 @83
+@ 32.725
+  out light 140 170 255 @81
+@ 32.750
+  out light 140 170 255 @80
+@ 32.775
+  out light 140 170 255 @81
+@ 32.800
+  out light 140 170 255 @83
+@ 32.825
+  out light 140 170 255 @87
+@ 32.850
+  out light 140 170 255 @91
+@ 32.875
+  out light 140 170 255 @98
+@ 32.900
+  out light 140 170 255 @105
+@ 32.925
+  out light 140 170 255 @113
+@ 32.950
+  out light 140 170 255 @121
+@ 32.975
+  out light 140 170 255 @131
+@ 33.000
+  out light 140 170 255 @140
+@ 33.025
+  out light 140 170 255 @149
+@ 33.050
+  out light 140 170 255 @159
+@ 33.075
+  out light 140 170 255 @167
+@ 33.100
+  out light 140 170 255 @175
+@ 33.125
+  out light 140 170 255 @182
+@ 33.150
+  out light 140 170 255 @189
+@ 33.175
+  out light 140 170 255 @193
+@ 33.200
+  out light 140 170 255 @197
+@ 33.225
+  out light 140 170 255 @199
+@ 33.250
+  out light 140 170 255 @200
+@ 33.275
+  out light 140 170 255 @199
+@ 33.300
+  out light 140 170 255 @197
+@ 33.325
+  out light 140 170 255 @193
+@ 33.350
+  out light 140 170 255 @189
+@ 33.375
+  out light 140 170 255 @182
+@ 33.400
+  out light 140 170 255 @175
+@ 33.425
+  out light 140 170 255 @167
+@ 33.450
+  out light 140 170 255 @159
+@ 33.475
+  out light 140 170 255 @149
+@ 33.500
+  out light 140 170 255 @140
+@ 33.525
+  out light 140 170 255 @131
+@ 33.550
+  out light 140 170 255 @121
+@ 33.575
+  out light 140 170 255 @113
+@ 33.600
+  out light 140 170 255 @105
+@ 33.625
+  out light 140 170 255 @98
+@ 33.650
+  out light 140 170 255 @91
+@ 33.675
+  out light 140 170 255 @87
+@ 33.700
+  out light 140 170 255 @83
+@ 33.725
+  out light 140 170 255 @81
+@ 33.750
+  out light 140 170 255 @80
+@ 33.775
+  out light 140 170 255 @81
+@ 33.800
+  out light 140 170 255 @83
+@ 33.825
+  out light 140 170 255 @87
+@ 33.850
+  out light 140 170 255 @91
+@ 33.875
+  out light 140 170 255 @98
+@ 33.900
+  out light 140 170 255 @105
+@ 33.925
+  out light 140 170 255 @113
+@ 33.950
+  out light 140 170 255 @121
+@ 33.975
+  out light 140 170 255 @131
+@ 34.000
+  out light 140 170 255 @140
+@ 34.025
+  out light 140 170 255 @149
+@ 34.050
+  out light 140 170 255 @159
+@ 34.075
+  out light 140 170 255 @167
+@ 34.100
+  out light 140 170 255 @175
+@ 34.125
+  out light 140 170 255 @182
+@ 34.150
+  out light 140 170 255 @189
+@ 34.175
+  out light 140 170 255 @193
+@ 34.200
+  out light 140 170 255 @197
+@ 34.225
+  out light 140 170 255 @199
+@ 34.250
+  out light 140 170 255 @200
+@ 34.275
+  out light 140 170 255 @199
+@ 34.300
+  out light 140 170 255 @197
+@ 34.325
+  out light 140 170 255 @193
+@ 34.350
+  out light 140 170 255 @189
+@ 34.375
+  out light 140 170 255 @182
+@ 34.400
+  out light 140 170 255 @175
+@ 34.425
+  out light 140 170 255 @167
+@ 34.450
+  out light 140 170 255 @159
+@ 34.475
+  out light 140 170 255 @149
+@ 34.500
+  out light 140 170 255 @140
+@ 34.525
+  out light 140 170 255 @131
+@ 34.550
+  out light 140 170 255 @121
+@ 34.575
+  out light 140 170 255 @113
+@ 34.600
+  out light 140 170 255 @105
+@ 34.625
+  out light 140 170 255 @98
+@ 34.650
+  out light 140 170 255 @91
+@ 34.675
+  out light 140 170 255 @87
+@ 34.700
+  out light 140 170 255 @83
+@ 34.725
+  out light 140 170 255 @81
+@ 34.750
+  out light 140 170 255 @80
+@ 34.775
+  out light 140 170 255 @81
+@ 34.800
+  out light 140 170 255 @83
+@ 34.825
+  out light 140 170 255 @87
+@ 34.850
+  out light 140 170 255 @91
+@ 34.875
+  out light 140 170 255 @98
+@ 34.900
+  out light 140 170 255 @105
+@ 34.925
+  out light 140 170 255 @113
+@ 34.950
+  out light 140 170 255 @121
+@ 34.975
+  out light 140 170 255 @131
+@ 35.000
+  out light 140 170 255 @140
+@ 35.025
+  out light 140 170 255 @149
+@ 35.050
+  out light 140 170 255 @159
+@ 35.075
+  out light 140 170 255 @167
+@ 35.100
+  out light 140 170 255 @175
+@ 35.125
+  out light 140 170 255 @182
+@ 35.150
+  out light 140 170 255 @189
+@ 35.175
+  out light 140 170 255 @193
+@ 35.200
+  out light 140 170 255 @197
+@ 35.225
+  out light 140 170 255 @199
+@ 35.250
+  out light 140 170 255 @200
+@ 35.275
+  out light 140 170 255 @199
+@ 35.300
+  out light 140 170 255 @197
+@ 35.325
+  out light 140 170 255 @193
+@ 35.350
+  out light 140 170 255 @189
+@ 35.375
+  out light 140 170 255 @182
+@ 35.400
+  out light 140 170 255 @175
+@ 35.425
+  out light 140 170 255 @167
+@ 35.450
+  out light 140 170 255 @159
+@ 35.475
+  out light 140 170 255 @149
+@ 35.500
+  out light 140 170 255 @140
+@ 35.525
+  out light 140 170 255 @131
+@ 35.550
+  out light 140 170 255 @121
+@ 35.575
+  out light 140 170 255 @113
+@ 35.600
+  out light 140 170 255 @105
+@ 35.625
+  out light 140 170 255 @98
+@ 35.650
+  out light 140 170 255 @91
+@ 35.675
+  out light 140 170 255 @87
+@ 35.700
+  out light 140 170 255 @83
+@ 35.725
+  out light 140 170 255 @81
+@ 35.750
+  out light 140 170 255 @80
+@ 35.775
+  out light 140 170 255 @81
+@ 35.800
+  out light 140 170 255 @83
+@ 35.825
+  out light 140 170 255 @87
+@ 35.850
+  out light 140 170 255 @91
+@ 35.875
+  out light 140 170 255 @98
+@ 35.900
+  out light 140 170 255 @105
+@ 35.925
+  out light 140 170 255 @113
+@ 35.950
+  out light 140 170 255 @121
+@ 35.975
+  out light 140 170 255 @131
+audio e369667d
+# Out of the tunnel in Pyro: a softer arrival, the lightbar back
+@ 36.000
+  read play qt_arrive side=both scale=0.7 pan=0 amount=0 at=+0  origin=rule:starcitizen/jump_arrived
+  read fact system "Unknown"  origin=lua:starcitizen/lua/state.lua:526
+  facts running=true active=true menu=false context="Piloting a Cutlass Black"
+  out light 0 255 60 @200 leds off
+  shown light=healthy l2=ship_fire_l r2=ship_fire_r
+  synth on on
+@ 37.500
+  synth off off
+audio dc8263a1
+end @ 39.000

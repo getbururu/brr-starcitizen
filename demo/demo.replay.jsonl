@@ -1,0 +1,23 @@
+{"replay":1,"mod":"starcitizen","mod_version":"0.1.0","bururu":"0.11.0","start_unix_ms":1790020800000,"poll_ms":25}
+{"t_ms":0,"sensor":"game","running":true,"in_front":true}
+{"t_ms":0,"step":"In the universe, at a landing zone"}
+{"t_ms":0,"sensor":"gamelog","raw":"<2026-09-21T20:00:00.000Z> [Notice] <Legacy login response> [CIG-net] User Login Success - Handle[Pilot1] [Team_GameServices][Login]"}
+{"t_ms":100,"sensor":"gamelog","raw":"<2026-09-21T20:00:00.100Z> [Notice] <Context Establisher Done> establisher=\"Network\" runningTime=20.1 map=\"megamap\" gamerules=\"SC_Default\" sessionId=\"00000000-0000-0000-0000-000000000000\" [Team_Network][Network][Replication][Loading][Persistence]"}
+{"t_ms":200,"sensor":"gamelog","raw":"<2026-09-21T20:00:00.200Z> [Notice] Loading screen for Stanton : SC_Frontend closed after 21.04 seconds"}
+{"t_ms":300,"sensor":"gamelog","raw":"<2026-09-21T20:00:00.300Z> [Notice] [CSessionManager::OnClientSpawned] Spawned!"}
+{"t_ms":2000,"step":"Your hangar is ready, the elevator brings the ship up"}
+{"t_ms":2000,"sensor":"gamelog","raw":"<2026-09-21T20:00:02.000Z> [Notice] <SHUDEvent_OnNotification> Added notification \"Hangar Request Completed: \" [1] to queue. New queue size: 1, MissionId: [00000000-0000-0000-0000-000000000000], ObjectiveId: [] [Team_CoreGameplayFeatures][Missions][Comms]"}
+{"t_ms":4000,"sensor":"gamelog","raw":"<2026-09-21T20:00:04.000Z> [Notice] <CSCLoadingPlatformManager::OnLoadingPlatformStateChanged> [Loading Platform] Loading Platform Manager [LoadingPlatformManager_ShipElevator_HangarMedTop] Platform state changed to RaisingPlatform [Team_CGP2][Vehicle]"}
+{"t_ms":8000,"step":"Take the pilot seat: R2 and L2 resist"}
+{"t_ms":8000,"sensor":"gamelog","raw":"<2026-09-21T20:00:08.000Z> [Notice] <Vehicle Control Flow> CVehicle::Initialize::<lambda_1>::operator (): Local client node [200000000001] granted control token for 'DRAK_Cutlass_Black_850000000001' [850000000001] [Team_CGP4][Vehicle]"}
+{"t_ms":12000,"step":"Pick a quantum target, then arrive"}
+{"t_ms":12000,"sensor":"gamelog","raw":"<2026-09-21T20:00:12.000Z> [Notice] <Player Selected Quantum Target - Local> [ItemNavigation][CL][416] | NOT AUTH | DRAK_Cutlass_Black_850000000001[850000000001]|CSCItemNavigation::OnPlayerSelectedQuantumTarget|Player has selected point OM-1_Hurston as their destination, routing locally [Team_CGP4][QuantumTravel]"}
+{"t_ms":20000,"sensor":"gamelog","raw":"<2026-09-21T20:00:20.000Z> [Notice] <Quantum Drive Arrived - Arrived at Final Destination> [ItemNavigation][CL][416] | NOT AUTH | DRAK_Cutlass_Black_850000000001[850000000001]|CSCItemNavigation::OnQuantumDriveArrived|Quantum Drive has arrived at final destination [Team_CGP4][QuantumTravel]"}
+{"t_ms":26000,"step":"A moderate injury: two thuds, the lightbar orange"}
+{"t_ms":26000,"sensor":"gamelog","raw":"<2026-09-21T20:00:26.000Z> [Notice] <SHUDEvent_OnNotification> Added notification \"Moderate Injury Detected - Torso - Tier 2 Treatment Required: \" [2] to queue. New queue size: 1, MissionId: [00000000-0000-0000-0000-000000000000], ObjectiveId: [] [Team_CoreGameplayFeatures][Missions][Comms]"}
+{"t_ms":31000,"step":"CrimeStat goes up"}
+{"t_ms":31000,"sensor":"gamelog","raw":"<2026-09-21T20:00:31.000Z> [Notice] <SHUDEvent_OnNotification> Added notification \"CrimeStat Rating Increased: \" [3] to queue. New queue size: 1, MissionId: [00000000-0000-0000-0000-000000000000], ObjectiveId: [] [Team_CoreGameplayFeatures][Missions][Comms]"}
+{"t_ms":37000,"step":"A contract complete"}
+{"t_ms":37000,"sensor":"gamelog","raw":"<2026-09-21T20:00:37.000Z> [Notice] <EndMission> Ending mission for player. MissionId[00000000-0000-0000-0000-000000000001] Player[Pilot1] PlayerId[200000000001] CompletionType[Complete] Reason[Complete] [Team_MissionFeatures][Missions]"}
+{"t_ms":42000,"step":"Out of the seat"}
+{"t_ms":42000,"sensor":"gamelog","raw":"<2026-09-21T20:00:42.000Z> [Notice] <Vehicle Control Flow> CVehicleMovementBase::ClearDriver: Local client node [200000000001] releasing control token for 'DRAK_Cutlass_Black_850000000001' [850000000001] [Team_CGP4][Vehicle]"}

@@ -1,0 +1,9 @@
+# Made-up sample for -feeltest: the quantum feel, once per choice. A
+# quantum target, then the arrival. It is not a real log.
+# go run .github/logreplay/main.go -out demo/feel-quantum_feel.replay.jsonl demo/logs/feel-quantum_feel.log.txt
+<2026-09-21T21:10:00.000Z> [Notice] <Legacy login response> [CIG-net] User Login Success - Handle[Pilot1] [Team_GameServices][Login]
+<2026-09-21T21:10:00.000Z> [Notice] <Context Establisher Done> establisher="Network" runningTime=20.1 map="megamap" gamerules="SC_Default" sessionId="00000000-0000-0000-0000-000000000000" [Team_Network][Network][Replication][Loading][Persistence]
+<2026-09-21T21:10:00.000Z> [Notice] [CSessionManager::OnClientSpawned] Spawned!
+<2026-09-21T21:10:00.000Z> [Notice] <Vehicle Control Flow> CVehicle::Initialize::<lambda_1>::operator (): Local client node [200000000001] granted control token for 'DRAK_Cutlass_Black_850000000001' [850000000001] [Team_CGP4][Vehicle]
+<2026-09-21T21:10:02.000Z> [Notice] <Player Selected Quantum Target - Local> [ItemNavigation][CL][416] | NOT AUTH | DRAK_Cutlass_Black_850000000001[850000000001]|CSCItemNavigation::OnPlayerSelectedQuantumTarget|Player has selected point OM-1_Hurston as their destination, routing locally [Team_CGP4][QuantumTravel]
+<2026-09-21T21:10:06.000Z> [Notice] <Quantum Drive Arrived - Arrived at Final Destination> [ItemNavigation][CL][416] | NOT AUTH | DRAK_Cutlass_Black_850000000001[850000000001]|CSCItemNavigation::OnQuantumDriveArrived|Quantum Drive has arrived at final destination [Team_CGP4][QuantumTravel]

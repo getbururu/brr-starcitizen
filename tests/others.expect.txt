@@ -1,0 +1,23 @@
+replay through starcitizen; starcitizen drives; ticks of 25 ms
+# In the universe, on foot; the handle comes from a nickname line
+@ 0.000
+  log Star Citizen started
+  read setup log warn "Star Citizen's folder is not known yet. Start the game, or set its folder on the Settings page."  origin=lua:starcitizen/lua/state.lua:511
+  read fact ship "None"  origin=lua:starcitizen/lua/state.lua:526
+  read fact system "Unknown"  origin=lua:starcitizen/lua/state.lua:526
+  read fact injury "None"  origin=lua:starcitizen/lua/state.lua:526
+  facts running=true active=false menu=true context="In the main menu"
+@ 1.000
+  facts running=true active=true menu=false context="On foot"
+  out L2 OFF [] R2 OFF [] light 0 255 60 @200 leds off mic off
+  shown light=healthy l2=- r2=-
+@ 1.500
+  read fact system "Stanton"  origin=lua:starcitizen/lua/state.lua:526
+  facts running=true active=true menu=false context="On foot in Stanton"
+# The friend's ship arrives from quantum travel: not your ship
+# A control token released that you never got
+# Another player's contract ends, another player is healed and gets a weapon
+# The friend's ship crashes and another player dies
+# A hangar streams in, a freight elevator moves, a stow line without a ship
+# A control token for a placeholder, and the main menu's own disconnect: still on foot, still in the universe
+end @ 47.000

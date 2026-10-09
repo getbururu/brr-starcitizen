@@ -1,0 +1,21 @@
+# Made-up sample for the mod's tests: an excerpt in the shape of Star
+# Citizen's Game.log (4.x builds), written from the line formats in public
+# log parsers. It is not a real log. Names and ids are placeholders.
+# go run .github/logreplay/main.go -out tests/noseat.replay.jsonl tests/logs/noseat.log.txt
+#
+# Some builds do not log taking the pilot seat. Your own quantum target
+# names your ship, and from then on the mod knows you pilot it. Then the
+# game takes you out of the seat as the ship crashes, and the crash line
+# comes a moment later.
+# <2026-09-21T19:00:00.000Z> step: In the universe, in a ship whose seat line is missing: on foot as far as the mod knows
+<2026-09-21T19:00:00.000Z> [Notice] <Legacy login response> [CIG-net] User Login Success - Handle[Pilot1] [Team_GameServices][Login]
+<2026-09-21T19:00:01.000Z> [Notice] <Context Establisher Done> establisher="Network" runningTime=20.1 map="megamap" gamerules="SC_Default" sessionId="00000000-0000-0000-0000-000000000000" [Team_Network][Network][Replication][Loading][Persistence]
+<2026-09-21T19:00:01.500Z> [Notice] Loading screen for Stanton : SC_Frontend closed after 21.04 seconds
+<2026-09-21T19:00:02.000Z> [Notice] [CSessionManager::OnClientSpawned] Spawned!
+# <2026-09-21T19:00:10.000Z> step: Pick a quantum target: the tick, and R2 and L2 resist
+<2026-09-21T19:00:10.000Z> [Notice] <Player Selected Quantum Target - Local> [ItemNavigation][CL][416] | NOT AUTH | RSI_Meteor_850000000002[850000000002]|CSCItemNavigation::OnPlayerSelectedQuantumTarget|Player has selected point OM-1_Hurston as their destination, routing locally [Team_CGP4][QuantumTravel]
+# <2026-09-21T19:00:30.000Z> step: Arrive
+<2026-09-21T19:00:30.000Z> [Notice] <Quantum Drive Arrived - Arrived at Final Destination> [ItemNavigation][CL][416] | NOT AUTH | RSI_Meteor_850000000002[850000000002]|CSCItemNavigation::OnQuantumDriveArrived|Quantum Drive has arrived at final destination [Team_CGP4][QuantumTravel]
+# <2026-09-21T19:00:40.000Z> step: The seat is released as the ship crashes; the crash line follows
+<2026-09-21T19:00:40.000Z> [Notice] <Vehicle Control Flow> CVehicleMovementBase::ClearDriver: Local client node [200000000001] releasing control token for 'RSI_Meteor_850000000002' [850000000002] [Team_CGP4][Vehicle]
+<2026-09-21T19:00:41.000Z> [Notice] <FatalCollision> Fatal Collision occured for vehicle RSI_Meteor_850000000002 [Part: Body, Pos: x: 100.000000, y: 200.000000, z: 300.000000, Zone: OOC_Stanton_1_Hurston, PlayerPilot: 1] after hitting entity: OOC_Stanton_1_Hurston [Zone: OOC_Stanton_1_Hurston - Class(OrbitingObjectContainer)] Distance: 0.50 [Team_VehicleFeatures][Vehicle]

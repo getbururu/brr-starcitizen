@@ -1,0 +1,73 @@
+// Star Citizen's one sensor: Game.log in the game's channel folder. Each
+// line rule is a Go regular expression; a match becomes the input
+// gamelog:<rule>, with the named captures as fields. A line can match more
+// than one rule. The game process and window come from the manifest; the
+// pad is always there.
+//
+// The formats come from public log parsers and their sample lines for the
+// 4.9 and 4.10 builds. Most rules start with the line's tag, so most lines
+// are skipped quickly. Still to be checked against a real 4.10 log: whether
+// taking the pilot seat writes a control token line, whether the jump drive
+// writes its tunnel states (data/states.json), and whether turret seats
+// write control token lines.
+{
+  "sensors": 1,
+  "items": {
+    "gamelog": {
+      "type": "file.text", "order": 10,
+      "dir": "{path:log}", "glob": "Game.log", "pick": "newest_mtime",
+      "catch_up": "state_only", "when": "game.running", "rescan_ms": 1000, "poll_ms": 0,
+      "patchable": ["dir", "lines"],
+      "redact": { "login": ["handle"], "nickname": ["handle"], "dead": ["actor"],
+                  "med_bed": ["actor"], "attachment": ["player"], "mission_end": ["player"],
+                  "attacked": ["who"] },
+      "lines": {
+        // the session; a disconnect counts only when it leaves the universe
+        // (gamerules SC_Default), since the main menu's own disconnects are
+        // routine
+        "login":        { "re": "User Login Success - Handle\\[(?P<handle>[^\\]]+)\\]" },
+        "nickname":     { "re": "nickname=\"(?P<handle>[^\"]+)\"\\s+playerGEID=" },
+        "join_pu":      { "re": "<Join PU> " },
+        "in_universe":  { "re": "<Context Establisher Done> .*gamerules=\"SC_Default\"" },
+        "spawned":      { "re": "OnClientSpawned\\] Spawned!" },
+        "loading_done": { "re": "Loading screen for (?P<system>\\S+) : \\S+ closed after" },
+        "disconnected": { "re": "<Channel Disconnected> cause=(?P<cause>\\d+) .*gamerules=\"SC_Default\"" },
+        "quit":         { "re": "<SystemQuit>|CCIGBroker::FastShutdown" },
+        "crash":        { "re": "public crash handler taking over" },
+        "system_hint":  { "re": "(?i)ooc_(?P<a>stanton|pyro|nyx)|location\\[(?P<b>stanton|pyro|nyx)|/pu/system/(?P<c>stanton|pyro|nyx)/|zone \\[(?P<d>stanton|pyro|nyx)|(?P<e>pyro)[1-5]" },
+
+        // the pilot seat
+        "seat_in":      { "re": "granted control token for '(?P<vehicle>[^']+)' \\[(?P<id>\\d+)\\]" },
+        "seat_out":     { "re": "releasing control token for '(?P<vehicle>[^']+)' \\[(?P<id>\\d+)\\]" },
+
+        // quantum travel and jump points; the ids are anchored on "]|",
+        // since the same lines carry small bracketed numbers such as [CL][416]
+        "qt_target":    { "re": "<Player Selected Quantum Target - Local> .*\\| (?P<vehicle>[A-Za-z0-9_]+)\\[(?P<id>\\d+)\\]\\|CSCItemNavigation::.*selected point (?P<dest>\\S+) as their destination" },
+        "qt_arrived":   { "re": "<Quantum Drive Arrived - Arrived at Final Destination> .*\\[(?P<id>\\d+)\\]\\|CSCItemNavigation::" },
+        "jump_drive":   { "re": "<Jump Drive State Changed> Now (?P<state>\\w+)" },
+
+        // hangars: a ship elevator going down or up (the idle states of
+        // elevators are logged when a hangar streams in, and freight
+        // elevators write the same line), and a ship stowed
+        "platform":     { "re": "OnLoadingPlatformStateChanged> \\[Loading Platform\\] Loading Platform Manager \\[LoadingPlatformManager_ShipElevator[^\\]]*\\] Platform state changed to (?P<state>LoweringPlatform|RaisingPlatform)" },
+        "stowing":      { "re": "<LandingArea_UnregisterFromExternalSystems_StowingVehicle> .*Attempting to stow current vehicle" },
+
+        // the body, deaths and crashes
+        "dead":         { "re": "<\\[ActorState\\] Dead> .*Actor '(?P<actor>[^']+)' \\[\\d+\\] ejected from zone '(?P<zone>[^']+)' \\[(?P<zone_id>\\d+)\\]" },
+        "collision":    { "re": "<FatalCollision> Fatal Collision occured for vehicle (?P<vehicle>\\S+) .*PlayerPilot: (?P<pilot>\\d)" },
+        "med_bed":      { "re": "<MED BED HEAL> Actor: (?P<actor>[^ ,]+).*Perform surgery event Success" },
+        "attachment":   { "re": "<AttachmentReceived> Player\\[(?P<player>[^\\]]+)\\] Attachment\\[(?P<item>[^,\\]]+),[^\\]]*\\] Status\\[(?P<status>[^\\]]*)\\] Port\\[(?P<port>[^\\]]*)\\]" },
+
+        // missions and shops
+        "mission_end":  { "re": "<EndMission> .*Player\\[(?P<player>[^\\]]*)\\].*CompletionType\\[(?P<how>\\w+)\\]" },
+        "shop":         { "re": "RmShopFlowResponse> .*result\\[(?P<result>\\w+)\\] type\\[(?P<type>\\w+)\\]" },
+
+        // HUD notifications, in the game's language: data/notifications.json
+        // names the English ones. Some notifications go on over a second
+        // line, so the text ends at a quote or at the end of the line.
+        "notification": { "re": "<SHUDEvent_OnNotification> Added notification \"(?P<text>[^\"]*)" },
+        "attacked":     { "re": "Added notification \"(?P<who>[^\"]*?) committed (?P<crime>[^\"]*?) against you" }
+      }
+    }
+  }
+}

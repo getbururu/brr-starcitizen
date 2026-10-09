@@ -1,0 +1,35 @@
+# Made-up sample for the mod's tests: an excerpt in the shape of Star
+# Citizen's Game.log (4.x builds), written from the line formats in public
+# log parsers. It is not a real log. Names and ids are placeholders.
+# go run .github/logreplay/main.go -out tests/missions.replay.jsonl tests/logs/missions.log.txt
+#
+# Contracts, objectives, rewards, a blueprint, a refinery order, a new
+# party member, a purchase.
+# <2026-09-21T14:00:00.000Z> step: In the universe, on foot
+<2026-09-21T14:00:00.000Z> [Notice] <Legacy login response> [CIG-net] User Login Success - Handle[Pilot1] [Team_GameServices][Login]
+<2026-09-21T14:00:01.000Z> [Notice] <Context Establisher Done> establisher="Network" runningTime=20.1 map="megamap" gamerules="SC_Default" sessionId="00000000-0000-0000-0000-000000000000" [Team_Network][Network][Replication][Loading][Persistence]
+<2026-09-21T14:00:01.500Z> [Notice] Loading screen for Stanton : SC_Frontend closed after 21.04 seconds
+<2026-09-21T14:00:02.000Z> [Notice] [CSessionManager::OnClientSpawned] Spawned!
+# <2026-09-21T14:00:05.000Z> step: Accept a contract
+<2026-09-21T14:00:05.000Z> [Notice] <SHUDEvent_OnNotification> Added notification "Contract Accepted: Hostile Takeover: " [1] to queue. New queue size: 1, MissionId: [00000000-0000-0000-0000-000000000001], ObjectiveId: [] [Team_CoreGameplayFeatures][Missions][Comms]
+<2026-09-21T14:00:05.500Z> [Notice] <SHUDEvent_OnNotification> Added notification "New Objective: Travel to the outpost: " [2] to queue. New queue size: 2, MissionId: [00000000-0000-0000-0000-000000000001], ObjectiveId: [travel] [Team_CoreGameplayFeatures][Missions][Comms]
+# <2026-09-21T14:00:10.000Z> step: An objective complete
+<2026-09-21T14:00:10.000Z> [Notice] <SHUDEvent_OnNotification> Added notification "Objective Complete: Travel to the outpost: " [3] to queue. New queue size: 1, MissionId: [00000000-0000-0000-0000-000000000001], ObjectiveId: [travel] [Team_CoreGameplayFeatures][Missions][Comms]
+# <2026-09-21T14:00:15.000Z> step: The contract complete
+<2026-09-21T14:00:15.000Z> [Notice] <EndMission> Ending mission for player. MissionId[00000000-0000-0000-0000-000000000001] Player[Pilot1] PlayerId[200000000001] CompletionType[Complete] Reason[Complete] [Team_MissionFeatures][Missions]
+<2026-09-21T14:00:15.200Z> [Notice] <SHUDEvent_OnNotification> Added notification "Contract Complete: Hostile Takeover: " [4] to queue. New queue size: 1, MissionId: [00000000-0000-0000-0000-000000000001], ObjectiveId: [] [Team_CoreGameplayFeatures][Missions][Comms]
+# <2026-09-21T14:00:20.000Z> step: Rewards, and a blueprint with a language pack's badge
+<2026-09-21T14:00:20.000Z> [Notice] <SHUDEvent_OnNotification> Added notification "You've earned: 2 rewards: " [5] to queue. New queue size: 1, MissionId: [00000000-0000-0000-0000-000000000000], ObjectiveId: [] [Team_CoreGameplayFeatures][Missions][Comms]
+<2026-09-21T14:00:23.000Z> [Notice] <SHUDEvent_OnNotification> Added notification "Received Blueprint: Demeco LMG <EM4>[BP]</EM4>: " [6] to queue. New queue size: 1, MissionId: [00000000-0000-0000-0000-000000000000], ObjectiveId: [] [Team_CoreGameplayFeatures][Missions][Comms]
+# <2026-09-21T14:00:26.000Z> step: A failed contract, then an abandoned one, which plays nothing
+<2026-09-21T14:00:26.000Z> [Notice] <EndMission> Ending mission for player. MissionId[00000000-0000-0000-0000-000000000002] Player[Pilot1] PlayerId[200000000001] CompletionType[Fail] Reason[Failed] [Team_MissionFeatures][Missions]
+<2026-09-21T14:00:30.000Z> [Notice] <EndMission> Ending mission for player. MissionId[00000000-0000-0000-0000-000000000003] Player[Pilot1] PlayerId[200000000001] CompletionType[Abandon] Reason[Abandoned] [Team_MissionFeatures][Missions]
+# <2026-09-21T14:00:33.000Z> step: A refinery order done, a new party member (a notice over two lines)
+<2026-09-21T14:00:33.000Z> [Notice] <SHUDEvent_OnNotification> Added notification "A Refinery Work Order has been Completed at ARC-L1: " [7] to queue. New queue size: 1, MissionId: [00000000-0000-0000-0000-000000000000], ObjectiveId: [] [Team_CoreGameplayFeatures][Missions][Comms]
+<2026-09-21T14:00:36.000Z> [Notice] <SHUDEvent_OnNotification> Added notification "New Member Joined
+<2026-09-21T14:00:36.000Z> Pilot2 has joined the party.: " [8] to queue. New queue size: 1, MissionId: [00000000-0000-0000-0000-000000000000], ObjectiveId: [] [Team_CoreGameplayFeatures][Missions][Comms]
+<2026-09-21T14:00:36.000Z>    "New Member Joined
+<2026-09-21T14:00:36.000Z> Pilot2 has joined the party.: " [8]
+# <2026-09-21T14:00:40.000Z> step: Buy something at a kiosk
+<2026-09-21T14:00:40.000Z> [Notice] <CEntityComponentShopUIProvider::SendShopBuyRequest> Sending SShopBuyRequest - playerId[200000000001] shopId[300000000001] shopName[SCShop_Area18_Kiosk] kioskId[300000000002] client_price[1500.000000] itemName[medpen_01] quantity[1] [Team_CoreGameplayFeatures][Shops]
+<2026-09-21T14:00:40.500Z> [Notice] <CEntityComponentShopUIProvider::RmShopFlowResponse> Received shop flow response - playerId[200000000001] shopId[300000000001] shopName[SCShop_Area18_Kiosk] kioskId[300000000002] kioskState[Buying] result[Success] type[Buying] [Team_CoreGameplayFeatures][Shops]

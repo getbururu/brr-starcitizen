@@ -1,0 +1,26 @@
+# Made-up sample for the mod's tests: an excerpt in the shape of Star
+# Citizen's Game.log (4.x builds), written from the line formats in public
+# log parsers. It is not a real log. Names and ids are placeholders.
+# go run .github/logreplay/main.go -out tests/restart.replay.jsonl tests/logs/restart.log.txt
+#
+# The game closes and starts again with a new Game.log: nothing from the
+# first session stays.
+# <2026-09-21T18:00:00.000Z> step: In the universe, in the pilot seat, injured, outside monitored space
+<2026-09-21T18:00:00.000Z> [Notice] <Legacy login response> [CIG-net] User Login Success - Handle[Pilot1] [Team_GameServices][Login]
+<2026-09-21T18:00:01.000Z> [Notice] <Context Establisher Done> establisher="Network" runningTime=20.1 map="megamap" gamerules="SC_Default" sessionId="00000000-0000-0000-0000-000000000000" [Team_Network][Network][Replication][Loading][Persistence]
+<2026-09-21T18:00:01.500Z> [Notice] Loading screen for Stanton : SC_Frontend closed after 21.04 seconds
+<2026-09-21T18:00:02.000Z> [Notice] [CSessionManager::OnClientSpawned] Spawned!
+<2026-09-21T18:00:03.000Z> [Notice] <Vehicle Control Flow> CVehicle::Initialize::<lambda_1>::operator (): Local client node [200000000001] granted control token for 'DRAK_Cutlass_Black_850000000001' [850000000001] [Team_CGP4][Vehicle]
+<2026-09-21T18:00:05.000Z> [Notice] <SHUDEvent_OnNotification> Added notification "Moderate Injury Detected - Torso - Tier 2 Treatment Required: " [1] to queue. New queue size: 1, MissionId: [00000000-0000-0000-0000-000000000000], ObjectiveId: [] [Team_CoreGameplayFeatures][Missions][Comms]
+<2026-09-21T18:00:08.000Z> [Notice] <SHUDEvent_OnNotification> Added notification "Exited Monitored Space: " [2] to queue. New queue size: 1, MissionId: [00000000-0000-0000-0000-000000000000], ObjectiveId: [] [Team_CoreGameplayFeatures][Missions][Comms]
+# <2026-09-21T18:00:10.000Z> step: The game closes without a quit line (a crash)
+<2026-09-21T18:00:10.000Z> [Notice] public crash handler taking over
+# <2026-09-21T18:00:11.000Z> game: closed
+# <2026-09-21T18:00:20.000Z> step: The game starts again: a new Game.log, the main menu
+# <2026-09-21T18:00:20.000Z> game: running
+<2026-09-21T18:00:21.000Z> Log started on Mon Sep 21 18:00:21 2026
+<2026-09-21T18:00:30.000Z> [Notice] <Legacy login response> [CIG-net] User Login Success - Handle[Pilot1] [Team_GameServices][Login]
+# <2026-09-21T18:00:40.000Z> step: Into the universe in Pyro: healthy, no ship, the mic LED off
+<2026-09-21T18:00:40.000Z> [Notice] <Context Establisher Done> establisher="Network" runningTime=20.1 map="megamap" gamerules="SC_Default" sessionId="00000000-0000-0000-0000-000000000001" [Team_Network][Network][Replication][Loading][Persistence]
+<2026-09-21T18:00:41.000Z> [Notice] Loading screen for Pyro : SC_Frontend closed after 21.04 seconds
+<2026-09-21T18:00:42.000Z> [Notice] [CSessionManager::OnClientSpawned] Spawned!

@@ -1,0 +1,43 @@
+# Made-up sample for the mod's tests: an excerpt in the shape of Star
+# Citizen's Game.log (4.x builds), written from the line formats in public
+# log parsers, with the controller's state in "pad:" lines. It is not a
+# real log. Names and ids are placeholders.
+# go run .github/logreplay/main.go -out tests/pad.replay.jsonl tests/logs/pad.log.txt
+#
+# The controller in the pilot seat, with the default gamepad layout: R2
+# in an armistice zone and outside it, a hard turn, a roll, a boost, and
+# small aiming, which is not felt.
+# <2026-09-21T17:00:00.000Z> step: In the universe, in the pilot seat, inside an armistice zone
+<2026-09-21T17:00:00.000Z> [Notice] <Legacy login response> [CIG-net] User Login Success - Handle[Pilot1] [Team_GameServices][Login]
+<2026-09-21T17:00:01.000Z> [Notice] <Context Establisher Done> establisher="Network" runningTime=20.1 map="megamap" gamerules="SC_Default" sessionId="00000000-0000-0000-0000-000000000000" [Team_Network][Network][Replication][Loading][Persistence]
+<2026-09-21T17:00:01.500Z> [Notice] Loading screen for Stanton : SC_Frontend closed after 21.04 seconds
+<2026-09-21T17:00:02.000Z> [Notice] [CSessionManager::OnClientSpawned] Spawned!
+<2026-09-21T17:00:02.500Z> [Notice] <SHUDEvent_OnNotification> Added notification "Entering Armistice Zone - Combat Prohibited: " [1] to queue. New queue size: 1, MissionId: [00000000-0000-0000-0000-000000000000], ObjectiveId: [] [Team_CoreGameplayFeatures][Missions][Comms]
+<2026-09-21T17:00:03.000Z> [Notice] <Vehicle Control Flow> CVehicle::Initialize::<lambda_1>::operator (): Local client node [200000000001] granted control token for 'DRAK_Cutlass_Black_850000000001' [850000000001] [Team_CGP4][Vehicle]
+# <2026-09-21T17:00:03.000Z> pad: {}
+# <2026-09-21T17:00:05.000Z> step: R2 held in the armistice zone: the trigger stays free
+# <2026-09-21T17:00:05.000Z> pad: {"r2": 255, "held": ["r2"]}
+# <2026-09-21T17:00:06.000Z> pad: {}
+# <2026-09-21T17:00:10.000Z> step: Out of the zone: R2 and L2 resist
+<2026-09-21T17:00:10.000Z> [Notice] <SHUDEvent_OnNotification> Added notification "Leaving Armistice Zone - Caution Advised: " [2] to queue. New queue size: 1, MissionId: [00000000-0000-0000-0000-000000000000], ObjectiveId: [] [Team_CoreGameplayFeatures][Missions][Comms]
+# <2026-09-21T17:00:11.000Z> pad: {"r2": 255, "held": ["r2"]}
+# <2026-09-21T17:00:12.000Z> pad: {}
+# <2026-09-21T17:00:15.000Z> step: A hard turn with the right stick: a soft push as it starts, and as it ends
+# <2026-09-21T17:00:15.000Z> pad: {"sticks": [0, 0, 0.3, 0]}
+# <2026-09-21T17:00:15.100Z> pad: {"sticks": [0, 0, 0.6, 0]}
+# <2026-09-21T17:00:15.200Z> pad: {"sticks": [0, 0, 0.9, 0]}
+# <2026-09-21T17:00:15.300Z> pad: {"sticks": [0, 0, 1, 0]}
+# <2026-09-21T17:00:17.000Z> pad: {"sticks": [0, 0, 0.5, 0]}
+# <2026-09-21T17:00:17.100Z> pad: {"sticks": [0, 0, 0, 0]}
+# <2026-09-21T17:00:20.000Z> step: A roll: L1 with the left stick
+# <2026-09-21T17:00:20.000Z> pad: {"held": ["l1"], "sticks": [-0.5, 0, 0, 0]}
+# <2026-09-21T17:00:20.100Z> pad: {"held": ["l1"], "sticks": [-1, 0, 0, 0]}
+# <2026-09-21T17:00:21.500Z> pad: {"held": ["l1"], "sticks": [0, 0, 0, 0]}
+# <2026-09-21T17:00:21.600Z> pad: {}
+# <2026-09-21T17:00:25.000Z> step: Boost: L3
+# <2026-09-21T17:00:25.000Z> pad: {"held": ["l3"], "pressed": ["l3"]}
+# <2026-09-21T17:00:25.200Z> pad: {}
+# <2026-09-21T17:00:28.000Z> step: Small aiming with the right stick: nothing is felt
+# <2026-09-21T17:00:28.000Z> pad: {"sticks": [0, 0, 0.3, -0.4]}
+# <2026-09-21T17:00:29.000Z> pad: {"sticks": [0, 0, -0.5, 0.2]}
+# <2026-09-21T17:00:30.000Z> pad: {}

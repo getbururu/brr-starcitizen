@@ -1,0 +1,146 @@
+replay through starcitizen; starcitizen drives; ticks of 25 ms
+# Log in, join the universe and spawn in a station
+@ 0.000
+  log Star Citizen started
+  read setup log warn "Star Citizen's folder is not known yet. Start the game, or set its folder on the Settings page."  origin=lua:starcitizen/lua/state.lua:511
+  read fact ship "None"  origin=lua:starcitizen/lua/state.lua:526
+  read fact system "Unknown"  origin=lua:starcitizen/lua/state.lua:526
+  read fact injury "None"  origin=lua:starcitizen/lua/state.lua:526
+  facts running=true active=false menu=true context="In the main menu"
+@ 20.000
+  facts running=true active=true menu=false context="On foot"
+  out L2 OFF [] R2 OFF [] light 0 255 60 @200 leds off mic off
+  shown light=healthy l2=- r2=-
+@ 21.000
+  read fact system "Stanton"  origin=lua:starcitizen/lua/state.lua:526
+  facts running=true active=true menu=false context="On foot in Stanton"
+@ 22.000
+  read play zone_in side=both scale=1 pan=0 amount=0 at=+0  origin=rule:starcitizen/zone_in
+  out light 0 255 60 @70
+  synth on on
+@ 22.075
+  synth off off
+@ 22.125
+  synth on on
+@ 22.200
+  synth off off
+audio 19fd1ead
+# Ask for a hangar: the queue, the hangar ready, the elevator down and up
+@ 30.000
+  read play notice side=both scale=1 pan=0 amount=0 at=+0  origin=rule:starcitizen/hangar_queue
+  out leds 3
+  synth on on
+@ 30.100
+  synth off off
+@ 30.175
+  synth on on
+@ 30.275
+  synth off off
+@ 40.000
+  read play hangar_ready side=both scale=1 pan=0 amount=0 at=+0  origin=rule:starcitizen/hangar_ready
+  read overlay starcitizen/hangar  origin=rule:starcitizen/hangar_ready
+  out light 0 255 80 @200 leds off
+  shown light=hangar l2=- r2=-
+  synth on on
+@ 40.225
+  synth off off
+@ 41.000
+  out light 0 255 60 @70
+  shown light=healthy l2=- r2=-
+@ 42.000
+  read play elevator side=both scale=1 pan=0 amount=0 at=+0  origin=rule:starcitizen/elevator
+  synth on on
+@ 43.200
+  synth off off
+@ 50.000
+  read play elevator side=both scale=1 pan=0 amount=0 at=+0  origin=rule:starcitizen/elevator
+  synth on on
+@ 51.200
+  synth off off
+audio 5cde9941
+# Take the pilot seat
+@ 60.000
+  read play seat_in side=both scale=1 pan=0 amount=0 at=+0  origin=rule:starcitizen/seat_in
+  read fact ship "Cutlass Black"  origin=lua:starcitizen/lua/state.lua:526
+  facts running=true active=true menu=false context="Piloting a Cutlass Black in Stanton"
+  synth on on
+@ 60.500
+  synth off off
+audio 688cff61
+# Fly out of the armistice zone
+@ 70.000
+  read play zone_out side=both scale=1 pan=0 amount=0 at=+0  origin=rule:starcitizen/zone_out
+  out L2 WEAPON [2 5 4] R2 WEAPON [2 5 6] light 0 255 60 @200
+  shown light=healthy l2=ship_fire_l r2=ship_fire_r
+  synth on on
+@ 70.075
+  synth off off
+@ 70.125
+  synth on on
+@ 70.200
+  synth off off
+audio affc6ecd
+# Pick a quantum target (logged twice), low fuel, arrive
+@ 80.000
+  read play qt_target side=both scale=1 pan=0 amount=0 at=+0  origin=rule:starcitizen/qt_target
+  synth off on
+@ 80.100
+  synth off off
+@ 85.000
+  read play low_fuel side=both scale=1 pan=0 amount=0 at=+0  origin=rule:starcitizen/low_fuel
+  out mic pulse
+  synth on on
+@ 85.025
+  synth off off
+@ 85.150
+  synth on on
+@ 85.200
+  synth off off
+@ 85.300
+  synth on on
+@ 85.350
+  synth off off
+@ 110.000
+  read play qt_arrive side=both scale=1 pan=0 amount=0 at=+0  origin=rule:starcitizen/qt_arrive
+  read overlay starcitizen/quantum  origin=rule:starcitizen/qt_flash
+  out light 140 170 255 @200
+  shown light=quantum l2=ship_fire_l r2=ship_fire_r
+  synth on on
+@ 110.600
+  out light 0 255 60 @200
+  shown light=healthy l2=ship_fire_l r2=ship_fire_r
+@ 111.500
+  synth off off
+audio 62c4670d
+# Back into an armistice zone, out of the seat, the ship stowed
+@ 130.000
+  read play zone_in side=both scale=1 pan=0 amount=0 at=+0  origin=rule:starcitizen/zone_in
+  out L2 OFF [] R2 OFF [] light 0 255 60 @70
+  shown light=healthy l2=- r2=-
+  synth on on
+@ 130.075
+  synth off off
+@ 130.125
+  synth on on
+@ 130.200
+  synth off off
+@ 140.000
+  read play seat_out side=both scale=1 pan=0 amount=0 at=+0  origin=rule:starcitizen/seat_out
+  read fact ship "None"  origin=lua:starcitizen/lua/state.lua:526
+  facts running=true active=true menu=false context="On foot in Stanton"
+  out mic off
+  synth on on
+@ 140.425
+  synth off off
+@ 145.000
+  read play stowed side=both scale=1 pan=0 amount=0 at=+0  origin=rule:starcitizen/stowed
+  synth on on
+@ 145.700
+  synth off off
+audio 55864765
+# Quit to the desktop
+@ 160.000
+  read fact system "Unknown"  origin=lua:starcitizen/lua/state.lua:526
+  facts running=true active=false menu=true context="In the main menu"
+  out handback
+end @ 169.000

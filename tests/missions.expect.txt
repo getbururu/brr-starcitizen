@@ -1,0 +1,142 @@
+replay through starcitizen; starcitizen drives; ticks of 25 ms
+# In the universe, on foot
+@ 0.000
+  log Star Citizen started
+  read setup log warn "Star Citizen's folder is not known yet. Start the game, or set its folder on the Settings page."  origin=lua:starcitizen/lua/state.lua:511
+  read fact ship "None"  origin=lua:starcitizen/lua/state.lua:526
+  read fact system "Unknown"  origin=lua:starcitizen/lua/state.lua:526
+  read fact injury "None"  origin=lua:starcitizen/lua/state.lua:526
+  facts running=true active=false menu=true context="In the main menu"
+@ 1.000
+  facts running=true active=true menu=false context="On foot"
+  out L2 OFF [] R2 OFF [] light 0 255 60 @200 leds off mic off
+  shown light=healthy l2=- r2=-
+@ 1.500
+  read fact system "Stanton"  origin=lua:starcitizen/lua/state.lua:526
+  facts running=true active=true menu=false context="On foot in Stanton"
+# Accept a contract
+@ 5.000
+  read play notice side=both scale=1 pan=0 amount=0 at=+0  origin=rule:starcitizen/contract_accepted
+  synth on on
+@ 5.100
+  synth off off
+@ 5.175
+  synth on on
+@ 5.275
+  synth off off
+audio 06fc3d0d
+# An objective complete
+@ 10.000
+  read play tick side=both scale=1 pan=0 amount=0 at=+0  origin=rule:starcitizen/objective_complete
+  synth on on
+@ 10.025
+  synth off off
+audio f9bdd161
+# The contract complete
+@ 15.000
+  read play success side=both scale=1 pan=0 amount=0 at=+0  origin=rule:starcitizen/contract_complete
+  read overlay starcitizen/success  origin=rule:starcitizen/contract_complete
+  out light 0 255 0 @200
+  shown light=success l2=- r2=-
+  synth on on
+@ 15.275
+  synth off off
+@ 15.700
+  out light 0 255 60 @200
+  shown light=healthy l2=- r2=-
+audio e5657049
+# Rewards, and a blueprint with a language pack's badge
+@ 20.000
+  read play sparkle side=both scale=1 pan=0 amount=0 at=+0  origin=rule:starcitizen/rewards
+  read overlay starcitizen/blueprint  origin=rule:starcitizen/rewards
+  out light 0 200 255 @200
+  shown light=blueprint l2=- r2=-
+  synth on on
+@ 20.075
+  synth off off
+@ 20.100
+  synth on on
+@ 20.175
+  synth off off
+@ 20.200
+  synth on on
+@ 20.275
+  synth off off
+@ 20.700
+  out light 0 255 60 @200
+  shown light=healthy l2=- r2=-
+@ 23.000
+  read play sparkle side=both scale=1 pan=0 amount=0 at=+0  origin=rule:starcitizen/blueprint
+  read overlay starcitizen/blueprint  origin=rule:starcitizen/blueprint
+  out light 0 200 255 @200
+  shown light=blueprint l2=- r2=-
+  synth on on
+@ 23.075
+  synth off off
+@ 23.100
+  synth on on
+@ 23.175
+  synth off off
+@ 23.200
+  synth on on
+@ 23.275
+  synth off off
+@ 23.700
+  out light 0 255 60 @200
+  shown light=healthy l2=- r2=-
+audio 32a8d9fd
+# A failed contract, then an abandoned one, which plays nothing
+@ 26.000
+  read play failure side=both scale=1 pan=0 amount=0 at=+0  origin=rule:starcitizen/contract_failed
+  read overlay starcitizen/failure  origin=rule:starcitizen/contract_failed
+  out light 255 40 0 @200
+  shown light=failure l2=- r2=-
+  synth on on
+@ 26.125
+  out light 255 40 0 @0
+@ 26.250
+  out light 255 40 0 @200
+@ 26.275
+  synth off off
+@ 26.375
+  out light 255 40 0 @0
+@ 26.500
+  out light 255 40 0 @200
+@ 26.625
+  out light 255 40 0 @0
+@ 26.700
+  out light 0 255 60 @200
+  shown light=healthy l2=- r2=-
+audio a03448f1
+# A refinery order done, a new party member (a notice over two lines)
+@ 33.000
+  read play notice side=both scale=1 pan=0 amount=0 at=+0  origin=rule:starcitizen/refinery_done
+  synth on on
+@ 33.100
+  synth off off
+@ 33.175
+  synth on on
+@ 33.275
+  synth off off
+@ 36.000
+  read play notice side=both scale=1 pan=0 amount=0 at=+0  origin=rule:starcitizen/party_joined
+  synth on on
+@ 36.100
+  synth off off
+@ 36.175
+  synth on on
+@ 36.275
+  synth off off
+audio ed5ccc15
+# Buy something at a kiosk
+@ 40.500
+  read play purchase side=both scale=1 pan=0 amount=0 at=+0  origin=rule:starcitizen/purchase
+  synth on on
+@ 40.600
+  synth off off
+@ 40.675
+  synth on on
+@ 40.875
+  synth off off
+audio 881d8ed1
+end @ 41.500

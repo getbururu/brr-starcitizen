@@ -1,0 +1,21 @@
+{"replay":1,"mod":"starcitizen","mod_version":"0.1.0","bururu":"0.11.0","start_unix_ms":1789995600000,"poll_ms":25}
+{"t_ms":0,"sensor":"game","running":true,"in_front":true}
+{"t_ms":0,"step":"In the universe, in the pilot seat"}
+{"t_ms":0,"sensor":"gamelog","raw":"<2026-09-21T13:00:00.000Z> [Notice] <Legacy login response> [CIG-net] User Login Success - Handle[Pilot1] [Team_GameServices][Login]"}
+{"t_ms":1000,"sensor":"gamelog","raw":"<2026-09-21T13:00:01.000Z> [Notice] <Context Establisher Done> establisher=\"Network\" runningTime=20.1 map=\"megamap\" gamerules=\"SC_Default\" sessionId=\"00000000-0000-0000-0000-000000000000\" [Team_Network][Network][Replication][Loading][Persistence]"}
+{"t_ms":1500,"sensor":"gamelog","raw":"<2026-09-21T13:00:01.500Z> [Notice] Loading screen for Stanton : SC_Frontend closed after 21.04 seconds"}
+{"t_ms":2000,"sensor":"gamelog","raw":"<2026-09-21T13:00:02.000Z> [Notice] [CSessionManager::OnClientSpawned] Spawned!"}
+{"t_ms":3000,"sensor":"gamelog","raw":"<2026-09-21T13:00:03.000Z> [Notice] <Vehicle Control Flow> CVehicle::Initialize::<lambda_1>::operator (): Local client node [200000000001] granted control token for 'DRAK_Cutlass_Black_850000000001' [850000000001] [Team_CGP4][Vehicle]"}
+{"t_ms":5000,"step":"Out of monitored space: the mic LED lights; back in: off"}
+{"t_ms":5000,"sensor":"gamelog","raw":"<2026-09-21T13:00:05.000Z> [Notice] <SHUDEvent_OnNotification> Added notification \"Exited Monitored Space: \" [1] to queue. New queue size: 1, MissionId: [00000000-0000-0000-0000-000000000000], ObjectiveId: [] [Team_CoreGameplayFeatures][Missions][Comms]"}
+{"t_ms":10000,"sensor":"gamelog","raw":"<2026-09-21T13:00:10.000Z> [Notice] <SHUDEvent_OnNotification> Added notification \"Entered Monitored Space: \" [2] to queue. New queue size: 1, MissionId: [00000000-0000-0000-0000-000000000000], ObjectiveId: [] [Team_CoreGameplayFeatures][Missions][Comms]"}
+{"t_ms":15000,"step":"Monitored space goes down and comes back"}
+{"t_ms":15000,"sensor":"gamelog","raw":"<2026-09-21T13:00:15.000Z> [Notice] <SHUDEvent_OnNotification> Added notification \"Monitored Space Down: \" [3] to queue. New queue size: 1, MissionId: [00000000-0000-0000-0000-000000000000], ObjectiveId: [] [Team_CoreGameplayFeatures][Missions][Comms]"}
+{"t_ms":20000,"sensor":"gamelog","raw":"<2026-09-21T13:00:20.000Z> [Notice] <SHUDEvent_OnNotification> Added notification \"Monitored Space Restored: \" [4] to queue. New queue size: 1, MissionId: [00000000-0000-0000-0000-000000000000], ObjectiveId: [] [Team_CoreGameplayFeatures][Missions][Comms]"}
+{"t_ms":25000,"step":"A crime: CrimeStat goes up"}
+{"t_ms":25000,"sensor":"gamelog","raw":"<2026-09-21T13:00:25.000Z> [Notice] <SHUDEvent_OnNotification> Added notification \"Crime Committed: Trespassing: \" [5] to queue. New queue size: 1, MissionId: [00000000-0000-0000-0000-000000000000], ObjectiveId: [] [Team_CoreGameplayFeatures][Missions][Comms]"}
+{"t_ms":25200,"sensor":"gamelog","raw":"<2026-09-21T13:00:25.200Z> [Notice] <SHUDEvent_OnNotification> Added notification \"CrimeStat Rating Increased: \" [6] to queue. New queue size: 1, MissionId: [00000000-0000-0000-0000-000000000000], ObjectiveId: [] [Team_CoreGameplayFeatures][Missions][Comms]"}
+{"t_ms":30000,"step":"A fine"}
+{"t_ms":30000,"sensor":"gamelog","raw":"<2026-09-21T13:00:30.000Z> [Notice] <SHUDEvent_OnNotification> Added notification \"Fined 5000 UEC: \" [7] to queue. New queue size: 1, MissionId: [00000000-0000-0000-0000-000000000000], ObjectiveId: [] [Team_CoreGameplayFeatures][Missions][Comms]"}
+{"t_ms":35000,"step":"A crime against you"}
+{"t_ms":35000,"sensor":"gamelog","raw":"<2026-09-21T13:00:35.000Z> [Notice] <SHUDEvent_OnNotification> Added notification \"Pilot2 committed Assault against you: \" [8] to queue. New queue size: 1, MissionId: [00000000-0000-0000-0000-000000000000], ObjectiveId: [] [Team_CoreGameplayFeatures][Missions][Comms]"}

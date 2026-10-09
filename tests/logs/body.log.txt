@@ -1,0 +1,28 @@
+# Made-up sample for the mod's tests: an excerpt in the shape of Star
+# Citizen's Game.log (4.x builds), written from the line formats in public
+# log parsers. It is not a real log. Names and ids are placeholders.
+# go run .github/logreplay/main.go -out tests/body.replay.jsonl tests/logs/body.log.txt
+#
+# Injuries of each tier, downed with the heartbeat, a med bed heal; then a
+# crash, the ship destroyed, your death and the respawn.
+# <2026-09-21T12:00:00.000Z> step: In the universe, on foot in Stanton
+<2026-09-21T12:00:00.000Z> [Notice] <Legacy login response> [CIG-net] User Login Success - Handle[Pilot1] [Team_GameServices][Login]
+<2026-09-21T12:00:01.000Z> [Notice] <Context Establisher Done> establisher="Network" runningTime=20.1 map="megamap" gamerules="SC_Default" sessionId="00000000-0000-0000-0000-000000000000" [Team_Network][Network][Replication][Loading][Persistence]
+<2026-09-21T12:00:01.500Z> [Notice] Loading screen for Stanton : SC_Frontend closed after 21.04 seconds
+<2026-09-21T12:00:02.000Z> [Notice] [CSessionManager::OnClientSpawned] Spawned!
+# <2026-09-21T12:00:05.000Z> step: A minor, a moderate and a major injury: one, two and three thuds
+<2026-09-21T12:00:05.000Z> [Notice] <SHUDEvent_OnNotification> Added notification "Minor Injury Detected - Left arm - Tier 3 Treatment Required: " [1] to queue. New queue size: 1, MissionId: [00000000-0000-0000-0000-000000000000], ObjectiveId: [] [Team_CoreGameplayFeatures][Missions][Comms]
+<2026-09-21T12:00:08.000Z> [Notice] <SHUDEvent_OnNotification> Added notification "Moderate Injury Detected - Torso - Tier 2 Treatment Required: " [2] to queue. New queue size: 1, MissionId: [00000000-0000-0000-0000-000000000000], ObjectiveId: [] [Team_CoreGameplayFeatures][Missions][Comms]
+<2026-09-21T12:00:11.000Z> [Notice] <SHUDEvent_OnNotification> Added notification "Major Injury Detected - Head - Tier 1 Treatment Required: " [3] to queue. New queue size: 1, MissionId: [00000000-0000-0000-0000-000000000000], ObjectiveId: [] [Team_CoreGameplayFeatures][Missions][Comms]
+# <2026-09-21T12:00:14.000Z> step: Downed: the heartbeat, the lightbar breathing red, the triggers free
+<2026-09-21T12:00:14.000Z> [Notice] <SHUDEvent_OnNotification> Added notification "Incapacitated: Seek medical attention: " [4] to queue. New queue size: 1, MissionId: [00000000-0000-0000-0000-000000000000], ObjectiveId: [] [Team_CoreGameplayFeatures][Missions][Comms]
+<2026-09-21T12:00:15.000Z> [Notice] <SHUDEvent_OnNotification> Added notification "Standby, Local Emergency Services Are En Route: " [5] to queue. New queue size: 1, MissionId: [00000000-0000-0000-0000-000000000000], ObjectiveId: [] [Team_CoreGameplayFeatures][Missions][Comms]
+# <2026-09-21T12:00:22.000Z> step: A med bed heals you
+<2026-09-21T12:00:22.000Z> [Notice] <MED BED HEAL> Actor: Pilot1 (Non-Authoritative CLIENT: Pilot1) | [CEntityComponentMedBed::HandleComponentEvent:1101] | -> Perform surgery event Success, med bed name: medbed_clinic_a_01, vehicle name: none, head: true torso: true leftArm: true rightArm: false leftLeg: false rightLeg: false [Team_ActorFeatures]
+# <2026-09-21T12:00:30.000Z> step: Take the pilot seat and crash into the ground
+<2026-09-21T12:00:30.000Z> [Notice] <Vehicle Control Flow> CVehicle::Initialize::<lambda_1>::operator (): Local client node [200000000001] granted control token for 'DRAK_Cutlass_Black_850000000001' [850000000001] [Team_CGP4][Vehicle]
+<2026-09-21T12:00:40.000Z> [Notice] <FatalCollision> Fatal Collision occured for vehicle DRAK_Cutlass_Black_850000000001 [Part: Body, Pos: x: 100.000000, y: 200.000000, z: 300.000000, Zone: OOC_Stanton_1_Hurston, PlayerPilot: 1] after hitting entity: OOC_Stanton_1_Hurston [Zone: OOC_Stanton_1_Hurston - Class(OrbitingObjectContainer)] Distance: 0.50 [Team_VehicleFeatures][Vehicle]
+# <2026-09-21T12:00:41.000Z> step: The ship is destroyed and you die: the death feel, the lightbar blinks, then the controller rests on the respawn screen
+<2026-09-21T12:00:41.000Z> [Notice] <[ActorState] Dead> [ACTOR STATE][CSCActorControlStateDead::PrePhysicsUpdate] Actor 'Pilot1' [200000000001] ejected from zone 'DRAK_Cutlass_Black_850000000001' [850000000001] to zone 'OOC_Stanton_1_Hurston' [900000000010] due to previous zone being in a destroyed vehicle [Team_ActorFeatures][Actor]
+# <2026-09-21T12:01:00.000Z> step: Respawn: a soft arrival, healthy again
+<2026-09-21T12:01:00.000Z> [Notice] [CSessionManager::OnClientSpawned] Spawned!

@@ -1,0 +1,113 @@
+replay through starcitizen; starcitizen drives; ticks of 25 ms
+# In the universe, in the pilot seat
+@ 0.000
+  log Star Citizen started
+  read setup log warn "Star Citizen's folder is not known yet. Start the game, or set its folder on the Settings page."  origin=lua:starcitizen/lua/state.lua:511
+  read fact ship "None"  origin=lua:starcitizen/lua/state.lua:526
+  read fact system "Unknown"  origin=lua:starcitizen/lua/state.lua:526
+  read fact injury "None"  origin=lua:starcitizen/lua/state.lua:526
+  facts running=true active=false menu=true context="In the main menu"
+@ 1.000
+  facts running=true active=true menu=false context="On foot"
+  out L2 OFF [] R2 OFF [] light 0 255 60 @200 leds off mic off
+  shown light=healthy l2=- r2=-
+@ 1.500
+  read fact system "Stanton"  origin=lua:starcitizen/lua/state.lua:526
+  facts running=true active=true menu=false context="On foot in Stanton"
+@ 3.000
+  read play seat_in side=both scale=1 pan=0 amount=0 at=+0  origin=rule:starcitizen/seat_in
+  read fact ship "Cutlass Black"  origin=lua:starcitizen/lua/state.lua:526
+  facts running=true active=true menu=false context="Piloting a Cutlass Black in Stanton"
+  out L2 WEAPON [2 5 4] R2 WEAPON [2 5 6]
+  shown light=healthy l2=ship_fire_l r2=ship_fire_r
+  synth on on
+@ 3.500
+  synth off off
+audio 939c4761
+# Out of monitored space: the mic LED lights; back in: off
+@ 5.000
+  out mic on
+@ 10.000
+  out mic off
+# Monitored space goes down and comes back
+@ 15.000
+  out mic on
+@ 20.000
+  out mic off
+# A crime: CrimeStat goes up
+@ 25.200
+  read play crime side=both scale=1 pan=0 amount=0 at=+0  origin=rule:starcitizen/crime
+  read overlay starcitizen/crime  origin=rule:starcitizen/crime
+  out light 255 0 40 @0
+  shown light=crime l2=ship_fire_l r2=ship_fire_r
+  synth on on
+@ 25.225
+  synth off off
+@ 25.250
+  out light 255 0 40 @200
+@ 25.350
+  synth on on
+@ 25.375
+  out light 255 0 40 @0
+@ 25.400
+  synth off off
+@ 25.500
+  out light 255 0 40 @200
+  synth on on
+@ 25.550
+  synth off off
+@ 25.625
+  out light 255 0 40 @0
+@ 25.750
+  out light 255 0 40 @200
+@ 25.875
+  out light 255 0 40 @0
+@ 26.000
+  out light 255 0 40 @200
+@ 26.125
+  out light 255 0 40 @0
+@ 26.250
+  out light 255 0 40 @200
+@ 26.375
+  out light 255 0 40 @0
+@ 26.500
+  out light 255 0 40 @200
+@ 26.625
+  out light 255 0 40 @0
+@ 26.750
+  out light 255 0 40 @200
+@ 26.875
+  out light 255 0 40 @0
+@ 27.000
+  out light 255 0 40 @200
+@ 27.125
+  out light 255 0 40 @0
+@ 27.200
+  out light 0 255 60 @200
+  shown light=healthy l2=ship_fire_l r2=ship_fire_r
+audio d962a3a9
+# A fine
+@ 30.000
+  read play notice side=both scale=1 pan=0 amount=0 at=+0  origin=rule:starcitizen/fined
+  synth on on
+@ 30.100
+  synth off off
+@ 30.175
+  synth on on
+@ 30.275
+  synth off off
+audio 06fc3d0d
+# A crime against you
+@ 35.000
+  read play attacked side=both scale=1 pan=0 amount=0 at=+0  origin=rule:starcitizen/attacked
+  read overlay starcitizen/hit  origin=rule:starcitizen/attacked
+  out light 255 30 30 @200
+  shown light=hit l2=ship_fire_l r2=ship_fire_r
+  synth on on
+@ 35.400
+  synth off off
+@ 35.600
+  out light 0 255 60 @200
+  shown light=healthy l2=ship_fire_l r2=ship_fire_r
+audio 18232741
+end @ 36.000

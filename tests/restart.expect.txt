@@ -1,0 +1,64 @@
+replay through starcitizen; starcitizen drives; ticks of 25 ms
+# In the universe, in the pilot seat, injured, outside monitored space
+@ 0.000
+  log Star Citizen started
+  read setup log warn "Star Citizen's folder is not known yet. Start the game, or set its folder on the Settings page."  origin=lua:starcitizen/lua/state.lua:511
+  read fact ship "None"  origin=lua:starcitizen/lua/state.lua:526
+  read fact system "Unknown"  origin=lua:starcitizen/lua/state.lua:526
+  read fact injury "None"  origin=lua:starcitizen/lua/state.lua:526
+  facts running=true active=false menu=true context="In the main menu"
+@ 1.000
+  facts running=true active=true menu=false context="On foot"
+  out L2 OFF [] R2 OFF [] light 0 255 60 @200 leds off mic off
+  shown light=healthy l2=- r2=-
+@ 1.500
+  read fact system "Stanton"  origin=lua:starcitizen/lua/state.lua:526
+  facts running=true active=true menu=false context="On foot in Stanton"
+@ 3.000
+  read play seat_in side=both scale=1 pan=0 amount=0 at=+0  origin=rule:starcitizen/seat_in
+  read fact ship "Cutlass Black"  origin=lua:starcitizen/lua/state.lua:526
+  facts running=true active=true menu=false context="Piloting a Cutlass Black in Stanton"
+  out L2 WEAPON [2 5 4] R2 WEAPON [2 5 6]
+  shown light=healthy l2=ship_fire_l r2=ship_fire_r
+  synth on on
+@ 3.500
+  synth off off
+@ 5.000
+  read play injury side=both scale=1 pan=0 amount=0 at=+0  origin=rule:starcitizen/injury_2
+  read play injury side=both scale=1 pan=0 amount=0 at=+180  origin=rule:starcitizen/injury_2
+  read fact injury "Moderate"  origin=lua:starcitizen/lua/state.lua:526
+  out light 255 120 0 @200
+  shown light=injury_2 l2=ship_fire_l r2=ship_fire_r
+  synth on on
+@ 5.175
+  synth off off
+@ 5.200
+  synth on on
+@ 5.375
+  synth off off
+@ 8.000
+  out mic on
+audio 273ad1c1
+# The game closes without a quit line (a crash)
+@ 10.000
+  read fact ship "None"  origin=lua:starcitizen/lua/state.lua:526
+  read fact system "Unknown"  origin=lua:starcitizen/lua/state.lua:526
+  read fact injury "None"  origin=lua:starcitizen/lua/state.lua:526
+  facts running=true active=false menu=true context="In the main menu"
+  out handback
+@ 12.100
+  log Star Citizen closed
+  facts running=false active=false menu=true context="In the main menu"
+# The game starts again: a new Game.log, the main menu
+@ 21.175
+  log Star Citizen started
+  facts running=true active=false menu=true context="In the main menu"
+# Into the universe in Pyro: healthy, no ship, the mic LED off
+@ 40.000
+  facts running=true active=true menu=false context="On foot"
+  out L2 OFF [] R2 OFF [] light 0 255 60 @200 leds off mic off
+  shown light=healthy l2=- r2=-
+@ 41.000
+  read fact system "Pyro"  origin=lua:starcitizen/lua/state.lua:526
+  facts running=true active=true menu=false context="On foot in Pyro"
+end @ 43.000

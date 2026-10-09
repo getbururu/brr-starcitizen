@@ -1,0 +1,822 @@
+replay through starcitizen; starcitizen drives; ticks of 25 ms
+# In the universe, on foot in Stanton
+@ 0.000
+  log Star Citizen started
+  read setup log warn "Star Citizen's folder is not known yet. Start the game, or set its folder on the Settings page."  origin=lua:starcitizen/lua/state.lua:511
+  read fact ship "None"  origin=lua:starcitizen/lua/state.lua:526
+  read fact system "Unknown"  origin=lua:starcitizen/lua/state.lua:526
+  read fact injury "None"  origin=lua:starcitizen/lua/state.lua:526
+  facts running=true active=false menu=true context="In the main menu"
+@ 1.000
+  facts running=true active=true menu=false context="On foot"
+  out L2 OFF [] R2 OFF [] light 0 255 60 @200 leds off mic off
+  shown light=healthy l2=- r2=-
+@ 1.500
+  read fact system "Stanton"  origin=lua:starcitizen/lua/state.lua:526
+  facts running=true active=true menu=false context="On foot in Stanton"
+# A minor, a moderate and a major injury: one, two and three thuds
+@ 5.000
+  read play injury side=both scale=1 pan=0 amount=0 at=+0  origin=rule:starcitizen/injury_1
+  read fact injury "Minor"  origin=lua:starcitizen/lua/state.lua:526
+  out light 255 190 0 @200
+  shown light=injury_1 l2=- r2=-
+  synth on on
+@ 5.175
+  synth off off
+@ 8.000
+  read play injury side=both scale=1 pan=0 amount=0 at=+0  origin=rule:starcitizen/injury_2
+  read play injury side=both scale=1 pan=0 amount=0 at=+180  origin=rule:starcitizen/injury_2
+  read fact injury "Moderate"  origin=lua:starcitizen/lua/state.lua:526
+  out light 255 120 0 @200
+  shown light=injury_2 l2=- r2=-
+  synth on on
+@ 8.175
+  synth off off
+@ 8.200
+  synth on on
+@ 8.375
+  synth off off
+@ 11.000
+  read play injury side=both scale=1 pan=0 amount=0 at=+0  origin=rule:starcitizen/injury_3
+  read play injury side=both scale=1 pan=0 amount=0 at=+180  origin=rule:starcitizen/injury_3
+  read play injury side=both scale=1 pan=0 amount=0 at=+360  origin=rule:starcitizen/injury_3
+  read fact injury "Major"  origin=lua:starcitizen/lua/state.lua:526
+  out light 255 0 0 @200
+  shown light=injury_3 l2=- r2=-
+  synth on on
+@ 11.175
+  synth off off
+@ 11.200
+  synth on on
+@ 11.550
+  synth off off
+audio 58bc81a5
+# Downed: the heartbeat, the lightbar breathing red, the triggers free
+@ 14.000
+  facts running=true active=true menu=false context="Downed in Stanton"
+  drive play heartbeat side=both scale=1 pan=0 amount=0 at=+0  origin=lua:starcitizen/lua/flight.lua:225
+  out light 255 0 0 @120
+  shown light=downed l2=- r2=-
+  synth on on
+@ 14.025
+  out light 255 0 0 @126
+@ 14.050
+  out light 255 0 0 @133
+@ 14.075
+  out light 255 0 0 @139
+  synth off off
+@ 14.100
+  out light 255 0 0 @145
+@ 14.125
+  out light 255 0 0 @151
+@ 14.150
+  out light 255 0 0 @156
+@ 14.175
+  out light 255 0 0 @162
+@ 14.200
+  out light 255 0 0 @167
+  synth on on
+@ 14.225
+  out light 255 0 0 @172
+@ 14.250
+  out light 255 0 0 @177
+@ 14.275
+  out light 255 0 0 @181
+@ 14.300
+  out light 255 0 0 @185
+  synth off off
+@ 14.325
+  out light 255 0 0 @188
+@ 14.350
+  out light 255 0 0 @191
+@ 14.375
+  out light 255 0 0 @194
+@ 14.400
+  out light 255 0 0 @196
+@ 14.425
+  out light 255 0 0 @198
+@ 14.450
+  out light 255 0 0 @199
+@ 14.475
+  out light 255 0 0 @200
+@ 14.550
+  out light 255 0 0 @199
+@ 14.575
+  out light 255 0 0 @198
+@ 14.600
+  out light 255 0 0 @196
+@ 14.625
+  out light 255 0 0 @194
+@ 14.650
+  out light 255 0 0 @191
+@ 14.675
+  out light 255 0 0 @188
+@ 14.700
+  out light 255 0 0 @185
+@ 14.725
+  out light 255 0 0 @181
+@ 14.750
+  out light 255 0 0 @177
+@ 14.775
+  out light 255 0 0 @172
+@ 14.800
+  out light 255 0 0 @167
+@ 14.825
+  out light 255 0 0 @162
+@ 14.850
+  out light 255 0 0 @156
+@ 14.875
+  out light 255 0 0 @151
+@ 14.900
+  out light 255 0 0 @145
+@ 14.925
+  out light 255 0 0 @139
+@ 14.950
+  out light 255 0 0 @133
+@ 14.975
+  out light 255 0 0 @126
+@ 15.000
+  out light 255 0 0 @120
+@ 15.025
+  out light 255 0 0 @114
+@ 15.050
+  out light 255 0 0 @107
+@ 15.075
+  out light 255 0 0 @101
+@ 15.100
+  out light 255 0 0 @95
+@ 15.125
+  drive play heartbeat side=both scale=1 pan=0 amount=0 at=+0  origin=lua:starcitizen/lua/flight.lua:225
+  out light 255 0 0 @89
+  synth on on
+@ 15.150
+  out light 255 0 0 @84
+@ 15.175
+  out light 255 0 0 @78
+@ 15.200
+  out light 255 0 0 @73
+  synth off off
+@ 15.225
+  out light 255 0 0 @68
+@ 15.250
+  out light 255 0 0 @63
+@ 15.275
+  out light 255 0 0 @59
+@ 15.300
+  out light 255 0 0 @55
+@ 15.325
+  out light 255 0 0 @52
+  synth on on
+@ 15.350
+  out light 255 0 0 @49
+@ 15.375
+  out light 255 0 0 @46
+@ 15.400
+  out light 255 0 0 @44
+@ 15.425
+  out light 255 0 0 @42
+  synth off off
+@ 15.450
+  out light 255 0 0 @41
+@ 15.475
+  out light 255 0 0 @40
+@ 15.550
+  out light 255 0 0 @41
+@ 15.575
+  out light 255 0 0 @42
+@ 15.600
+  out light 255 0 0 @44
+@ 15.625
+  out light 255 0 0 @46
+@ 15.650
+  out light 255 0 0 @49
+@ 15.675
+  out light 255 0 0 @52
+@ 15.700
+  out light 255 0 0 @55
+@ 15.725
+  out light 255 0 0 @59
+@ 15.750
+  out light 255 0 0 @63
+@ 15.775
+  out light 255 0 0 @68
+@ 15.800
+  out light 255 0 0 @73
+@ 15.825
+  out light 255 0 0 @78
+@ 15.850
+  out light 255 0 0 @84
+@ 15.875
+  out light 255 0 0 @89
+@ 15.900
+  out light 255 0 0 @95
+@ 15.925
+  out light 255 0 0 @101
+@ 15.950
+  out light 255 0 0 @107
+@ 15.975
+  out light 255 0 0 @114
+@ 16.000
+  out light 255 0 0 @120
+@ 16.025
+  out light 255 0 0 @126
+@ 16.050
+  out light 255 0 0 @133
+@ 16.075
+  out light 255 0 0 @139
+@ 16.100
+  out light 255 0 0 @145
+@ 16.125
+  out light 255 0 0 @151
+@ 16.150
+  out light 255 0 0 @156
+@ 16.175
+  out light 255 0 0 @162
+@ 16.200
+  out light 255 0 0 @167
+@ 16.225
+  out light 255 0 0 @172
+@ 16.250
+  drive play heartbeat side=both scale=1 pan=0 amount=0 at=+0  origin=lua:starcitizen/lua/flight.lua:225
+  out light 255 0 0 @177
+  synth on on
+@ 16.275
+  out light 255 0 0 @181
+@ 16.300
+  out light 255 0 0 @185
+@ 16.325
+  out light 255 0 0 @188
+  synth off off
+@ 16.350
+  out light 255 0 0 @191
+@ 16.375
+  out light 255 0 0 @194
+@ 16.400
+  out light 255 0 0 @196
+@ 16.425
+  out light 255 0 0 @198
+@ 16.450
+  out light 255 0 0 @199
+  synth on on
+@ 16.475
+  out light 255 0 0 @200
+@ 16.550
+  out light 255 0 0 @199
+  synth off off
+@ 16.575
+  out light 255 0 0 @198
+@ 16.600
+  out light 255 0 0 @196
+@ 16.625
+  out light 255 0 0 @194
+@ 16.650
+  out light 255 0 0 @191
+@ 16.675
+  out light 255 0 0 @188
+@ 16.700
+  out light 255 0 0 @185
+@ 16.725
+  out light 255 0 0 @181
+@ 16.750
+  out light 255 0 0 @177
+@ 16.775
+  out light 255 0 0 @172
+@ 16.800
+  out light 255 0 0 @167
+@ 16.825
+  out light 255 0 0 @162
+@ 16.850
+  out light 255 0 0 @156
+@ 16.875
+  out light 255 0 0 @151
+@ 16.900
+  out light 255 0 0 @145
+@ 16.925
+  out light 255 0 0 @139
+@ 16.950
+  out light 255 0 0 @133
+@ 16.975
+  out light 255 0 0 @126
+@ 17.000
+  out light 255 0 0 @120
+@ 17.025
+  out light 255 0 0 @114
+@ 17.050
+  out light 255 0 0 @107
+@ 17.075
+  out light 255 0 0 @101
+@ 17.100
+  out light 255 0 0 @95
+@ 17.125
+  out light 255 0 0 @89
+@ 17.150
+  out light 255 0 0 @84
+@ 17.175
+  out light 255 0 0 @78
+@ 17.200
+  out light 255 0 0 @73
+@ 17.225
+  out light 255 0 0 @68
+@ 17.250
+  out light 255 0 0 @63
+@ 17.275
+  out light 255 0 0 @59
+@ 17.300
+  out light 255 0 0 @55
+@ 17.325
+  out light 255 0 0 @52
+@ 17.350
+  out light 255 0 0 @49
+@ 17.375
+  out light 255 0 0 @46
+@ 17.400
+  drive play heartbeat side=both scale=1 pan=0 amount=0 at=+0  origin=lua:starcitizen/lua/flight.lua:225
+  out light 255 0 0 @44
+  synth on on
+@ 17.425
+  out light 255 0 0 @42
+@ 17.450
+  out light 255 0 0 @41
+@ 17.475
+  out light 255 0 0 @40
+  synth off off
+@ 17.550
+  out light 255 0 0 @41
+@ 17.575
+  out light 255 0 0 @42
+@ 17.600
+  out light 255 0 0 @44
+  synth on on
+@ 17.625
+  out light 255 0 0 @46
+@ 17.650
+  out light 255 0 0 @49
+@ 17.675
+  out light 255 0 0 @52
+@ 17.700
+  out light 255 0 0 @55
+  synth off off
+@ 17.725
+  out light 255 0 0 @59
+@ 17.750
+  out light 255 0 0 @63
+@ 17.775
+  out light 255 0 0 @68
+@ 17.800
+  out light 255 0 0 @73
+@ 17.825
+  out light 255 0 0 @78
+@ 17.850
+  out light 255 0 0 @84
+@ 17.875
+  out light 255 0 0 @89
+@ 17.900
+  out light 255 0 0 @95
+@ 17.925
+  out light 255 0 0 @101
+@ 17.950
+  out light 255 0 0 @107
+@ 17.975
+  out light 255 0 0 @114
+@ 18.000
+  out light 255 0 0 @120
+@ 18.025
+  out light 255 0 0 @126
+@ 18.050
+  out light 255 0 0 @133
+@ 18.075
+  out light 255 0 0 @139
+@ 18.100
+  out light 255 0 0 @145
+@ 18.125
+  out light 255 0 0 @151
+@ 18.150
+  out light 255 0 0 @156
+@ 18.175
+  out light 255 0 0 @162
+@ 18.200
+  out light 255 0 0 @167
+@ 18.225
+  out light 255 0 0 @172
+@ 18.250
+  out light 255 0 0 @177
+@ 18.275
+  out light 255 0 0 @181
+@ 18.300
+  out light 255 0 0 @185
+@ 18.325
+  out light 255 0 0 @188
+@ 18.350
+  out light 255 0 0 @191
+@ 18.375
+  out light 255 0 0 @194
+@ 18.400
+  out light 255 0 0 @196
+@ 18.425
+  out light 255 0 0 @198
+@ 18.450
+  out light 255 0 0 @199
+@ 18.475
+  out light 255 0 0 @200
+@ 18.550
+  drive play heartbeat side=both scale=1 pan=0 amount=0 at=+0  origin=lua:starcitizen/lua/flight.lua:225
+  out light 255 0 0 @199
+  synth on on
+@ 18.575
+  out light 255 0 0 @198
+@ 18.600
+  out light 255 0 0 @196
+@ 18.625
+  out light 255 0 0 @194
+  synth off off
+@ 18.650
+  out light 255 0 0 @191
+@ 18.675
+  out light 255 0 0 @188
+@ 18.700
+  out light 255 0 0 @185
+@ 18.725
+  out light 255 0 0 @181
+@ 18.750
+  out light 255 0 0 @177
+  synth on on
+@ 18.775
+  out light 255 0 0 @172
+@ 18.800
+  out light 255 0 0 @167
+@ 18.825
+  out light 255 0 0 @162
+@ 18.850
+  out light 255 0 0 @156
+  synth off off
+@ 18.875
+  out light 255 0 0 @151
+@ 18.900
+  out light 255 0 0 @145
+@ 18.925
+  out light 255 0 0 @139
+@ 18.950
+  out light 255 0 0 @133
+@ 18.975
+  out light 255 0 0 @126
+@ 19.000
+  out light 255 0 0 @120
+@ 19.025
+  out light 255 0 0 @114
+@ 19.050
+  out light 255 0 0 @107
+@ 19.075
+  out light 255 0 0 @101
+@ 19.100
+  out light 255 0 0 @95
+@ 19.125
+  out light 255 0 0 @89
+@ 19.150
+  out light 255 0 0 @84
+@ 19.175
+  out light 255 0 0 @78
+@ 19.200
+  out light 255 0 0 @73
+@ 19.225
+  out light 255 0 0 @68
+@ 19.250
+  out light 255 0 0 @63
+@ 19.275
+  out light 255 0 0 @59
+@ 19.300
+  out light 255 0 0 @55
+@ 19.325
+  out light 255 0 0 @52
+@ 19.350
+  out light 255 0 0 @49
+@ 19.375
+  out light 255 0 0 @46
+@ 19.400
+  out light 255 0 0 @44
+@ 19.425
+  out light 255 0 0 @42
+@ 19.450
+  out light 255 0 0 @41
+@ 19.475
+  out light 255 0 0 @40
+@ 19.550
+  out light 255 0 0 @41
+@ 19.575
+  out light 255 0 0 @42
+@ 19.600
+  out light 255 0 0 @44
+@ 19.625
+  out light 255 0 0 @46
+@ 19.650
+  out light 255 0 0 @49
+@ 19.675
+  out light 255 0 0 @52
+@ 19.700
+  drive play heartbeat side=both scale=1 pan=0 amount=0 at=+0  origin=lua:starcitizen/lua/flight.lua:225
+  out light 255 0 0 @55
+  synth on on
+@ 19.725
+  out light 255 0 0 @59
+@ 19.750
+  out light 255 0 0 @63
+@ 19.775
+  out light 255 0 0 @68
+  synth off off
+@ 19.800
+  out light 255 0 0 @73
+@ 19.825
+  out light 255 0 0 @78
+@ 19.850
+  out light 255 0 0 @84
+@ 19.875
+  out light 255 0 0 @89
+@ 19.900
+  out light 255 0 0 @95
+  synth on on
+@ 19.925
+  out light 255 0 0 @101
+@ 19.950
+  out light 255 0 0 @107
+@ 19.975
+  out light 255 0 0 @114
+@ 20.000
+  out light 255 0 0 @120
+  synth off off
+@ 20.025
+  out light 255 0 0 @126
+@ 20.050
+  out light 255 0 0 @133
+@ 20.075
+  out light 255 0 0 @139
+@ 20.100
+  out light 255 0 0 @145
+@ 20.125
+  out light 255 0 0 @151
+@ 20.150
+  out light 255 0 0 @156
+@ 20.175
+  out light 255 0 0 @162
+@ 20.200
+  out light 255 0 0 @167
+@ 20.225
+  out light 255 0 0 @172
+@ 20.250
+  out light 255 0 0 @177
+@ 20.275
+  out light 255 0 0 @181
+@ 20.300
+  out light 255 0 0 @185
+@ 20.325
+  out light 255 0 0 @188
+@ 20.350
+  out light 255 0 0 @191
+@ 20.375
+  out light 255 0 0 @194
+@ 20.400
+  out light 255 0 0 @196
+@ 20.425
+  out light 255 0 0 @198
+@ 20.450
+  out light 255 0 0 @199
+@ 20.475
+  out light 255 0 0 @200
+@ 20.550
+  out light 255 0 0 @199
+@ 20.575
+  out light 255 0 0 @198
+@ 20.600
+  out light 255 0 0 @196
+@ 20.625
+  out light 255 0 0 @194
+@ 20.650
+  out light 255 0 0 @191
+@ 20.675
+  out light 255 0 0 @188
+@ 20.700
+  out light 255 0 0 @185
+@ 20.725
+  out light 255 0 0 @181
+@ 20.750
+  out light 255 0 0 @177
+@ 20.775
+  out light 255 0 0 @172
+@ 20.800
+  out light 255 0 0 @167
+@ 20.825
+  out light 255 0 0 @162
+@ 20.850
+  out light 255 0 0 @156
+@ 20.875
+  drive play heartbeat side=both scale=1 pan=0 amount=0 at=+0  origin=lua:starcitizen/lua/flight.lua:225
+  out light 255 0 0 @151
+  synth on on
+@ 20.900
+  out light 255 0 0 @145
+@ 20.925
+  out light 255 0 0 @139
+@ 20.950
+  out light 255 0 0 @133
+  synth off off
+@ 20.975
+  out light 255 0 0 @126
+@ 21.000
+  out light 255 0 0 @120
+@ 21.025
+  out light 255 0 0 @114
+@ 21.050
+  out light 255 0 0 @107
+@ 21.075
+  out light 255 0 0 @101
+  synth on on
+@ 21.100
+  out light 255 0 0 @95
+@ 21.125
+  out light 255 0 0 @89
+@ 21.150
+  out light 255 0 0 @84
+@ 21.175
+  out light 255 0 0 @78
+  synth off off
+@ 21.200
+  out light 255 0 0 @73
+@ 21.225
+  out light 255 0 0 @68
+@ 21.250
+  out light 255 0 0 @63
+@ 21.275
+  out light 255 0 0 @59
+@ 21.300
+  out light 255 0 0 @55
+@ 21.325
+  out light 255 0 0 @52
+@ 21.350
+  out light 255 0 0 @49
+@ 21.375
+  out light 255 0 0 @46
+@ 21.400
+  out light 255 0 0 @44
+@ 21.425
+  out light 255 0 0 @42
+@ 21.450
+  out light 255 0 0 @41
+@ 21.475
+  out light 255 0 0 @40
+@ 21.550
+  out light 255 0 0 @41
+@ 21.575
+  out light 255 0 0 @42
+@ 21.600
+  out light 255 0 0 @44
+@ 21.625
+  out light 255 0 0 @46
+@ 21.650
+  out light 255 0 0 @49
+@ 21.675
+  out light 255 0 0 @52
+@ 21.700
+  out light 255 0 0 @55
+@ 21.725
+  out light 255 0 0 @59
+@ 21.750
+  out light 255 0 0 @63
+@ 21.775
+  out light 255 0 0 @68
+@ 21.800
+  out light 255 0 0 @73
+@ 21.825
+  out light 255 0 0 @78
+@ 21.850
+  out light 255 0 0 @84
+@ 21.875
+  out light 255 0 0 @89
+@ 21.900
+  out light 255 0 0 @95
+@ 21.925
+  out light 255 0 0 @101
+@ 21.950
+  out light 255 0 0 @107
+@ 21.975
+  out light 255 0 0 @114
+audio 03e9e01d
+# A med bed heals you
+@ 22.000
+  read play healed side=both scale=1 pan=0 amount=0 at=+0  origin=rule:starcitizen/healed
+  read fact injury "None"  origin=lua:starcitizen/lua/state.lua:526
+  facts running=true active=true menu=false context="On foot in Stanton"
+  out light 0 255 60 @200
+  shown light=healthy l2=- r2=-
+  synth on on
+@ 22.600
+  synth off off
+audio 3c233da5
+# Take the pilot seat and crash into the ground
+@ 30.000
+  read play seat_in side=both scale=1 pan=0 amount=0 at=+0  origin=rule:starcitizen/seat_in
+  read fact ship "Cutlass Black"  origin=lua:starcitizen/lua/state.lua:526
+  facts running=true active=true menu=false context="Piloting a Cutlass Black in Stanton"
+  out L2 WEAPON [2 5 4] R2 WEAPON [2 5 6]
+  shown light=healthy l2=ship_fire_l r2=ship_fire_r
+  synth on on
+@ 30.500
+  synth off off
+@ 40.000
+  read play crash side=both scale=1 pan=0 amount=0 at=+0  origin=rule:starcitizen/crash
+  read overlay starcitizen/hit  origin=rule:starcitizen/crash
+  read overlay starcitizen/crash_buzz  origin=rule:starcitizen/crash
+  out L2 VIBRATION [1 5 25] R2 VIBRATION [1 5 25] light 255 30 30 @200
+  shown light=hit l2=hit r2=hit
+  synth on on
+@ 40.300
+  synth off off
+@ 40.400
+  out L2 WEAPON [2 5 4] R2 WEAPON [2 5 6]
+  shown light=hit l2=ship_fire_l r2=ship_fire_r
+@ 40.600
+  out light 0 255 60 @200
+  shown light=healthy l2=ship_fire_l r2=ship_fire_r
+audio 64a9944d
+# The ship is destroyed and you die: the death feel, the lightbar blinks, then the controller rests on the respawn screen
+@ 41.000
+  read play died side=both scale=1 pan=0 amount=0 at=+0  origin=rule:starcitizen/died
+  read overlay starcitizen/died  origin=rule:starcitizen/died
+  read fact ship "None"  origin=lua:starcitizen/lua/state.lua:526
+  facts running=true active=true menu=false context="Waiting to respawn"
+  out L2 OFF [] R2 OFF [] light 255 0 0 @200
+  shown light=died l2=- r2=-
+  synth on on
+@ 41.175
+  out light 255 0 0 @0
+@ 41.350
+  out light 255 0 0 @200
+@ 41.500
+  out light 255 0 0 @0
+@ 41.675
+  out light 255 0 0 @200
+@ 41.850
+  out light 255 0 0 @0
+@ 42.000
+  out light 255 0 0 @200
+@ 42.175
+  out light 255 0 0 @0
+@ 42.350
+  out light 255 0 0 @200
+@ 42.425
+  synth off off
+@ 42.500
+  out light 255 0 0 @0
+@ 42.675
+  out light 255 0 0 @200
+@ 42.850
+  out light 255 0 0 @0
+@ 43.000
+  out light 255 0 0 @200
+@ 43.175
+  out light 255 0 0 @0
+@ 43.350
+  out light 255 0 0 @200
+@ 43.500
+  out light 255 0 0 @0
+@ 43.675
+  out light 255 0 0 @200
+@ 43.850
+  out light 255 0 0 @0
+@ 44.000
+  out light 255 0 0 @200
+@ 44.175
+  out light 255 0 0 @0
+@ 44.350
+  out light 255 0 0 @200
+@ 44.500
+  out light 255 0 0 @0
+@ 44.675
+  out light 255 0 0 @200
+@ 44.850
+  out light 255 0 0 @0
+@ 45.000
+  out light 255 0 0 @200
+@ 45.175
+  out light 255 0 0 @0
+@ 45.350
+  out light 255 0 0 @200
+@ 45.500
+  out light 255 0 0 @0
+@ 45.675
+  out light 255 0 0 @200
+@ 45.850
+  out light 255 0 0 @0
+@ 46.000
+  out light 0 255 60 @200
+  shown light=healthy l2=- r2=-
+@ 47.000
+  facts running=true active=false menu=false context="Waiting to respawn"
+  out handback
+audio b626f549
+# Respawn: a soft arrival, healthy again
+@ 60.000
+  read play qt_arrive side=both scale=0.5 pan=0 amount=0 at=+0  origin=rule:starcitizen/respawned
+  read overlay_stop starcitizen/died  origin=rule:starcitizen/respawned
+  facts running=true active=true menu=false context="On foot in Stanton"
+  out L2 OFF [] R2 OFF [] light 0 255 60 @200 leds off mic off
+  synth on on
+audio 6f2e8a11
+end @ 61.000

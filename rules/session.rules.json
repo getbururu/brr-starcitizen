@@ -1,0 +1,22 @@
+// The ship you sit in and the hangar: the pilot seat, the hangar queue
+// and request, the ship elevator, stowing, low fuel. Rules see live lines
+// only; state.lua has read each line before them.
+{
+  "format": 1,
+  "rules": {
+    // the control token lines name the ship; a release of a ship you do
+    // not pilot plays nothing
+    "seat_in":  { "on": "gamelog:seat_in",  "if": "lib.moment('seat_in')",  "play": "seat_in" },
+    "seat_out": { "on": "gamelog:seat_out", "if": "lib.moment('seat_out')", "play": "seat_out" },
+
+    "hangar_queue": { "on": "gamelog:notification", "if": "lib.note(ev) == 'hangar_queue'", "play": "notice" },
+    "hangar_ready": { "on": "gamelog:notification", "if": "lib.note(ev) == 'hangar_ready'",
+                      "do": [ { "play": "hangar_ready" }, { "overlay": "hangar" } ] },
+
+    // a ship elevator going down or up
+    "elevator": { "on": "gamelog:platform", "cooldown_ms": 4000, "play": "elevator" },
+    "stowed":   { "on": "gamelog:stowing", "play": "stowed" },
+
+    "low_fuel": { "on": "gamelog:notification", "if": "lib.note(ev) == 'low_fuel'", "play": "low_fuel" }
+  }
+}

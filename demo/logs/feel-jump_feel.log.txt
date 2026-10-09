@@ -1,0 +1,17 @@
+# Made-up sample for -feeltest: the jump feel, once per choice. The jump
+# drive tunes for a few seconds, goes into the tunnel and out again. It is
+# not a real log.
+# go run .github/logreplay/main.go -out demo/feel-jump_feel.replay.jsonl demo/logs/feel-jump_feel.log.txt
+<2026-09-21T21:20:00.000Z> [Notice] <Legacy login response> [CIG-net] User Login Success - Handle[Pilot1] [Team_GameServices][Login]
+<2026-09-21T21:20:00.000Z> [Notice] <Context Establisher Done> establisher="Network" runningTime=20.1 map="megamap" gamerules="SC_Default" sessionId="00000000-0000-0000-0000-000000000000" [Team_Network][Network][Replication][Loading][Persistence]
+<2026-09-21T21:20:00.000Z> [Notice] Loading screen for Stanton : SC_Frontend closed after 21.04 seconds
+<2026-09-21T21:20:00.000Z> [Notice] [CSessionManager::OnClientSpawned] Spawned!
+<2026-09-21T21:20:00.000Z> [Notice] <Vehicle Control Flow> CVehicle::Initialize::<lambda_1>::operator (): Local client node [200000000001] granted control token for 'DRAK_Cutlass_Black_850000000001' [850000000001] [Team_CGP4][Vehicle]
+<2026-09-21T21:20:01.000Z> [Notice] <Jump Drive State Changed> Now EntryChecks | jumpdrive | NOT AUTH | EntryChecks | JDRV_Drake_S2_Default [850000000101] (in zone DRAK_Cutlass_Black_850000000001) [Team_CGP4][JumpDrive]
+<2026-09-21T21:20:02.000Z> [Notice] <Jump Drive State Changed> Now Tuning | jumpdrive | NOT AUTH | Tuning | JDRV_Drake_S2_Default [850000000101] (in zone DRAK_Cutlass_Black_850000000001) [Team_CGP4][JumpDrive]
+<2026-09-21T21:20:07.000Z> [Notice] <Jump Drive State Changed> Now RequestingJump | jumpdrive | NOT AUTH | RequestingJump | JDRV_Drake_S2_Default [850000000101] (in zone DRAK_Cutlass_Black_850000000001) [Team_CGP4][JumpDrive]
+<2026-09-21T21:20:08.000Z> [Notice] <Jump Drive State Changed> Now WaitingForOpen | jumpdrive | NOT AUTH | WaitingForOpen | JDRV_Drake_S2_Default [850000000101] (in zone DRAK_Cutlass_Black_850000000001) [Team_CGP4][JumpDrive]
+<2026-09-21T21:20:09.000Z> [Notice] <Jump Drive State Changed> Now Entering | jumpdrive | NOT AUTH | Entering | JDRV_Drake_S2_Default [850000000101] (in zone DRAK_Cutlass_Black_850000000001) [Team_CGP4][JumpDrive]
+<2026-09-21T21:20:10.000Z> [Notice] <Jump Drive State Changed> Now Transiting | jumpdrive | NOT AUTH | Transiting | JDRV_Drake_S2_Default [850000000101] (in zone DRAK_Cutlass_Black_850000000001) [Team_CGP4][JumpDrive]
+<2026-09-21T21:20:15.000Z> [Notice] <Jump Drive State Changed> Now Exiting | jumpdrive | NOT AUTH | Exiting | JDRV_Drake_S2_Default [850000000101] (in zone DRAK_Cutlass_Black_850000000001) [Team_CGP4][JumpDrive]
+<2026-09-21T21:20:16.000Z> [Notice] <Jump Drive State Changed> Now Idle | jumpdrive | NOT AUTH | Idle | JDRV_Drake_S2_Default [850000000101] (in zone DRAK_Cutlass_Black_850000000001) [Team_CGP4][JumpDrive]

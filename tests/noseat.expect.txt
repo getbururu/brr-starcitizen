@@ -1,0 +1,67 @@
+replay through starcitizen; starcitizen drives; ticks of 25 ms
+# In the universe, in a ship whose seat line is missing: on foot as far as the mod knows
+@ 0.000
+  log Star Citizen started
+  read setup log warn "Star Citizen's folder is not known yet. Start the game, or set its folder on the Settings page."  origin=lua:starcitizen/lua/state.lua:511
+  read fact ship "None"  origin=lua:starcitizen/lua/state.lua:526
+  read fact system "Unknown"  origin=lua:starcitizen/lua/state.lua:526
+  read fact injury "None"  origin=lua:starcitizen/lua/state.lua:526
+  facts running=true active=false menu=true context="In the main menu"
+@ 1.000
+  facts running=true active=true menu=false context="On foot"
+  out L2 OFF [] R2 OFF [] light 0 255 60 @200 leds off mic off
+  shown light=healthy l2=- r2=-
+@ 1.500
+  read fact system "Stanton"  origin=lua:starcitizen/lua/state.lua:526
+  facts running=true active=true menu=false context="On foot in Stanton"
+# Pick a quantum target: the tick, and R2 and L2 resist
+@ 10.000
+  read play qt_target side=both scale=1 pan=0 amount=0 at=+0  origin=rule:starcitizen/qt_target
+  read fact ship "Meteor"  origin=lua:starcitizen/lua/state.lua:526
+  facts running=true active=true menu=false context="Piloting a Meteor in Stanton"
+  out L2 WEAPON [2 5 4] R2 WEAPON [2 5 6]
+  shown light=healthy l2=ship_fire_l r2=ship_fire_r
+  synth off on
+@ 10.100
+  synth off off
+audio 0a7a0ee1
+# Arrive
+@ 30.000
+  read play qt_arrive side=both scale=1 pan=0 amount=0 at=+0  origin=rule:starcitizen/qt_arrive
+  read overlay starcitizen/quantum  origin=rule:starcitizen/qt_flash
+  out light 140 170 255 @200
+  shown light=quantum l2=ship_fire_l r2=ship_fire_r
+  synth on on
+@ 30.600
+  out light 0 255 60 @200
+  shown light=healthy l2=ship_fire_l r2=ship_fire_r
+@ 31.500
+  synth off off
+audio 6a785a7d
+# The seat is released as the ship crashes; the crash line follows
+@ 40.000
+  read play seat_out side=both scale=1 pan=0 amount=0 at=+0  origin=rule:starcitizen/seat_out
+  read fact ship "None"  origin=lua:starcitizen/lua/state.lua:526
+  facts running=true active=true menu=false context="On foot in Stanton"
+  out L2 OFF [] R2 OFF []
+  shown light=healthy l2=- r2=-
+  synth on on
+@ 40.425
+  synth off off
+@ 41.000
+  read play crash side=both scale=1 pan=0 amount=0 at=+0  origin=rule:starcitizen/crash
+  read overlay starcitizen/hit  origin=rule:starcitizen/crash
+  read overlay starcitizen/crash_buzz  origin=rule:starcitizen/crash
+  out L2 VIBRATION [1 5 25] R2 VIBRATION [1 5 25] light 255 30 30 @200
+  shown light=hit l2=hit r2=hit
+  synth on on
+@ 41.300
+  synth off off
+@ 41.400
+  out L2 OFF [] R2 OFF []
+  shown light=hit l2=- r2=-
+@ 41.600
+  out light 0 255 60 @200
+  shown light=healthy l2=- r2=-
+audio a9e3a3dd
+end @ 42.000

@@ -1,0 +1,14 @@
+{"replay":1,"mod":"starcitizen","mod_version":"0.1.0","bururu":"0.11.0","start_unix_ms":1790017200000,"poll_ms":25}
+{"t_ms":0,"sensor":"game","running":true,"in_front":true}
+{"t_ms":0,"step":"In the universe, in a ship whose seat line is missing: on foot as far as the mod knows"}
+{"t_ms":0,"sensor":"gamelog","raw":"<2026-09-21T19:00:00.000Z> [Notice] <Legacy login response> [CIG-net] User Login Success - Handle[Pilot1] [Team_GameServices][Login]"}
+{"t_ms":1000,"sensor":"gamelog","raw":"<2026-09-21T19:00:01.000Z> [Notice] <Context Establisher Done> establisher=\"Network\" runningTime=20.1 map=\"megamap\" gamerules=\"SC_Default\" sessionId=\"00000000-0000-0000-0000-000000000000\" [Team_Network][Network][Replication][Loading][Persistence]"}
+{"t_ms":1500,"sensor":"gamelog","raw":"<2026-09-21T19:00:01.500Z> [Notice] Loading screen for Stanton : SC_Frontend closed after 21.04 seconds"}
+{"t_ms":2000,"sensor":"gamelog","raw":"<2026-09-21T19:00:02.000Z> [Notice] [CSessionManager::OnClientSpawned] Spawned!"}
+{"t_ms":10000,"step":"Pick a quantum target: the tick, and R2 and L2 resist"}
+{"t_ms":10000,"sensor":"gamelog","raw":"<2026-09-21T19:00:10.000Z> [Notice] <Player Selected Quantum Target - Local> [ItemNavigation][CL][416] | NOT AUTH | RSI_Meteor_850000000002[850000000002]|CSCItemNavigation::OnPlayerSelectedQuantumTarget|Player has selected point OM-1_Hurston as their destination, routing locally [Team_CGP4][QuantumTravel]"}
+{"t_ms":30000,"step":"Arrive"}
+{"t_ms":30000,"sensor":"gamelog","raw":"<2026-09-21T19:00:30.000Z> [Notice] <Quantum Drive Arrived - Arrived at Final Destination> [ItemNavigation][CL][416] | NOT AUTH | RSI_Meteor_850000000002[850000000002]|CSCItemNavigation::OnQuantumDriveArrived|Quantum Drive has arrived at final destination [Team_CGP4][QuantumTravel]"}
+{"t_ms":40000,"step":"The seat is released as the ship crashes; the crash line follows"}
+{"t_ms":40000,"sensor":"gamelog","raw":"<2026-09-21T19:00:40.000Z> [Notice] <Vehicle Control Flow> CVehicleMovementBase::ClearDriver: Local client node [200000000001] releasing control token for 'RSI_Meteor_850000000002' [850000000002] [Team_CGP4][Vehicle]"}
+{"t_ms":41000,"sensor":"gamelog","raw":"<2026-09-21T19:00:41.000Z> [Notice] <FatalCollision> Fatal Collision occured for vehicle RSI_Meteor_850000000002 [Part: Body, Pos: x: 100.000000, y: 200.000000, z: 300.000000, Zone: OOC_Stanton_1_Hurston, PlayerPilot: 1] after hitting entity: OOC_Stanton_1_Hurston [Zone: OOC_Stanton_1_Hurston - Class(OrbitingObjectContainer)] Distance: 0.50 [Team_VehicleFeatures][Vehicle]"}

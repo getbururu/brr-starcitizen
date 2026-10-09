@@ -1,0 +1,8 @@
+# Made-up sample for -feeltest: the downed feel. Downed for a few seconds,
+# then healed in a med bed. It is not a real log.
+# go run .github/logreplay/main.go -out demo/feel-downed_feel.replay.jsonl demo/logs/feel-downed_feel.log.txt
+<2026-09-21T21:30:00.000Z> [Notice] <Legacy login response> [CIG-net] User Login Success - Handle[Pilot1] [Team_GameServices][Login]
+<2026-09-21T21:30:00.000Z> [Notice] <Context Establisher Done> establisher="Network" runningTime=20.1 map="megamap" gamerules="SC_Default" sessionId="00000000-0000-0000-0000-000000000000" [Team_Network][Network][Replication][Loading][Persistence]
+<2026-09-21T21:30:00.000Z> [Notice] [CSessionManager::OnClientSpawned] Spawned!
+<2026-09-21T21:30:01.000Z> [Notice] <SHUDEvent_OnNotification> Added notification "Incapacitated: Seek medical attention: " [1] to queue. New queue size: 1, MissionId: [00000000-0000-0000-0000-000000000000], ObjectiveId: [] [Team_CoreGameplayFeatures][Missions][Comms]
+<2026-09-21T21:30:08.000Z> [Notice] <MED BED HEAL> Actor: Pilot1 (Non-Authoritative CLIENT: Pilot1) | [CEntityComponentMedBed::HandleComponentEvent:1101] | -> Perform surgery event Success, med bed name: medbed_clinic_a_01, vehicle name: none, head: true torso: true leftArm: false rightArm: false leftLeg: false rightLeg: false [Team_ActorFeatures]

@@ -1,0 +1,457 @@
+// Star Citizen's settings: types, ranges, defaults, words and pages.
+{
+  "schema": 1,
+  "settings": {
+    "game_dir": {
+      "type": "path",
+      "default": "",
+      "role": "path",
+      "restart": "session",
+      "label": "Star Citizen folder",
+      "help": "The game's channel folder, the one that holds Game.log, such as ...\\StarCitizen\\LIVE. Empty: the folder of the game that runs. Applies with Apply now.",
+      "placeholder": "The folder of the running game"
+    },
+    "turn_feel": {
+      "type": "enum",
+      "default": "push",
+      "needs": "haptics",
+      "label": "Turn feel",
+      "help": "Push: a soft push when a hard turn starts, changes or ends.",
+      "options": { "push": "Push", "waves": "Waves", "off": "Off" },
+      "by_value": {
+        "push": "Push: a soft push when a hard turn starts, changes or ends.",
+        "waves": "Waves: a soft swell about every 2 seconds during a hard turn.",
+        "off": "Off: nothing."
+      },
+      "more": "A turn is hard when a stick is past 60%, or when the controller turns faster than 90 degrees a second with gyro aim on. The right stick aims all the time in Star Citizen, so smaller turns are not felt."
+    },
+    "quantum_feel": {
+      "type": "enum",
+      "default": "swell",
+      "needs": "haptics",
+      "label": "Quantum feel",
+      "help": "Swell: a tick when you pick a target, and a slow swell when you arrive.",
+      "options": { "swell": "Swell", "taps": "Taps", "off": "Off" },
+      "by_value": {
+        "swell": "Swell: a tick when you pick a target, and a slow swell when you arrive.",
+        "taps": "Taps: the tick, and two taps when you arrive.",
+        "off": "Off: nothing."
+      }
+    },
+    "jump_feel": {
+      "type": "enum",
+      "default": "swell",
+      "needs": "haptics",
+      "label": "Jump feel",
+      "help": "Swell: one soft swell into the jump tunnel.",
+      "options": { "swell": "Swell", "calm": "Calm", "off": "Off" },
+      "by_value": {
+        "swell": "Swell: one soft swell into the jump tunnel.",
+        "calm": "Calm: the swell, and a soft pulse every 1.5 seconds while you tune the jump.",
+        "off": "Off: no swell and no pulse."
+      }
+    },
+    "downed_feel": {
+      "type": "enum",
+      "default": "heartbeat",
+      "needs": "haptics",
+      "label": "Downed feel",
+      "help": "Heartbeat: a slow heartbeat while you are downed.",
+      "options": { "heartbeat": "Heartbeat", "off": "Off" },
+      "by_value": {
+        "heartbeat": "Heartbeat: a slow heartbeat while you are downed.",
+        "off": "Off: nothing."
+      }
+    },
+    "fire_feel": {
+      "type": "enum",
+      "default": "off",
+      "needs": "haptics",
+      "label": "Fire feel",
+      "help": "Off: nothing while you hold R2 or L2. The mod cannot see whether your guns fire.",
+      "options": { "off": "Off", "light": "Light" },
+      "by_value": {
+        "off": "Off: nothing while you hold R2 or L2. The mod cannot see whether your guns fire.",
+        "light": "Light: light ticks while you hold R2 or L2 in the pilot seat, outside armistice zones."
+      }
+    },
+    "gyro_in_seat": {
+      "type": "bool",
+      "default": true,
+      "needs": "gyro",
+      "label": "Gyro aim in the pilot seat",
+      "help": "Off: gyro aim pauses while you fly, and still works on foot."
+    },
+    "haptics_gain": {
+      "type": "map",
+      "role": "feel_gain",
+      "needs": "haptics",
+      "of": { "type": "float", "min": 0, "max": 2, "step": 0.05, "unit": "%", "scale": 100 },
+      "default": {
+        "turn": 1,
+        "boost": 1,
+        "fire_light": 1,
+        "seat_in": 1,
+        "seat_out": 1,
+        "crash": 1,
+        "low_fuel": 1,
+        "qt_target": 1,
+        "qt_arrive": 1,
+        "qt_arrive_taps": 1,
+        "jump_step": 1,
+        "jump_pulse": 1,
+        "jump_swell": 1,
+        "hangar_ready": 1,
+        "elevator": 1,
+        "stowed": 1,
+        "injury": 1,
+        "heartbeat": 1,
+        "healed": 1,
+        "died": 1,
+        "zone_in": 1,
+        "zone_out": 1,
+        "crime": 1,
+        "attacked": 1,
+        "notice": 1,
+        "success": 1,
+        "failure": 1,
+        "tick": 1,
+        "sparkle": 1,
+        "purchase": 1
+      },
+      "label": "Effect levels",
+      "help": "The level of each effect. 100% is normal, 0% turns it off.",
+      "groups": {
+        "flying": { "title": "Flying", "order": 1 },
+        "travel": { "title": "Travel", "order": 2 },
+        "hangars": { "title": "Hangars", "order": 3 },
+        "body": { "title": "Body", "order": 4 },
+        "law": { "title": "Law", "order": 5 },
+        "missions": { "title": "Missions", "order": 6 }
+      },
+      "entries": {
+        "turn": { "label": "Turns", "help": "The turn feel during hard turns.", "group": "flying" },
+        "boost": { "label": "Boost", "help": "A surge when you press L3 in the pilot seat.", "group": "flying" },
+        "fire_light": { "label": "Fire", "help": "Light ticks while R2 or L2 is held, with the fire feel on Light.", "group": "flying" },
+        "seat_in": { "label": "Pilot seat", "help": "Taking the pilot seat.", "group": "flying" },
+        "seat_out": { "label": "Leaving the seat", "help": "Leaving the pilot seat.", "group": "flying" },
+        "crash": { "label": "Crash", "help": "A fatal collision of the ship you fly.", "group": "flying" },
+        "low_fuel": { "label": "Low fuel", "help": "The game's Low Fuel notice.", "group": "flying" },
+        "qt_target": { "label": "Quantum target", "help": "A tick when you pick a quantum target.", "group": "travel" },
+        "qt_arrive": { "label": "Arrival swell", "help": "A slow swell when you arrive from quantum travel; softer when you come out of a jump tunnel, and when you respawn.", "group": "travel" },
+        "qt_arrive_taps": { "label": "Arrival taps", "help": "Two taps when you arrive, with the quantum feel on Taps.", "group": "travel" },
+        "jump_step": { "label": "Jump drive steps", "help": "A tick for each step of the jump drive.", "group": "travel" },
+        "jump_pulse": { "label": "Jump tuning", "help": "The soft pulse of the Calm jump feel.", "group": "travel" },
+        "jump_swell": { "label": "Jump tunnel", "help": "The swell into the jump tunnel.", "group": "travel" },
+        "hangar_ready": { "label": "Hangar ready", "help": "Your hangar request is done.", "group": "hangars" },
+        "elevator": { "label": "Ship elevator", "help": "A ship elevator moves.", "group": "hangars" },
+        "stowed": { "label": "Ship stowed", "help": "The game puts away the ship left on your hangar pad.", "group": "hangars" },
+        "injury": { "label": "Injury", "help": "One thud for a minor injury, two for a moderate one, three for a major one.", "group": "body" },
+        "heartbeat": { "label": "Heartbeat", "help": "A slow heartbeat while you are downed.", "group": "body" },
+        "healed": { "label": "Healed", "help": "A med bed heals you.", "group": "body" },
+        "died": { "label": "Death", "help": "You die, mostly when your ship is destroyed.", "group": "body" },
+        "zone_in": { "label": "Armistice zone in", "help": "Entering an armistice zone.", "group": "law" },
+        "zone_out": { "label": "Armistice zone out", "help": "Leaving an armistice zone.", "group": "law" },
+        "crime": { "label": "CrimeStat", "help": "Your CrimeStat goes up.", "group": "law" },
+        "attacked": { "label": "Crime against you", "help": "Someone commits a crime against you.", "group": "law" },
+        "notice": { "label": "Notices", "help": "Two taps: the hangar queue, a fine, a contract accepted, a refinery order done, a new party member.", "group": "missions" },
+        "success": { "label": "Contract complete", "help": "One of your contracts is complete.", "group": "missions" },
+        "failure": { "label": "Contract failed", "help": "One of your contracts failed.", "group": "missions" },
+        "tick": { "label": "Objective complete", "help": "An objective is complete.", "group": "missions" },
+        "sparkle": { "label": "Blueprints and rewards", "help": "A blueprint or rewards you received.", "group": "missions" },
+        "purchase": { "label": "Purchase", "help": "A purchase at a shop or kiosk.", "group": "missions" }
+      }
+    },
+    "rumble": {
+      "type": "map",
+      "role": "feel_rumble",
+      "needs": "rumble",
+      "of": { "type": "rumble", "min": 0, "max": 1, "step": 0.01 },
+      "default": {
+        "boost": { "left": 0.6, "right": 0.6, "ms": 700 },
+        "seat_in": { "left": 0.3, "right": 0.3, "ms": 250 },
+        "seat_out": { "left": 0.2, "right": 0.2, "ms": 200 },
+        "crash": { "left": 0.9, "right": 0.9, "ms": 350 },
+        "low_fuel": { "left": 0.3, "right": 0.3, "ms": 80 },
+        "qt_target": { "left": 0, "right": 0.12, "ms": 40 },
+        "qt_arrive": { "left": 0.3, "right": 0.3, "ms": 900 },
+        "qt_arrive_taps": { "left": 0.15, "right": 0.15, "ms": 70 },
+        "jump_step": { "left": 0, "right": 0.15, "ms": 40 },
+        "hangar_ready": { "left": 0.15, "right": 0.15, "ms": 70 },
+        "elevator": { "left": 0.15, "right": 0.15, "ms": 900 },
+        "stowed": { "left": 0.4, "right": 0.4, "ms": 300 },
+        "injury": { "left": 0.35, "right": 0.35, "ms": 80 },
+        "heartbeat": { "left": 0.25, "right": 0.25, "ms": 90 },
+        "healed": { "left": 0.2, "right": 0.2, "ms": 300 },
+        "died": { "left": 1.0, "right": 1.0, "ms": 1500 },
+        "zone_in": { "left": 0.15, "right": 0.15, "ms": 60 },
+        "zone_out": { "left": 0.15, "right": 0.15, "ms": 60 },
+        "crime": { "left": 0.3, "right": 0.3, "ms": 80 },
+        "attacked": { "left": 0.35, "right": 0.35, "ms": 150 },
+        "notice": { "left": 0.15, "right": 0.15, "ms": 60 },
+        "success": { "left": 0.3, "right": 0.3, "ms": 90 },
+        "failure": { "left": 0.3, "right": 0.3, "ms": 90 },
+        "tick": { "left": 0.15, "right": 0.15, "ms": 40 },
+        "sparkle": { "left": 0.15, "right": 0.15, "ms": 60 },
+        "purchase": { "left": 0.2, "right": 0.2, "ms": 70 }
+      },
+      "label": "Rumble fallback",
+      "help": "The rumble of each effect: the strength of the left and right motor in %, and the length in ms. Bururu rumbles only in Rumble mode. A length of 0 turns an effect off. The turns, the fire ticks and the jump swell and pulse do not rumble.",
+      "groups": {
+        "flying": { "title": "Flying", "order": 1 },
+        "travel": { "title": "Travel", "order": 2 },
+        "hangars": { "title": "Hangars", "order": 3 },
+        "body": { "title": "Body", "order": 4 },
+        "law": { "title": "Law", "order": 5 },
+        "missions": { "title": "Missions", "order": 6 }
+      },
+      "entries": {
+        "boost": { "label": "Boost", "help": "A surge when you press L3 in the pilot seat.", "group": "flying" },
+        "seat_in": { "label": "Pilot seat", "help": "Taking the pilot seat.", "group": "flying" },
+        "seat_out": { "label": "Leaving the seat", "help": "Leaving the pilot seat.", "group": "flying" },
+        "crash": { "label": "Crash", "help": "A fatal collision of the ship you fly.", "group": "flying" },
+        "low_fuel": { "label": "Low fuel", "help": "The game's Low Fuel notice.", "group": "flying" },
+        "qt_target": { "label": "Quantum target", "help": "A tick when you pick a quantum target.", "group": "travel" },
+        "qt_arrive": { "label": "Arrival swell", "help": "A quantum arrival; softer after a jump and when you respawn.", "group": "travel" },
+        "qt_arrive_taps": { "label": "Arrival taps", "help": "A quantum arrival, with the quantum feel on Taps.", "group": "travel" },
+        "jump_step": { "label": "Jump drive steps", "help": "Each step of the jump drive.", "group": "travel" },
+        "hangar_ready": { "label": "Hangar ready", "help": "Your hangar request is done.", "group": "hangars" },
+        "elevator": { "label": "Ship elevator", "help": "A ship elevator moves.", "group": "hangars" },
+        "stowed": { "label": "Ship stowed", "help": "The game puts away the ship left on your hangar pad.", "group": "hangars" },
+        "injury": { "label": "Injury", "help": "Each thud of an injury.", "group": "body" },
+        "heartbeat": { "label": "Heartbeat", "help": "Each beat while you are downed.", "group": "body" },
+        "healed": { "label": "Healed", "help": "A med bed heals you.", "group": "body" },
+        "died": { "label": "Death", "help": "You die.", "group": "body" },
+        "zone_in": { "label": "Armistice zone in", "help": "Entering an armistice zone.", "group": "law" },
+        "zone_out": { "label": "Armistice zone out", "help": "Leaving an armistice zone.", "group": "law" },
+        "crime": { "label": "CrimeStat", "help": "Your CrimeStat goes up.", "group": "law" },
+        "attacked": { "label": "Crime against you", "help": "Someone commits a crime against you.", "group": "law" },
+        "notice": { "label": "Notices", "help": "The hangar queue, a fine, a contract accepted, a refinery order done, a new party member.", "group": "missions" },
+        "success": { "label": "Contract complete", "help": "One of your contracts is complete.", "group": "missions" },
+        "failure": { "label": "Contract failed", "help": "One of your contracts failed.", "group": "missions" },
+        "tick": { "label": "Objective complete", "help": "An objective is complete.", "group": "missions" },
+        "sparkle": { "label": "Blueprints and rewards", "help": "A blueprint or rewards you received.", "group": "missions" },
+        "purchase": { "label": "Purchase", "help": "A purchase at a shop or kiosk.", "group": "missions" }
+      }
+    },
+    "triggers": {
+      "type": "map",
+      "role": "trigger_table",
+      "needs": "triggers",
+      "of": { "type": "trigger" },
+      "default": {
+        "ship_fire_r": { "mode": "WEAPON", "params": [2, 5, 6] },
+        "ship_fire_l": { "mode": "WEAPON", "params": [2, 5, 4] },
+        "onfoot_r": { "mode": "WEAPON", "params": [2, 6, 5] },
+        "onfoot_l": { "mode": "FEEDBACK", "params": [3, 2] },
+        "hit": { "mode": "VIBRATION", "params": [1, 5, 25] }
+      },
+      "label": "Trigger situations",
+      "groups": {
+        "ship": { "title": "In the pilot seat", "order": 1 },
+        "on_foot": { "title": "On foot", "order": 2 },
+        "both": { "title": "Both triggers", "order": 3 }
+      },
+      "entries": {
+        "ship_fire_r": {
+          "label": "Pilot seat R2",
+          "help": "R2 fires weapon group 1, L2 group 2, in the default gamepad layout. Free in armistice zones.",
+          "group": "ship",
+          "card": "Weapon group 1",
+          "row": "Pilot seat"
+        },
+        "ship_fire_l": {
+          "label": "Pilot seat L2",
+          "help": "R2 fires weapon group 1, L2 group 2, in the default gamepad layout. Free in armistice zones.",
+          "group": "ship",
+          "card": "Weapon group 2",
+          "row": "Pilot seat"
+        },
+        "onfoot_r": {
+          "label": "On foot R2",
+          "help": "With something in your hand, outside armistice zones.",
+          "group": "on_foot",
+          "card": "Right trigger",
+          "row": "On foot"
+        },
+        "onfoot_l": {
+          "label": "On foot L2",
+          "help": "With something in your hand, outside armistice zones.",
+          "group": "on_foot",
+          "card": "Left trigger",
+          "row": "On foot"
+        },
+        "hit": { "label": "Crash", "help": "A fatal collision: both triggers for 0.4 s.", "group": "both", "card": "Both triggers" }
+      }
+    },
+    "colors": {
+      "type": "map",
+      "role": "color_table",
+      "needs": "lightbar",
+      "of": { "type": "rgb", "min": 0, "max": 255 },
+      "default": {
+        "healthy": [0, 255, 60],
+        "injury_1": [255, 190, 0],
+        "injury_2": [255, 120, 0],
+        "injury_3": [255, 0, 0],
+        "stanton": [30, 80, 255],
+        "pyro": [255, 90, 0],
+        "nyx": [140, 60, 255],
+        "jump": [140, 170, 255],
+        "downed": [255, 0, 0],
+        "died": [255, 0, 0],
+        "hit": [255, 30, 30],
+        "crime": [255, 0, 40],
+        "quantum": [140, 170, 255],
+        "hangar": [0, 255, 80],
+        "success": [0, 255, 0],
+        "failure": [255, 40, 0],
+        "blueprint": [0, 200, 255]
+      },
+      "label": "Lightbar colours",
+      "groups": {
+        "health": { "title": "Health", "order": 1 },
+        "systems": { "title": "Star systems", "order": 2 },
+        "travel": { "title": "Travel and hangars", "order": 3 },
+        "moments": { "title": "Moments", "order": 4 }
+      },
+      "entries": {
+        "healthy": { "label": "Healthy", "help": "No injury.", "group": "health", "pattern": "Steady" },
+        "injury_1": { "label": "Minor injury", "help": "After a minor injury, until a med bed or a respawn.", "group": "health", "pattern": "Steady" },
+        "injury_2": { "label": "Moderate injury", "help": "After a moderate injury.", "group": "health", "pattern": "Steady" },
+        "injury_3": { "label": "Major injury", "help": "After a major or severe injury.", "group": "health", "pattern": "Steady" },
+        "downed": { "label": "Downed", "help": "Breathing slowly while you are downed.", "group": "health", "pattern": "Breathing" },
+        "stanton": { "label": "Stanton", "help": "With the lightbar showing the star system.", "group": "systems", "pattern": "Steady" },
+        "pyro": { "label": "Pyro", "help": "With the lightbar showing the star system.", "group": "systems", "pattern": "Steady" },
+        "nyx": { "label": "Nyx", "help": "With the lightbar showing the star system.", "group": "systems", "pattern": "Steady" },
+        "jump": { "label": "Jump tunnel", "help": "Breathing in the jump tunnel.", "group": "travel", "pattern": "Breathing" },
+        "quantum": { "label": "Quantum arrival", "help": "A flash when you arrive.", "group": "travel", "pattern": "Flash" },
+        "hangar": { "label": "Hangar ready", "help": "A flash when your hangar request is done.", "group": "travel", "pattern": "Flash" },
+        "hit": { "label": "Hit", "help": "A flash on a crash and on a crime against you.", "group": "moments", "pattern": "Flash" },
+        "died": { "label": "Death", "help": "Blinks for 5 s when you die.", "group": "moments", "pattern": "Blink" },
+        "crime": { "label": "CrimeStat", "help": "Blinks for 2 s when your CrimeStat goes up.", "group": "moments", "pattern": "Blink" },
+        "success": { "label": "Contract complete", "help": "A flash.", "group": "moments", "pattern": "Flash" },
+        "failure": { "label": "Contract failed", "help": "A short blink.", "group": "moments", "pattern": "Blink" },
+        "blueprint": { "label": "Blueprints and rewards", "help": "A flash.", "group": "moments", "pattern": "Flash" }
+      }
+    },
+    "lightbar_base": {
+      "type": "enum",
+      "default": "health",
+      "needs": "lightbar",
+      "label": "Lightbar shows",
+      "help": "Health: green, then amber, orange and red with your injuries.",
+      "options": { "health": "Health", "system": "Star system" },
+      "by_value": {
+        "health": "Health: green, then amber, orange and red with your injuries.",
+        "system": "Star system: a colour for Stanton, Pyro and Nyx. An injury still shows over it."
+      }
+    }
+  },
+  "pages": {
+    "effects": {
+      "title": "Effects",
+      "icon": "waves",
+      "order": 1,
+      "tabs": {
+        "haptics": {
+          "title": "Haptics",
+          "order": 1,
+          "lead": "How the controller's haptics answer the game.",
+          "cards": {
+            "feels": {
+              "title": "Feels",
+              "order": 1,
+              "rows": [
+                { "widget": "choice", "path": "turn_feel" },
+                { "widget": "choice", "path": "quantum_feel" },
+                { "widget": "choice", "path": "jump_feel" },
+                { "widget": "choice", "path": "downed_feel" },
+                { "widget": "choice", "path": "fire_feel" }
+              ]
+            },
+            "fine_tune": {
+              "title": "Fine-tune",
+              "order": 2,
+              "rows": [
+                { "widget": "levels", "path": "haptics_gain" },
+                { "widget": "rumble-table", "path": "rumble" }
+              ]
+            }
+          }
+        },
+        "triggers": {
+          "title": "Triggers",
+          "order": 2,
+          "lead": "The resistance of R2 and L2 in each situation. They are free in the main menu, while you are downed and in armistice zones.",
+          "cards": {
+            "situations": {
+              "order": 1,
+              "rows": [
+                {
+                  "widget": "situations",
+                  "path": "triggers",
+                  "pairs": [
+                    ["ship_fire_r", "ship_fire_l"],
+                    ["onfoot_r", "onfoot_l"]
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        "lights": {
+          "title": "Lights",
+          "order": 3,
+          "lead": "The lightbar, the player LEDs and the mic LED.",
+          "cards": {
+            "colors": {
+              "title": "Lightbar colours",
+              "order": 1,
+              "rows": [
+                { "widget": "choice", "path": "lightbar_base" },
+                { "widget": "color-grid", "path": "colors", "preview": "pad" },
+                { "widget": "note", "text": "The player LEDs count the steps of the jump drive (all five in the jump tunnel), or show your place in a hangar queue. The mic LED is on outside monitored space and while monitored space is down, and pulses after a Low Fuel notice." }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "settings": {
+      "title": "Settings",
+      "icon": "gear",
+      "order": 2,
+      "cards": {
+        "seat": {
+          "title": "In the pilot seat",
+          "order": 1,
+          "rows": [
+            { "widget": "toggle", "path": "gyro_in_seat", "enabled_by": "core.gyro_off_in_menus" }
+          ]
+        },
+        "files": {
+          "title": "Star Citizen's files",
+          "order": 2,
+          "rows": [
+            { "widget": "path", "path": "game_dir" }
+          ]
+        }
+      }
+    }
+  },
+  "live": {
+    "facts": {
+      "ship": { "label": "Ship", "order": 1 },
+      "system": { "label": "System", "order": 2 },
+      "injury": { "label": "Injury", "order": 3 }
+    }
+  },
+  "setup": {
+    "log": {
+      "label": "Game.log found",
+      "order": 1,
+      "help": "Bururu reads Game.log in the game's folder while the game runs. If the game is installed somewhere unusual, set its folder on the mod's Settings page."
+    }
+  }
+}

@@ -1,0 +1,73 @@
+replay through starcitizen; starcitizen drives; ticks of 25 ms
+# In the universe, in the pilot seat, inside an armistice zone
+@ 0.000
+  log Star Citizen started
+  read setup log warn "Star Citizen's folder is not known yet. Start the game, or set its folder on the Settings page."  origin=lua:starcitizen/lua/state.lua:511
+  read fact ship "None"  origin=lua:starcitizen/lua/state.lua:526
+  read fact system "Unknown"  origin=lua:starcitizen/lua/state.lua:526
+  read fact injury "None"  origin=lua:starcitizen/lua/state.lua:526
+  facts running=true active=false menu=true context="In the main menu"
+@ 1.000
+  facts running=true active=true menu=false context="On foot"
+  out L2 OFF [] R2 OFF [] light 0 255 60 @200 leds off mic off
+  shown light=healthy l2=- r2=-
+@ 1.500
+  read fact system "Stanton"  origin=lua:starcitizen/lua/state.lua:526
+  facts running=true active=true menu=false context="On foot in Stanton"
+@ 2.500
+  read play zone_in side=both scale=1 pan=0 amount=0 at=+0  origin=rule:starcitizen/zone_in
+  out light 0 255 60 @70
+  synth on on
+@ 2.575
+  synth off off
+@ 2.625
+  synth on on
+@ 2.700
+  synth off off
+@ 3.000
+  read play seat_in side=both scale=1 pan=0 amount=0 at=+0  origin=rule:starcitizen/seat_in
+  read fact ship "Cutlass Black"  origin=lua:starcitizen/lua/state.lua:526
+  facts running=true active=true menu=false context="Piloting a Cutlass Black in Stanton"
+  synth on on
+@ 3.500
+  synth off off
+audio 87ebcfa9
+# Along the border: out, in, out, in, out within a second; one feel
+@ 10.000
+  read play zone_out side=both scale=1 pan=0 amount=0 at=+0  origin=rule:starcitizen/zone_out
+  out L2 WEAPON [2 5 4] R2 WEAPON [2 5 6] light 0 255 60 @200
+  shown light=healthy l2=ship_fire_l r2=ship_fire_r
+  synth on on
+@ 10.075
+  synth off off
+@ 10.125
+  synth on on
+@ 10.200
+  synth off off
+@ 10.250
+  out L2 OFF [] R2 OFF [] light 0 255 60 @70
+  shown light=healthy l2=- r2=-
+@ 10.500
+  out L2 WEAPON [2 5 4] R2 WEAPON [2 5 6] light 0 255 60 @200
+  shown light=healthy l2=ship_fire_l r2=ship_fire_r
+@ 10.750
+  out L2 OFF [] R2 OFF [] light 0 255 60 @70
+  shown light=healthy l2=- r2=-
+@ 11.000
+  out L2 WEAPON [2 5 4] R2 WEAPON [2 5 6] light 0 255 60 @200
+  shown light=healthy l2=ship_fire_l r2=ship_fire_r
+audio affc6ecd
+# Ten seconds later, back into the zone: felt again
+@ 20.000
+  read play zone_in side=both scale=1 pan=0 amount=0 at=+0  origin=rule:starcitizen/zone_in
+  out L2 OFF [] R2 OFF [] light 0 255 60 @70
+  shown light=healthy l2=- r2=-
+  synth on on
+@ 20.075
+  synth off off
+@ 20.125
+  synth on on
+@ 20.200
+  synth off off
+audio f86eadad
+end @ 21.000

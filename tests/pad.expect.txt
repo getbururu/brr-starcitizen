@@ -1,0 +1,506 @@
+replay through starcitizen; starcitizen drives; ticks of 25 ms
+# In the universe, in the pilot seat, inside an armistice zone
+@ 0.000
+  log Star Citizen started
+  read setup log warn "Star Citizen's folder is not known yet. Start the game, or set its folder on the Settings page."  origin=lua:starcitizen/lua/state.lua:511
+  read fact ship "None"  origin=lua:starcitizen/lua/state.lua:526
+  read fact system "Unknown"  origin=lua:starcitizen/lua/state.lua:526
+  read fact injury "None"  origin=lua:starcitizen/lua/state.lua:526
+  facts running=true active=false menu=true context="In the main menu"
+@ 1.000
+  facts running=true active=true menu=false context="On foot"
+  out L2 OFF [] R2 OFF [] light 0 255 60 @200 leds off mic off
+  shown light=healthy l2=- r2=-
+@ 1.500
+  read fact system "Stanton"  origin=lua:starcitizen/lua/state.lua:526
+  facts running=true active=true menu=false context="On foot in Stanton"
+@ 2.500
+  read play zone_in side=both scale=1 pan=0 amount=0 at=+0  origin=rule:starcitizen/zone_in
+  out light 0 255 60 @70
+  synth on on
+@ 2.575
+  synth off off
+@ 2.625
+  synth on on
+@ 2.700
+  synth off off
+@ 3.000
+  read play seat_in side=both scale=1 pan=0 amount=0 at=+0  origin=rule:starcitizen/seat_in
+  read fact ship "Cutlass Black"  origin=lua:starcitizen/lua/state.lua:526
+  facts running=true active=true menu=false context="Piloting a Cutlass Black in Stanton"
+  synth on on
+@ 3.500
+  synth off off
+audio ebadb7a9
+# R2 held in the armistice zone: the trigger stays free
+# Out of the zone: R2 and L2 resist
+@ 10.000
+  read play zone_out side=both scale=1 pan=0 amount=0 at=+0  origin=rule:starcitizen/zone_out
+  out L2 WEAPON [2 5 4] R2 WEAPON [2 5 6] light 0 255 60 @200
+  shown light=healthy l2=ship_fire_l r2=ship_fire_r
+  synth on on
+@ 10.075
+  synth off off
+@ 10.125
+  synth on on
+@ 10.200
+  synth off off
+audio eb99f6cd
+# A hard turn with the right stick: a soft push as it starts, and as it ends
+@ 15.200
+  drive layer turn feel=turn_push level=0.1715570931932901 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+  synth on on
+@ 15.225
+  drive layer turn feel=turn_push level=0.23579368909417936 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 15.250
+  drive layer turn feel=turn_push level=0.28208172780483776 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 15.275
+  drive layer turn feel=turn_push level=0.31564072652357117 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 15.300
+  drive layer turn feel=turn_push level=0.3639652425728696 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 15.325
+  drive layer turn feel=turn_push level=0.3986566986654345 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 15.350
+  drive layer turn feel=turn_push level=0.4226792250737872 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 15.375
+  drive layer turn feel=turn_push level=0.4382471250623465 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 15.400
+  drive layer turn feel=turn_push level=0.4470873498848686 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 15.425
+  drive layer turn feel=turn_push level=0.45 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 15.450
+  drive layer turn feel=turn_push level=0.4498276029058498 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 15.475
+  drive layer turn feel=turn_push level=0.44574333013530437 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 15.500
+  drive layer turn feel=turn_push level=0.43906211732214034 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 15.525
+  drive layer turn feel=turn_push level=0.4303876119401666 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 15.550
+  drive layer turn feel=turn_push level=0.42021374520262356 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 15.575
+  drive layer turn feel=turn_push level=0.40894431248305363 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 15.600
+  drive layer turn feel=turn_push level=0.3969087560177241 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 15.625
+  drive layer turn feel=turn_push level=0.38437501669569224 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 15.650
+  drive layer turn feel=turn_push level=0.3715600776700866 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 15.675
+  drive layer turn feel=turn_push level=0.35863866236544406 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 15.700
+  drive layer turn feel=turn_push level=0.3457504396152665 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 15.725
+  drive layer turn feel=turn_push level=0.333006010499458 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 15.750
+  drive layer turn feel=turn_push level=0.3204918940963473 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 15.775
+  drive layer turn feel=turn_push level=0.30827468619953535 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 15.800
+  drive layer turn feel=turn_push level=0.2964045318815728 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 15.825
+  drive layer turn feel=turn_push level=0.2849180268601268 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 15.850
+  drive layer turn feel=turn_push level=0.2738406420698877 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 15.875
+  drive layer turn feel=turn_push level=0.2631887493607765 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 15.900
+  drive layer turn feel=turn_push level=0.25297131289521113 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 15.925
+  drive layer turn feel=turn_push level=0.24319129991797683 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 15.950
+  drive layer turn feel=turn_push level=0.23384685560656798 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 15.975
+  drive layer turn feel=turn_push level=0.22493227928266107 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 16.000
+  drive layer turn feel=turn_push level=0.2164388330666217 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 16.025
+  drive layer turn feel=turn_push level=0.20835540883633372 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 16.050
+  drive layer turn feel=turn_push level=0.200669074898829 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 16.075
+  drive layer turn feel=turn_push level=0.19336551991013357 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 16.100
+  drive layer turn feel=turn_push level=0.18642940810024683 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 16.125
+  drive layer turn feel=turn_push level=0.17984465656746715 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 16.150
+  drive layer turn feel=turn_push level=0.17359464202330663 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 16.175
+  drive layer turn feel=turn_push level=0.16766234047066234 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 16.200
+  drive layer turn feel=turn_push level=0.16203039814079936 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 16.225
+  drive layer turn feel=turn_push level=0.15668112416626367 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 16.250
+  drive layer turn feel=turn_push level=0.1515963819182176 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 16.275
+  drive layer turn feel=turn_push level=0.14675732981154366 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 16.300
+  drive layer turn feel=turn_push level=0.10555068319057224 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 16.325
+  drive layer turn feel=turn_push level=0.06485109273450551 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 16.350
+  drive layer turn feel=turn_push level=0.028972617543460526 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 16.450
+  synth off off
+@ 17.025
+  drive layer turn feel=turn_push level=0.15329559778615764 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+  synth on on
+@ 17.050
+  drive layer turn feel=turn_push level=0.1852712048599878 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 17.075
+  drive layer turn feel=turn_push level=0.21162200531163738 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 17.100
+  drive layer turn feel=turn_push level=0.23369736414805314 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 17.125
+  drive layer turn feel=turn_push level=0.25223713788747093 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 17.150
+  drive layer turn feel=turn_push level=0.26775584883956727 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 17.175
+  drive layer turn feel=turn_push level=0.2806507599565205 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 17.200
+  drive layer turn feel=turn_push level=0.2912461242130311 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 17.225
+  drive layer turn feel=turn_push level=0.2998154073796273 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 17.250
+  drive layer turn feel=turn_push level=0.3065940570172837 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 17.275
+  drive layer turn feel=turn_push level=0.31178758700084375 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 17.300
+  drive layer turn feel=turn_push level=0.3155770859850968 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 17.325
+  drive layer turn feel=turn_push level=0.3181231910124652 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 17.350
+  drive layer turn feel=turn_push level=0.319569085940961 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 17.375
+  drive layer turn feel=turn_push level=0.3200428465931961 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 17.400
+  drive layer turn feel=turn_push level=0.31965932836294253 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 17.425
+  drive layer turn feel=turn_push level=0.31852172101343196 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 17.450
+  drive layer turn feel=turn_push level=0.3167228534217532 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 17.475
+  drive layer turn feel=turn_push level=0.31434630513502804 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 17.500
+  drive layer turn feel=turn_push level=0.31146736504430034 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 17.525
+  drive layer turn feel=turn_push level=0.3081538665436545 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 17.550
+  drive layer turn feel=turn_push level=0.30446692110726853 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 17.575
+  drive layer turn feel=turn_push level=0.3004615670322171 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 17.600
+  drive layer turn feel=turn_push level=0.29618734639386823 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 17.625
+  drive layer turn feel=turn_push level=0.29168882056224776 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 17.650
+  drive layer turn feel=turn_push level=0.2870060326215002 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 17.675
+  drive layer turn feel=turn_push level=0.28217492351591644 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 17.700
+  drive layer turn feel=turn_push level=0.2772277075771532 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 17.725
+  drive layer turn feel=turn_push level=0.2721932121736742 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 17.750
+  drive layer turn feel=turn_push level=0.2670971854990547 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 17.775
+  drive layer turn feel=turn_push level=0.26196257593371575 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 17.800
+  drive layer turn feel=turn_push level=0.25680978594110193 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 17.825
+  drive layer turn feel=turn_push level=0.25165690306955757 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 17.850
+  drive layer turn feel=turn_push level=0.24651991030688555 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 17.875
+  drive layer turn feel=turn_push level=0.24141287776201942 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 17.900
+  drive layer turn feel=turn_push level=0.23634813741693356 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 17.925
+  drive layer turn feel=turn_push level=0.23133644249379667 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 17.950
+  drive layer turn feel=turn_push level=0.22638711281111684 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 17.975
+  drive layer turn feel=turn_push level=0.22150816735323375 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 18.000
+  drive layer turn feel=turn_push level=0.21670644514592707 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 18.025
+  drive layer turn feel=turn_push level=0.2119877154137782 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 18.050
+  drive layer turn feel=turn_push level=0.207356777889377 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 18.075
+  drive layer turn feel=turn_push level=0.20281755404795332 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 18.100
+  drive layer turn feel=turn_push level=0.19837316995113483 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 18.125
+  drive layer turn feel=turn_push level=0.19402603129786053 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 18.150
+  drive layer turn feel=turn_push level=0.18977789119637456 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 18.175
+  drive layer turn feel=turn_push level=0.18562991108556592 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 18.200
+  drive layer turn feel=turn_push level=0.18158271514273813 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 18.225
+  drive layer turn feel=turn_push level=0.17763643841281662 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 18.250
+  drive layer turn feel=turn_push level=0.173790768773385 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 18.275
+  drive layer turn feel=turn_push level=0.170044982699439 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 18.300
+  drive layer turn feel=turn_push level=0.16639797459392996 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 18.325
+  drive layer turn feel=turn_push level=0.1628482791774034 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 18.350
+  drive layer turn feel=turn_push level=0.15939408603711896 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 18.375
+  drive layer turn feel=turn_push level=0.15603324484663578 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 18.400
+  drive layer turn feel=turn_push level=0.15276325884751835 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 18.425
+  drive layer turn feel=turn_push level=0.14958126269317318 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 18.450
+  drive layer turn feel=turn_push level=0.14648397823087528 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 18.475
+  drive layer turn feel=turn_push level=0.11841291736705777 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 18.500
+  drive layer turn feel=turn_push level=0.09025012632037085 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 18.525
+  drive layer turn feel=turn_push level=0.06419303067293941 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 18.550
+  drive layer turn feel=turn_push level=0.040111797552144425 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 18.575
+  drive layer turn feel=turn_push level=0.01788568252252658 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 18.675
+  synth off off
+audio b36c3d89
+# A roll: L1 with the left stick
+@ 20.100
+  drive layer turn feel=turn_push level=0.19981940532582906 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+  synth on on
+@ 20.125
+  drive layer turn feel=turn_push level=0.28197980674252765 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 20.150
+  drive layer turn feel=turn_push level=0.34152011071751087 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 20.175
+  drive layer turn feel=turn_push level=0.38476243195996557 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 20.200
+  drive layer turn feel=turn_push level=0.41544692280800943 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 20.225
+  drive layer turn feel=turn_push level=0.43623902136731524 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 20.250
+  drive layer turn feel=turn_push level=0.4491728062790649 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 20.275
+  drive layer turn feel=turn_push level=0.45 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+  (same for 3 more ticks)
+@ 20.375
+  drive layer turn feel=turn_push level=0.44236929845356615 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 20.400
+  drive layer turn feel=turn_push level=0.4328721968818893 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 20.425
+  drive layer turn feel=turn_push level=0.42202227341412396 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 20.450
+  drive layer turn feel=turn_push level=0.4101988420240554 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 20.475
+  drive layer turn feel=turn_push level=0.3977110302209683 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 20.500
+  drive layer turn feel=turn_push level=0.3848098639425862 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 20.525
+  drive layer turn feel=turn_push level=0.3716982062927648 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 20.550
+  drive layer turn feel=turn_push level=0.35853897152561404 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 20.575
+  drive layer turn feel=turn_push level=0.34546193850409157 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 20.600
+  drive layer turn feel=turn_push level=0.3325694177960242 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 20.625
+  drive layer turn feel=turn_push level=0.3199409745973284 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 20.650
+  drive layer turn feel=turn_push level=0.3076373702070957 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 20.675
+  drive layer turn feel=turn_push level=0.2957038542306915 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 20.700
+  drive layer turn feel=turn_push level=0.28417291566465086 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 20.725
+  drive layer turn feel=turn_push level=0.27306658188000954 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 20.750
+  drive layer turn feel=turn_push level=0.26239833911051386 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 20.775
+  drive layer turn feel=turn_push level=0.25217473553056585 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 20.800
+  drive layer turn feel=turn_push level=0.24239671775388877 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 20.825
+  drive layer turn feel=turn_push level=0.23306074312801575 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 20.850
+  drive layer turn feel=turn_push level=0.2241597031787999 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 20.875
+  drive layer turn feel=turn_push level=0.21568368768615098 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 20.900
+  drive layer turn feel=turn_push level=0.20762061391333433 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 20.925
+  drive layer turn feel=turn_push level=0.1999567412687782 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 20.950
+  drive layer turn feel=turn_push level=0.19267708797107322 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 20.975
+  drive layer turn feel=turn_push level=0.18576576293333547 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 21.000
+  drive layer turn feel=turn_push level=0.17920622287262844 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 21.025
+  drive layer turn feel=turn_push level=0.17298146129934822 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 21.050
+  drive layer turn feel=turn_push level=0.16707413210329222 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 21.075
+  drive layer turn feel=turn_push level=0.16146660513502956 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 21.100
+  drive layer turn feel=turn_push level=0.1561409429377133 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 21.125
+  drive layer turn feel=turn_push level=0.15107877333888417 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 21.150
+  drive layer turn feel=turn_push level=0.14626100440122142 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 21.175
+  drive layer turn feel=turn_push level=0.10099182821981316 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 21.200
+  drive layer turn feel=turn_push level=0.06080781240568909 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 21.225
+  drive layer turn feel=turn_push level=0.025394902554579775 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 21.325
+  synth off off
+@ 21.525
+  drive layer turn feel=turn_push level=0.06693219346717194 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+  synth on on
+@ 21.550
+  drive layer turn feel=turn_push level=0.1722716931615572 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 21.575
+  drive layer turn feel=turn_push level=0.20001603758240608 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 21.600
+  drive layer turn feel=turn_push level=0.22316662410088178 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 21.625
+  drive layer turn feel=turn_push level=0.24260447903846816 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 21.650
+  drive layer turn feel=turn_push level=0.25890166978871476 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 21.675
+  drive layer turn feel=turn_push level=0.2724855542652147 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 21.700
+  drive layer turn feel=turn_push level=0.28369862943951857 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 21.725
+  drive layer turn feel=turn_push level=0.2928265702101115 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 21.750
+  drive layer turn feel=turn_push level=0.3001135918290384 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 21.775
+  drive layer turn feel=turn_push level=0.30577184227780685 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 21.800
+  drive layer turn feel=turn_push level=0.309987633088508 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 21.825
+  drive layer turn feel=turn_push level=0.31292584111701166 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 21.850
+  drive layer turn feel=turn_push level=0.3147331755939028 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 21.875
+  drive layer turn feel=turn_push level=0.3155406999038097 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 21.900
+  drive layer turn feel=turn_push level=0.31546584002874334 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 21.925
+  drive layer turn feel=turn_push level=0.31461402487313916 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 21.950
+  drive layer turn feel=turn_push level=0.3130800533586246 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 21.975
+  drive layer turn feel=turn_push level=0.31094925262860396 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 22.000
+  drive layer turn feel=turn_push level=0.3082984724317246 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 22.025
+  drive layer turn feel=turn_push level=0.30519694817871157 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 22.050
+  drive layer turn feel=turn_push level=0.3017070567129253 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 22.075
+  drive layer turn feel=turn_push level=0.29788498299691424 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 22.100
+  drive layer turn feel=turn_push level=0.2937813117870429 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 22.125
+  drive layer turn feel=turn_push level=0.2894415553813093 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 22.150
+  drive layer turn feel=turn_push level=0.28490662632130787 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 22.175
+  drive layer turn feel=turn_push level=0.28021326227231663 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 22.200
+  drive layer turn feel=turn_push level=0.2753944090383052 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 22.225
+  drive layer turn feel=turn_push level=0.27047956668405565 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 22.250
+  drive layer turn feel=turn_push level=0.26549510296016415 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 22.275
+  drive layer turn feel=turn_push level=0.2604645376059779 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 22.300
+  drive layer turn feel=turn_push level=0.2554088006029001 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 22.325
+  drive layer turn feel=turn_push level=0.2503464670386243 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 22.350
+  drive layer turn feel=turn_push level=0.24529397090155974 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 22.375
+  drive layer turn feel=turn_push level=0.24026579983891844 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 22.400
+  drive layer turn feel=turn_push level=0.23527467267022173 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 22.425
+  drive layer turn feel=turn_push level=0.23033170124160848 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 22.450
+  drive layer turn feel=turn_push level=0.22544653802845258 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 22.475
+  drive layer turn feel=turn_push level=0.22062751073904996 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 22.500
+  drive layer turn feel=turn_push level=0.2158817450361722 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 22.525
+  drive layer turn feel=turn_push level=0.21121527637253287 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 22.550
+  drive layer turn feel=turn_push level=0.20663315182763548 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 22.575
+  drive layer turn feel=turn_push level=0.20213952273438437 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 22.600
+  drive layer turn feel=turn_push level=0.19773772879172052 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 22.625
+  drive layer turn feel=turn_push level=0.19343037427187612 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 22.650
+  drive layer turn feel=turn_push level=0.18921939684488653 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 22.675
+  drive layer turn feel=turn_push level=0.18510612945553717 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 22.700
+  drive layer turn feel=turn_push level=0.18109135559487655 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 22.725
+  drive layer turn feel=turn_push level=0.17717535820426722 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 22.750
+  drive layer turn feel=turn_push level=0.17335796232682132 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 22.775
+  drive layer turn feel=turn_push level=0.1696385714673022 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 22.800
+  drive layer turn feel=turn_push level=0.16601619741922471 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 22.825
+  drive layer turn feel=turn_push level=0.16248948303845467 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 22.850
+  drive layer turn feel=turn_push level=0.159056717039394 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 22.875
+  drive layer turn feel=turn_push level=0.15571583928382624 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 22.900
+  drive layer turn feel=turn_push level=0.1524644340852372 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 22.925
+  drive layer turn feel=turn_push level=0.14929970751074287 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 22.950
+  drive layer turn feel=turn_push level=0.14608202582656685 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 22.975
+  drive layer turn feel=turn_push level=0.11595408999037471 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 23.000
+  drive layer turn feel=turn_push level=0.08804292519128201 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 23.025
+  drive layer turn feel=turn_push level=0.06221291622073267 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 23.050
+  drive layer turn feel=turn_push level=0.03833675701927087 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 23.075
+  drive layer turn feel=turn_push level=0.01629605063410969 side=both gain=turn  origin=lua:starcitizen/lua/flight.lua:196
+@ 23.175
+  synth off off
+audio 8cf03769
+# Boost: L3
+@ 25.000
+  drive play boost side=both scale=1 pan=0 amount=0 at=+0  origin=lua:starcitizen/lua/flight.lua:243
+  synth on on
+@ 25.775
+  synth off off
+audio faa744c9
+# Small aiming with the right stick: nothing is felt
+end @ 31.000

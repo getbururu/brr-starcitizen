@@ -1,0 +1,40 @@
+// The HUD notifications the mod knows, by the start of their English
+// text, and the name the rules use for each (lib.note(ev) in a rule).
+// Many moments reach Game.log only as this text, which follows the game's
+// language. A language pack add-on patches this one table:
+// overrides/starcitizen/data/notifications.patch.json. Badges that
+// language packs put in front, such as [BP], are left out before the
+// lookup.
+{
+  "prefix": {
+    "Entering Armistice Zone": "armistice_in",
+    "Leaving Armistice Zone": "armistice_out",
+    "Exiting Armistice Zone": "armistice_out",
+    "Entered Monitored Space": "monitored_in",
+    "Exited Monitored Space": "monitored_out",
+    "Monitored Space Down": "comms_down",
+    "Monitored Space Restored": "comms_back",
+    "Hangar Request Completed": "hangar_ready",
+    "Joined hangar queue": "hangar_queue",
+    "Low Fuel": "low_fuel",
+    "Incapacitated": "downed",
+    "Standby, Local Emergency Services Are En Route": "downed",
+    "Minor Injury Detected": "injury_1",
+    "Moderate Injury Detected": "injury_2",
+    "Major Injury Detected": "injury_3",
+    "Severe Injury Detected": "injury_3",
+    "CrimeStat Rating Increased": "crime",
+    "Fined": "fined",
+    "Contract Accepted": "contract_accepted",
+    "Contract Complete": "contract_complete",
+    "Contract Failed": "contract_failed",
+    "Objective Complete": "objective_complete",
+    "Received Blueprint": "blueprint",
+    "You've earned": "rewards",
+    "A Refinery Work Order has been Completed": "refinery_done",
+    "New Member Joined": "party_joined"
+  },
+  // the number in "Joined hangar queue. Your place: 3. ...": a Lua
+  // pattern whose capture is the place
+  "queue_place": "place: (%d+)"
+}

@@ -1,0 +1,23 @@
+{"replay":1,"mod":"starcitizen","mod_version":"0.1.0","bururu":"0.11.0","start_unix_ms":1789992000000,"poll_ms":25}
+{"t_ms":0,"sensor":"game","running":true,"in_front":true}
+{"t_ms":0,"step":"In the universe, on foot in Stanton"}
+{"t_ms":0,"sensor":"gamelog","raw":"<2026-09-21T12:00:00.000Z> [Notice] <Legacy login response> [CIG-net] User Login Success - Handle[Pilot1] [Team_GameServices][Login]"}
+{"t_ms":1000,"sensor":"gamelog","raw":"<2026-09-21T12:00:01.000Z> [Notice] <Context Establisher Done> establisher=\"Network\" runningTime=20.1 map=\"megamap\" gamerules=\"SC_Default\" sessionId=\"00000000-0000-0000-0000-000000000000\" [Team_Network][Network][Replication][Loading][Persistence]"}
+{"t_ms":1500,"sensor":"gamelog","raw":"<2026-09-21T12:00:01.500Z> [Notice] Loading screen for Stanton : SC_Frontend closed after 21.04 seconds"}
+{"t_ms":2000,"sensor":"gamelog","raw":"<2026-09-21T12:00:02.000Z> [Notice] [CSessionManager::OnClientSpawned] Spawned!"}
+{"t_ms":5000,"step":"A minor, a moderate and a major injury: one, two and three thuds"}
+{"t_ms":5000,"sensor":"gamelog","raw":"<2026-09-21T12:00:05.000Z> [Notice] <SHUDEvent_OnNotification> Added notification \"Minor Injury Detected - Left arm - Tier 3 Treatment Required: \" [1] to queue. New queue size: 1, MissionId: [00000000-0000-0000-0000-000000000000], ObjectiveId: [] [Team_CoreGameplayFeatures][Missions][Comms]"}
+{"t_ms":8000,"sensor":"gamelog","raw":"<2026-09-21T12:00:08.000Z> [Notice] <SHUDEvent_OnNotification> Added notification \"Moderate Injury Detected - Torso - Tier 2 Treatment Required: \" [2] to queue. New queue size: 1, MissionId: [00000000-0000-0000-0000-000000000000], ObjectiveId: [] [Team_CoreGameplayFeatures][Missions][Comms]"}
+{"t_ms":11000,"sensor":"gamelog","raw":"<2026-09-21T12:00:11.000Z> [Notice] <SHUDEvent_OnNotification> Added notification \"Major Injury Detected - Head - Tier 1 Treatment Required: \" [3] to queue. New queue size: 1, MissionId: [00000000-0000-0000-0000-000000000000], ObjectiveId: [] [Team_CoreGameplayFeatures][Missions][Comms]"}
+{"t_ms":14000,"step":"Downed: the heartbeat, the lightbar breathing red, the triggers free"}
+{"t_ms":14000,"sensor":"gamelog","raw":"<2026-09-21T12:00:14.000Z> [Notice] <SHUDEvent_OnNotification> Added notification \"Incapacitated: Seek medical attention: \" [4] to queue. New queue size: 1, MissionId: [00000000-0000-0000-0000-000000000000], ObjectiveId: [] [Team_CoreGameplayFeatures][Missions][Comms]"}
+{"t_ms":15000,"sensor":"gamelog","raw":"<2026-09-21T12:00:15.000Z> [Notice] <SHUDEvent_OnNotification> Added notification \"Standby, Local Emergency Services Are En Route: \" [5] to queue. New queue size: 1, MissionId: [00000000-0000-0000-0000-000000000000], ObjectiveId: [] [Team_CoreGameplayFeatures][Missions][Comms]"}
+{"t_ms":22000,"step":"A med bed heals you"}
+{"t_ms":22000,"sensor":"gamelog","raw":"<2026-09-21T12:00:22.000Z> [Notice] <MED BED HEAL> Actor: Pilot1 (Non-Authoritative CLIENT: Pilot1) | [CEntityComponentMedBed::HandleComponentEvent:1101] | -> Perform surgery event Success, med bed name: medbed_clinic_a_01, vehicle name: none, head: true torso: true leftArm: true rightArm: false leftLeg: false rightLeg: false [Team_ActorFeatures]"}
+{"t_ms":30000,"step":"Take the pilot seat and crash into the ground"}
+{"t_ms":30000,"sensor":"gamelog","raw":"<2026-09-21T12:00:30.000Z> [Notice] <Vehicle Control Flow> CVehicle::Initialize::<lambda_1>::operator (): Local client node [200000000001] granted control token for 'DRAK_Cutlass_Black_850000000001' [850000000001] [Team_CGP4][Vehicle]"}
+{"t_ms":40000,"sensor":"gamelog","raw":"<2026-09-21T12:00:40.000Z> [Notice] <FatalCollision> Fatal Collision occured for vehicle DRAK_Cutlass_Black_850000000001 [Part: Body, Pos: x: 100.000000, y: 200.000000, z: 300.000000, Zone: OOC_Stanton_1_Hurston, PlayerPilot: 1] after hitting entity: OOC_Stanton_1_Hurston [Zone: OOC_Stanton_1_Hurston - Class(OrbitingObjectContainer)] Distance: 0.50 [Team_VehicleFeatures][Vehicle]"}
+{"t_ms":41000,"step":"The ship is destroyed and you die: the death feel, the lightbar blinks, then the controller rests on the respawn screen"}
+{"t_ms":41000,"sensor":"gamelog","raw":"<2026-09-21T12:00:41.000Z> [Notice] <[ActorState] Dead> [ACTOR STATE][CSCActorControlStateDead::PrePhysicsUpdate] Actor 'Pilot1' [200000000001] ejected from zone 'DRAK_Cutlass_Black_850000000001' [850000000001] to zone 'OOC_Stanton_1_Hurston' [900000000010] due to previous zone being in a destroyed vehicle [Team_ActorFeatures][Actor]"}
+{"t_ms":60000,"step":"Respawn: a soft arrival, healthy again"}
+{"t_ms":60000,"sensor":"gamelog","raw":"<2026-09-21T12:01:00.000Z> [Notice] [CSessionManager::OnClientSpawned] Spawned!"}

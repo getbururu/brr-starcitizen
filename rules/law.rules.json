@@ -1,0 +1,20 @@
+// The law: armistice zones, crimes, fines, crimes against you. Outside
+// monitored space and with monitored space down the mic LED lights
+// (lights.json); nothing plays.
+{
+  "format": 1,
+  "rules": {
+    // state.lua makes these moments on a real change only, at most one in
+    // 5 s: the notice flaps at a zone's border
+    "zone_in":  { "on": "gamelog:notification", "if": "lib.moment('zone_in')",  "play": "zone_in" },
+    "zone_out": { "on": "gamelog:notification", "if": "lib.moment('zone_out')", "play": "zone_out" },
+
+    "crime": { "on": "gamelog:notification", "if": "lib.note(ev) == 'crime'",
+               "do": [ { "play": "crime" }, { "overlay": "crime" } ] },
+    "fined": { "on": "gamelog:notification", "if": "lib.note(ev) == 'fined'", "play": "notice" },
+
+    // the only sign of a player attacking you that the log still gives,
+    // and only where it is a crime
+    "attacked": { "on": "gamelog:attacked", "do": [ { "play": "attacked" }, { "overlay": "hit" } ] }
+  }
+}

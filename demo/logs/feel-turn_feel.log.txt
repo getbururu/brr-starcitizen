@@ -1,0 +1,20 @@
+# Made-up sample for -feeltest: the turn feel, once per choice. In the
+# pilot seat, a hard turn to the right with the right stick, then one to
+# the left. It is not a real log.
+# go run .github/logreplay/main.go -out demo/feel-turn_feel.replay.jsonl demo/logs/feel-turn_feel.log.txt
+<2026-09-21T21:00:00.000Z> [Notice] <Legacy login response> [CIG-net] User Login Success - Handle[Pilot1] [Team_GameServices][Login]
+<2026-09-21T21:00:00.000Z> [Notice] <Context Establisher Done> establisher="Network" runningTime=20.1 map="megamap" gamerules="SC_Default" sessionId="00000000-0000-0000-0000-000000000000" [Team_Network][Network][Replication][Loading][Persistence]
+<2026-09-21T21:00:00.000Z> [Notice] [CSessionManager::OnClientSpawned] Spawned!
+<2026-09-21T21:00:00.000Z> [Notice] <Vehicle Control Flow> CVehicle::Initialize::<lambda_1>::operator (): Local client node [200000000001] granted control token for 'DRAK_Cutlass_Black_850000000001' [850000000001] [Team_CGP4][Vehicle]
+# <2026-09-21T21:00:00.000Z> pad: {}
+# <2026-09-21T21:00:01.000Z> pad: {"sticks": [0, 0, 0.4, 0]}
+# <2026-09-21T21:00:01.100Z> pad: {"sticks": [0, 0, 0.7, 0]}
+# <2026-09-21T21:00:01.200Z> pad: {"sticks": [0, 0, 1, 0]}
+# <2026-09-21T21:00:04.500Z> pad: {"sticks": [0, 0, 0.5, 0]}
+# <2026-09-21T21:00:04.600Z> pad: {"sticks": [0, 0, 0, 0]}
+# <2026-09-21T21:00:07.000Z> pad: {"sticks": [0, 0, -0.4, 0]}
+# <2026-09-21T21:00:07.100Z> pad: {"sticks": [0, 0, -0.7, 0]}
+# <2026-09-21T21:00:07.200Z> pad: {"sticks": [0, 0, -1, 0]}
+# <2026-09-21T21:00:10.500Z> pad: {"sticks": [0, 0, -0.5, 0]}
+# <2026-09-21T21:00:10.600Z> pad: {"sticks": [0, 0, 0, 0]}
+# <2026-09-21T21:00:12.000Z> pad: {}
