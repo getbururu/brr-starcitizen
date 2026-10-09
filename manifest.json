@@ -9,7 +9,7 @@
   "authors": ["Bururu"],
   "license": "MIT",
   "summary": "Haptics, adaptive triggers and lights for Star Citizen, from its Game.log.",
-  "homepage": "https://github.com/getbururu/mod-starcitizen",
+  "homepage": "https://github.com/getbururu/brr-starcitizen",
   "icon": "ship",
 
   "games": {
