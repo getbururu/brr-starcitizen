@@ -19,7 +19,7 @@ Star Citizen has not written combat to `Game.log` since 4.4: no hits, shields, k
 
 ## Install
 
-In Bururu, open **Mods**, then **Browse**, and click **Install** on Star Citizen. Or download `starcitizen-<version>.brr` from [Releases](https://github.com/getbururu/brr-starcitizen/releases) and use **Install from file...** on the **Mods** page.
+In Bururu, open **Mods**, then **Browse**, and click **Install** on Star Citizen. Or download `starcitizen-<version>.brr` from [Releases](https://github.com/getbururu/bururu-starcitizen/releases) and use **Install from file...** on the **Mods** page.
 
 ## Set up Star Citizen
 
@@ -110,7 +110,7 @@ Bururu's modding guide, in the `docs\modding` folder next to `Bururu.exe`, expla
 
 ## Working on this mod
 
-- Clone it into Bururu's `mods` folder, in a folder named after the mod's id: `git clone https://github.com/getbururu/brr-starcitizen mods\starcitizen`. Bururu skips `.git` and `.github`, so the clone loads as it is.
+- Clone it into Bururu's `mods` folder, in a folder named after the mod's id: `git clone https://github.com/getbururu/bururu-starcitizen mods\starcitizen`. Bururu skips `.git` and `.github`, so the clone loads as it is.
 - `feels.RPP` is the REAPER project of the feels (see Bururu's REAPER kit, `mods\templates\reaper`). After a change there, `.\brr feel import feels.RPP --mod mods\starcitizen` writes the feel files again. Packs leave the project out.
 - `tests/logs` holds made-up `Game.log` excerpts, one per test. `go run .github/logreplay/main.go -out tests/body.replay.jsonl tests/logs/body.log.txt` turns one into a recording, and `.\brr mod replay mods\starcitizen mods\starcitizen\tests\body.replay.jsonl` plays it through the mod and compares it with `tests/body.expect.txt`. The demos in `demo/` come from `demo/logs` the same way.
 - The same tool turns a real log from the game's `logbackups` folder into a recording, so you can check the mod against your own play. Such a recording holds your handle and other players' names: keep it to yourself.
